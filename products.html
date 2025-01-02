@@ -3,9 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produkter</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #242526;
+        }
+
+        /* Header */
+        header{
+            background-color: #303233;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 3px solid rgb(223, 223, 223);
+        }
+        .left-section{
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+        .logo{
+            height: 50px;
+        }
+        .right-section{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 50px;
+            flex-shrink: 0;
+        }
+        .login-button{
+            background-color: #079702; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+
+        /* Navigationbar */
+        nav{
+            background-color: rgb(223, 223, 223);
+            display: flex;
+            flex-direction: row;
+        }
+        .links{
+            text-decoration: none;
+            font-weight: bold;
+            color: #242526;
+            text-align: left;
+            margin-left: 20%;
+        }
+
+        /* Products */
+        h1{
+            margin-top: 5%;
+            text-align: center;
+            color: white;
+        }
+        .products{
+            margin-left: 20%;
+            margin-right: 20%;
+            border: 2px solid white;
+            border-radius: 2%;
+            padding: 1%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 40px;
+            color: white;
+        }
+        .product-image{
+            width: 100%;
+            display: block;
+            border-radius: 5%;
+        }
+        .buy-button{
+            background-color: #079702; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        .articel-data{
+            display: grid;
+            text-align: center;
+        }
+        .product-name{
+            font-weight: bold;
+        }
+        
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <div class="left-section">
+            <img class="logo" 
+            src="product-images\LEGO.png" alt="">
+        </div>
+        <div class="right-section">
+            <button class="login-button">Logga in</button>
+        </div>
+    </header>
+
+    <nav>
+        <a class="links" href="">Produkter</a>
+        <a class="links" href="">Erbjudanden</a>
+    </nav>
+
+    <h1>Produkter</h1>
+    <section class="products">
+        <article>
+            <img class="product-image" src="product-images\makita.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Makita Skruvdragare "Basic"</p>
+                <p class="price-button">1600:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="product-images\makita.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Makita Skruvdragare "Standard"</p>
+                <p class="price-button">1700:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="product-images\makita.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Makita Skruvdragare "Pro"</p>
+                <p class="price-button">1800:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="product-images\makita.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Makita Skruvdragare "Ultimate"</p>
+                <p class="price-button">1900:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+    </section>
+
+    <footer></footer>
 </body>
 </html>
