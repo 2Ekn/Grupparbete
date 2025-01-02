@@ -3,16 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Webbshop</title>
+    <style>
+    :root{
+        --primary-color: #303233;
+        --secondary-color: #686969;
+        --texty-color: #fff;
+        --lines-color: #000;
+        --hover-color: #6d0000;
+        --button-hover-color: #424242;
+        }
+    * {
+        box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+
+html, body {
+    height: 100%; /* Se till att HTML- och BODY-element fyller hela sidan */
+    margin: 0; /* Ta bort standardmarginaler */
+}
+    body{
+        display: flex;
+        flex-direction: column;
+        margin:2.5rem;
+        font-family: Arial, sans-serif;
+        background-color: #303233;
+    }
+    header {
+        background-color: var(--primary-color);
+        padding: 0.5rem;
+        text-align: center;
+        /* margin: 0.5rem; */
+    }
+    header img {
+        width: 20rem;
+        padding: 0.5rem;
+        border: var(--lines-color) 1px solid;
+    }
+    nav {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+        background-color: #686969;
+        /* padding: 0.9rem;   */
+        border-bottom: 2px solid var(--lines-color);
+        margin-bottom: 1rem;
+    }
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+    nav > ul > li {
+       list-style: none;
+       display: inline-block;
+    }
+    nav > ul > li > a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0.8rem;
+       list-style: none;
+ 
+    }
+    nav > ul > li > a:hover {
+        text-decoration: none;
+        color: #6d0000;
+        font-style: bold;
+        
+      
+    }
+    nav > button {
+        background-color: var(--primary-color);
+        color: var(--texty-color);
+        border: none;
+        border-radius: 30px;
+        padding: 0.5rem;
+        margin: 0.1rem;
+        cursor: pointer;
+    }
+    nav > button:hover {
+        background-color: var(--button-hover-color);
+        /* border: px solid var(--lines-color); */
+    }
+    main {
+        /* flex: 1; */
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: c;
+        flex-wrap: wrap;
+        flex-direction: collumn;
+        margin-bottom: 2rem;
+        
+        
+    }
+    main > h4 {
+        color: var(--texty-color);
+        text-align;
+        position: relative;
+        left: 4%;
+        width: 100%;
+        /* padding: 1rem; */
+    }
+
+    main > article {
+    display: flex; 
+    gap: 5px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    
+    }
+
+    main > article > box {
+        color: var(--texty-color); 
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid var(--lines-color);
+        /* border-radius: 8px; */
+        padding: 1rem;
+        width: 12rem; 
+        background-color: var(--secondary-color);
+        box-shadow: 0 2px 5px(0,0,0,0.3);
+
+    }
+    main > article > box > p {
+        color: var(--texty-color);
+        font-size: 0.8rem;
+    }
+
+    main > article > box > button {
+        background-color: var(--primary-color);
+        color: var(--texty-color);
+        border: none;
+        border-radius: 30px;
+        padding: 0.5rem;
+        margin: 0.1rem;
+        cursor: pointer;
+    }
+    main > article > box > button:hover {
+        background-color: var(--button-hover-color);
+        
+    }
+    main > article > box > img {
+        width: 100%;
+        height: 8rem;
+        border-radius: 5px;    
+    }
+    footer{
+        width: 89%;
+        position: fixed;
+        bottom: 0%;
+        background-color: var(--secondary-color);
+     text-align: center;
+     margin: 0;
+     /* border-top: 2px solid var(--lines-color); */
+     padding: 1rem 0;
+     height: 4rem;
+     flex-shrink: 0;
+    }
+
+    footer >  ul {
+        text-decoration: none;
+        color: #fff;
+        /* padding: 0.8rem; */
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+    }
+    footer > ul > li > a {
+        text-decoration: none;
+
+        color: #fff;
+        padding: 2rem;
+       
+    }
+    footer > ul > li > a:hover {
+        text-decoration: none;
+        color: #6d0000;
+        font-style: bold;
+        
+      
+    }
+
+    </style>
+
 </head>
 <body>
     <header>
-        <h1>Hej gruppen</h1>
-        <h1>Hej// Markus</h1>
-        <h1>Hej jag är Farzad</h1>
-        <h1>jonas</h1>
-
-        <h1>test bransch 2</h1>
+        <img src="./assets/bild.jpg" alt="header image">
     </header>
+    <nav>
+        <ul>
+            
+            <li><a href="#">Products</a></li>
+            <li><a href="#">On Sale</a></li>
+        
+        </ul>
+        <button>Login/Register</button>
+    </nav>
+    <main>
+        <h4>Poulära produkter:</h4>
+        <article>
+            <box>
+                <img src="./assets/computer.avif" alt="Computer">
+                <h5>Computer</h5>
+                <p>Price: 10000kr</p>
+                <button>Add to cart</button>
+            </box>
+            <box>
+                <img src="./assets/cookie.jpg" alt="Oreo cookie">
+                <h5>Oreo cookie</h5>
+                <p>Price: 15kr</p>
+                <button>Add to cart</button>
+            </box>
+            <box>
+                <img src="./assets/robot.png" alt="Lamp">
+                <h5>Lamp</h5>
+                <p>Price: 120kr</p>
+                <button>Add to cart</button>
+            </box>
+        </article>
+    </main>
+
+    <footer>
+       <ul>
+        <li><a href ="#">Contact</a></li>
+        <li><a href ="#">About</a></li>
+        <li><a href ="#">FAQ</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
