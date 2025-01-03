@@ -11,14 +11,23 @@
         --texty-color: #fff;
         --lines-color: #000;
         --hover-color: #6d0000;
-        --button-hover-color: #424242;
+        --button-color: #40A011;
+        --button-hover-color: #4fbb19;
+        --search-bar-color: #191A1B;
+
+        --button-font-size: 12px;
+        --p-font-size: 12px;
+        --font-family:
         }
     * {
         box-sizing: border-box;
     margin: 0;
     padding: 0;
     }
-
+    @font-face{
+        font-family: OpenSans;
+        src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
+    }
 
 html, body {
     height: 100%; /* Se till att HTML- och BODY-element fyller hela sidan */
@@ -28,7 +37,7 @@ html, body {
         display: flex;
         flex-direction: column;
         margin:2.5rem;
-        font-family: Arial, sans-serif;
+        font-family: OpenSans;
         background-color: #303233;
     }
     header {
@@ -48,7 +57,7 @@ html, body {
        justify-content: space-between;
         background-color: #686969;
         /* padding: 0.9rem;   */
-        border-bottom: 2px solid var(--lines-color);
+        /* border-bottom: 1px solid var(--lines-color); */
         margin-bottom: 1rem;
     }
     nav ul {
@@ -61,7 +70,8 @@ html, body {
     }
     nav > ul > li > a {
         text-decoration: none;
-        color: #fff;
+        color: var(--texty-color);
+        font-size: 12px;
         padding: 0.8rem;
        list-style: none;
  
@@ -73,11 +83,37 @@ html, body {
         
       
     }
-    nav > button {
-        background-color: var(--primary-color);
-        color: var(--texty-color);
+    nav > .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav > .search-bar > input {
+        font-size: 12px;
+        padding: 0.2rem;
+        margin: 0.2rem;
         border: none;
-        border-radius: 30px;
+        background-color: var(--search-bar-color);
+        border-radius: 2px;
+    }
+    nav > .search-bar > button {
+        background-color: #1489FF;
+        color: var(--texty-color);
+        font-size: var(--button-font-size);
+        border: none;
+        border-radius: 2px;
+        padding: 0.2rem;
+        margin: 0.1rem;
+        cursor: pointer;
+        
+    }
+
+    nav > button {
+        background-color: var(--button-color);
+        color: var(--texty-color);
+        font-size: var(--button-font-size);
+        border: none;
+        border-radius: 2px;
         padding: 0.5rem;
         margin: 0.1rem;
         cursor: pointer;
@@ -99,11 +135,19 @@ html, body {
         
     }
     main > h4 {
+        text-decoration: none;
+        font-size: 13px;
+        /* text-transform: uppercase; */
+        /* text-shadow: #000000 1px 1px 1px; */
+        font-style:normal; 
         color: var(--texty-color);
-        text-align;
+        /* border: 1px solid var(--lines-color); */
+        /* text-align; */
         position: relative;
-        left: 4%;
-        width: 100%;
+        right: 0%;
+        background-color: var(--secondary-color);
+        width: 93.5%;
+        margin-bottom: .3rem;
         /* padding: 1rem; */
     }
 
@@ -130,15 +174,16 @@ html, body {
     }
     main > article > box > p {
         color: var(--texty-color);
-        font-size: 0.8rem;
+        font-size: var(--p-font-size);
     }
 
     main > article > box > button {
-        background-color: var(--primary-color);
+        background-color: var(--button-color);
         color: var(--texty-color);
+        font-size: 12px;
         border: none;
-        border-radius: 30px;
-        padding: 0.5rem;
+        border-radius: 2px;
+        padding: 0.3rem;
         margin: 0.1rem;
         cursor: pointer;
     }
@@ -149,7 +194,7 @@ html, body {
     main > article > box > img {
         width: 100%;
         height: 8rem;
-        border-radius: 5px;    
+        border-radius: 2px;    
     }
     footer{
         width: 89%;
@@ -193,6 +238,7 @@ html, body {
 <body>
     <header>
         <img src="./assets/bild.jpg" alt="header image">
+
     </header>
     <nav>
         <ul>
@@ -201,6 +247,10 @@ html, body {
             <li><a href="#">On Sale</a></li>
         
         </ul>
+        <form class="search-bar" action="search" method="GET">
+            <input type="text" name="search" placeholder="Search">
+            <button type="submit">Search</button>
+        </form>
         <button>Login/Register</button>
     </nav>
     <main>
