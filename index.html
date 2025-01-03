@@ -29,10 +29,10 @@
         src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
     }
 
-html, body {
-    height: 100%; /* Se till att HTML- och BODY-element fyller hela sidan */
-    margin: 0; /* Ta bort standardmarginaler */
-}
+    html, body {
+    height: 100%; 
+    margin: 0; 
+    }
     body{
         display: flex;
         flex-direction: column;
@@ -88,13 +88,19 @@ html, body {
         align-items: center;
         justify-content: center;
     }
+ 
     nav > .search-bar > input {
         font-size: 12px;
+        color: var(--texty-color);
+        opacity: 80%;
         padding: 0.2rem;
         margin: 0.2rem;
         border: none;
         background-color: var(--search-bar-color);
         border-radius: 2px;
+    }
+    nav > .search-bar > input:focus {
+        outline: 1px solid var(--texty-color);
     }
     nav > .search-bar > button {
         background-color: #1489FF;
