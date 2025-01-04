@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkter</title>
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
+        :root{
+            --primary-bg: #242526;
+            --header-bg: #303233;
+            --button-bg: #079702;
+            --font: Arial, Helvetica, sans-serif;
+        }
+        *{
+            box-sizing: border-box;
             margin: 0;
-            background-color: #242526;
+            padding: 0;
+            font-family: var(--font);
+        }
+        body{
+            background-color: var(--primary-bg);
         }
 
         /* Header */
         header{
-            background-color: #303233;
-            height: 70px;
+            background-color: var(--header-bg);
+            padding: 0.5rem;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -36,7 +46,7 @@
             flex-shrink: 0;
         }
         .login-button{
-            background-color: #079702; 
+            background-color: var(--button-bg); 
             color: white; 
             border: none; 
             padding: 10px 20px; 
@@ -50,52 +60,55 @@
             background-color: rgb(223, 223, 223);
             display: flex;
             flex-direction: row;
+            justify-content: space-evenly;
         }
         .links{
             text-decoration: none;
             font-weight: bold;
             color: #242526;
-            text-align: left;
-            margin-left: 20%;
         }
 
         /* Products */
         h2{
-            margin-top: 5%;
+            margin: 2%;
             text-align: center;
             color: white;
         }
         .products{
-            margin-left: 20%;
-            margin-right: 20%;
+            max-width: 1140px;
+            margin: 0 auto;
+           
             border: 2px solid white;
-            border-radius: 2%;
-            padding: 1%;
+            border-radius: 2rem;
+            padding: 1rem;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 20px;
-            row-gap: 40px;
+            column-gap: 1rem;
+            row-gap: 2rem;
             color: white;
         }
         .product-image{
             width: 100%;
-            display: block;
-            border-radius: 5%;
+            display: flex;
+            border-radius: 1.5rem;
         }
         .buy-button{
             background-color: #079702; 
             color: white; 
             border: none; 
+            width: 100%;
             padding: 10px 20px; 
             font-size: 16px; 
             border-radius: 5px; 
             cursor: pointer; 
+            margin-top: 10%;
         }
         .articel-data{
-            display: grid;
+            margin: 5% 0;
             text-align: center;
         }
         .product-name{
+            margin: 5% 0;
             font-weight: bold;
         }
         
@@ -184,10 +197,10 @@
         </article>
 
         <article>
-            <img class="product-image" src="./product-images\HiKOKI DS18DD - 2590kr.jpg" alt="produktbild">
+            <img class="product-image" src="./product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="produktbild">
             <div class="articel-data">
-                <p class="product-name">HiKOKI DS18DD</p>
-                <p class="price-button">2590:-</p>
+                <p class="product-name">Black & Decker BCD001C1</p>
+                <p class="price-button">890:-</p>
                 <button class="buy-button">KÖP</button>
             </div>
         </article>
