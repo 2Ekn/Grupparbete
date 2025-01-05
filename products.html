@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #242526;
+        }
+
+        /* Header */
+        header{
+            background-color: #303233;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 3px solid rgb(223, 223, 223);
+        }
+        .left-section{
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+        .logo{
+            height: 50px;
+        }
+        .right-section{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 50px;
+            flex-shrink: 0;
+        }
+        .login-button{
+            background-color: #079702; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+
+        /* Navigationbar */
+        nav{
+            background-color: rgb(223, 223, 223);
+            display: flex;
+            flex-direction: row;
+        }
+        .links{
+            text-decoration: none;
+            font-weight: bold;
+            color: #242526;
+            text-align: left;
+            margin-left: 20%;
+        }
+
+        /* Products */
+        h2{
+            margin-top: 5%;
+            text-align: center;
+            color: white;
+        }
+        .products{
+            margin-left: 20%;
+            margin-right: 20%;
+            border: 2px solid white;
+            border-radius: 2%;
+            padding: 1%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 40px;
+            color: white;
+        }
+        .product-image{
+            width: 100%;
+            display: block;
+            border-radius: 5%;
+        }
+        .buy-button{
+            background-color: #079702; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        .articel-data{
+            display: grid;
+            text-align: center;
+        }
+        .product-name{
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="left-section">
+            <img class="logo" 
+            src="product-images\LEGO.png" alt="">
+        </div>
+        <div class="right-section">
+            <button class="login-button">Logga in</button>
+        </div>
+    </header>
+
+    <nav>
+        <a class="links" href="">Produkter</a>
+        <a class="links" href="">Erbjudanden</a>
+    </nav>
+
+    <h2>Produkter</h2>
+    <section class="products">
+        <article>
+            <img class="product-image" src="./product-images\Makita DDF484RTJ - 4790kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Makita DDF484RTJ</p>
+                <p class="price-button">4790:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Bosch GSR 18V-EC</p>
+                <p class="price-button">3679:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Milwaukee M18 BLDDRC-502C</p>
+                <p class="price-button">3590:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\HiKOKI DS18DD - 2590kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">HiKOKI DS18DD</p>
+                <p class="price-button">2590:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\STANLEY FatMax -  2690kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">STANLEY FatMax</p>
+                <p class="price-button">2690:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\Metabo BS 18 - 3190kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Metabo BS 18</p>
+                <p class="price-button">3190:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Milwaukee M12 BDD-202C</p>
+                <p class="price-button">2390:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\HiKOKI DS18DD - 2590kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">HiKOKI DS18DD</p>
+                <p class="price-button">2590:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\Flex DD 2G - 2890kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Flex DD 2G</p>
+                <p class="price-button">2890:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+
+        <article>
+            <img class="product-image" src="./product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="produktbild">
+            <div class="articel-data">
+                <p class="product-name">Bosch GSR 12V-15</p>
+                <p class="price-button">1590:-</p>
+                <button class="buy-button">KÖP</button>
+            </div>
+        </article>
+    </section>
+
+    <footer></footer>
+</body>
+</html>
