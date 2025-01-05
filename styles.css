@@ -1,4 +1,4 @@
-/* Grundläggande stil för hela sidan */
+/* Grundstil för hela sidan */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Stil för sidhuvudet */
+/* Header */
 .header {
     background-color: #333;
     color: white;
@@ -14,60 +14,95 @@ body {
     padding: 20px 0;
 }
 
-/* Stil för användarprofil */
+/* Användarprofil */
 .profile-section {
     margin: 20px auto;
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-section:hover {
+    transform: scale(1.02);
 }
 
 .profile-section .user-info {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-section .profile-picture {
+    position: relative;
+    text-align: center;
 }
 
 .profile-section .profile-picture img {
-    /* Gör profilbilden rund */
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
+    border: 4px solid #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.profile-section .profile-picture .upload-label {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-section .profile-picture .upload-label:hover {
+    background-color: #0056b3;
+}
+
+.profile-section .profile-picture input {
+    display: none;
+}
+
+.profile-section .details {
+    flex: 1;
 }
 
 .profile-section .details h2 {
-    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.profile-section .details p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.profile-section .details p strong {
     color: #333;
 }
 
-/* Stil för orderhistorik */
-.order-history {
-    margin: 20px auto;
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.order-history h2 {
-    /* Centrerar rubriken */
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
+/* Orderhistorik */
 .order-history table {
-    /* Gör tabellen responsiv och snygg */
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.order-history table th, 
+.order-history table th,
 .order-history table td {
     border: 1px solid #ddd;
     text-align: center;
@@ -75,23 +110,17 @@ body {
 }
 
 .order-history table th {
-    /* Bakgrundsfärg för tabellrubriker */
-    background-color: #f4f4f4;
-    color: #333;
-    font-weight: bold;
+    background-color: #007BFF;
+    color: white;
 }
 
-/* Stil för produktbilder i tabellen */
-.order-history table td img {
-    width: 100px; /* Standardbredd för bilder */
-    height: auto; /* Bibehåller proportioner */
-    border-radius: 8px; /* Rundar hörn */
-    object-fit: cover; /* Anpassar bilden till ramen */
-    display: block; /* Centrerar bilden */
-    margin: 0 auto;
+.order-history table img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-/* Stil för knappar */
 .btn {
     padding: 5px 10px;
     margin: 5px;
@@ -104,7 +133,6 @@ body {
 }
 
 .btn:hover {
-    /* Förstorar knappen vid hovring */
     transform: scale(1.1);
     background-color: #0056b3;
 }
@@ -117,13 +145,12 @@ body {
     background-color: #a71d2a;
 }
 
-/* Stil för sidfoten */
+/* Footer */
 .footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
 }
 
 .footer ul {
@@ -138,10 +165,21 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
 .footer ul li a:hover {
-    /* Ändrar färgen på länken vid hovring */
     color: #007BFF;
+}
+
+/* Responsiv design */
+@media (max-width: 600px) {
+    .profile-section .user-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-section .details h2 {
+        text-align: center;
+    }
 }
