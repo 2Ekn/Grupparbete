@@ -1,4 +1,4 @@
-
+/* Grundläggande stil för hela sidan */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
-
+/* Stil för sidhuvudet */
 .header {
     background-color: #333;
     color: white;
@@ -14,6 +14,7 @@ body {
     padding: 20px 0;
 }
 
+/* Stil för användarprofil */
 .profile-section {
     margin: 20px auto;
     max-width: 800px;
@@ -30,25 +31,40 @@ body {
 }
 
 .profile-section .profile-picture img {
+    /* Gör profilbilden rund */
     border-radius: 50%;
     width: 120px;
     height: 120px;
     object-fit: cover;
 }
 
-.profile-section .profile-picture input {
-    margin-top: 10px;
-}
-
-.details h2 {
+.profile-section .details h2 {
     margin-bottom: 10px;
     color: #333;
 }
 
+/* Stil för orderhistorik */
+.order-history {
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.order-history h2 {
+    /* Centrerar rubriken */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 .order-history table {
+    /* Gör tabellen responsiv och snygg */
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .order-history table th, 
@@ -59,9 +75,23 @@ body {
 }
 
 .order-history table th {
+    /* Bakgrundsfärg för tabellrubriker */
     background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
 }
 
+/* Stil för produktbilder i tabellen */
+.order-history table td img {
+    width: 100px; /* Standardbredd för bilder */
+    height: auto; /* Bibehåller proportioner */
+    border-radius: 8px; /* Rundar hörn */
+    object-fit: cover; /* Anpassar bilden till ramen */
+    display: block; /* Centrerar bilden */
+    margin: 0 auto;
+}
+
+/* Stil för knappar */
 .btn {
     padding: 5px 10px;
     margin: 5px;
@@ -74,6 +104,7 @@ body {
 }
 
 .btn:hover {
+    /* Förstorar knappen vid hovring */
     transform: scale(1.1);
     background-color: #0056b3;
 }
@@ -86,6 +117,7 @@ body {
     background-color: #a71d2a;
 }
 
+/* Stil för sidfoten */
 .footer {
     background-color: #333;
     color: white;
@@ -110,5 +142,6 @@ body {
 }
 
 .footer ul li a:hover {
+    /* Ändrar färgen på länken vid hovring */
     color: #007BFF;
 }
