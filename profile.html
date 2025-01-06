@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil och Orderhistorik</title>
+    <link rel="stylesheet" href="styles profile.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Välkommen till Din Profil</h1>
+    </header>
+
+    <section class="profile-section">
+        <h1>Användarprofil</h1>
+        <div class="user-info">
+            <div class="profile-picture">
+                <img src="farzad.jpg" alt="Profilbild" id="userImage">
+                <label for="uploadImage" class="upload-label">Ladda upp bild</label>
+                <input type="file" id="uploadImage" accept="image/*" aria-label="Ladda upp en profilbild">
+            </div>
+            <div class="details">
+                <h2>Användarinformation</h2>
+                <p><strong>Namn:</strong> Farzad Jafarzadehtey</p>
+                <p><strong>E-post:</strong> farzadjafarzadehtey@gmail.com</p>
+                <p><strong>Adress:</strong> Frihetsgatan, Stockholm</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-history">
+        <h2>Orderhistorik</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Produktnamn</th>
+                    <th>Pris (SEK)</th>
+                    <th>Orderdatum</th>
+                    <th>Åtgärder</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild"></td>
+                    <td>Black & Decker BCD001C1</td>
+                    <td>890</td>
+                    <td>2025-01-11</td>
+                    <td>
+                        <button class="btn edit">Redigera</button>
+                        <button class="btn delete">Ta bort</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Produktbild"></td>
+                    <td>Bosch GSR 12V-15</td>
+                    <td>1590</td>
+                    <td>2025-01-01</td>
+                    <td>
+                        <button class="btn edit">Redigera</button>
+                        <button class="btn delete">Ta bort</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./product-images/Makita DDF484RTJ - 4790kr.jpg" alt="Produktbild"></td>
+                    <td>Makita DDF484RTJ</td>
+                    <td>4790</td>
+                    <td>2024-12-12</td>
+                    <td>
+                        <button class="btn edit">Redigera</button>
+                        <button class="btn delete">Ta bort</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+        <ul>
+            <li><a href="#">Hem</a></li>
+            <li><a href="products.html">Produkter</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Om oss</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
