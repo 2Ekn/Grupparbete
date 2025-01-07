@@ -1,0 +1,202 @@
+:root {
+    --primary-color: #242526;
+    --secondary-color: #303233;
+    --texty-color: #fff;
+    --lines-color: #000;
+    --hover-color: #1489FF;
+    --button-color: #40A011;
+    --button-hover-color: #4fbb19;
+    --search-bar-color: #191A1B;
+
+    --button-font-size: 12px;
+    --p-font-size: 12px;
+    --font-family: Arial, sans-serif;
+}
+
+/* Grundstil för hela sidan */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--texty-color);
+}
+
+/* Header */
+.header {
+    background-color: var(--secondary-color);
+    color: var(--texty-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Användarprofil */
+.profile-section {
+    margin: 20px auto;
+    max-width: 900px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-section:hover {
+    transform: scale(1.02);
+}
+
+.profile-section .user-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-section .profile-picture {
+    position: relative;
+    text-align: center;
+}
+
+.profile-section .profile-picture img {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border: 4px solid var(--hover-color);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.profile-section .profile-picture .upload-label {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: var(--hover-color);
+    color: var(--texty-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-section .profile-picture .upload-label:hover {
+    background-color: var(--button-hover-color);
+}
+
+.profile-section .profile-picture input {
+    display: none;
+}
+
+.profile-section .details {
+    flex: 1;
+}
+
+.profile-section .details h2 {
+    font-size: 22px;
+    color: var(--texty-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--hover-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.profile-section .details p {
+    margin: 10px 0;
+    font-size: var(--p-font-size);
+    color: var(--texty-color);
+}
+
+.profile-section .details p strong {
+    color: var(--texty-color);
+}
+
+/* Orderhistorik */
+.order-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.order-history table th,
+.order-history table td {
+    border: 1px solid var(--lines-color);
+    text-align: center;
+    padding: 10px;
+}
+
+.order-history table th {
+    background-color: var(--hover-color);
+    color: var(--texty-color);
+}
+
+.order-history table img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin: 5px;
+    color: var(--texty-color);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: var(--button-font-size);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: var(--button-hover-color);
+}
+
+.btn.delete {
+    background-color: #dc3545;
+}
+
+.btn.delete:hover {
+    background-color: #a71d2a;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--texty-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer ul li a {
+    color: var(--texty-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Responsiv design */
+@media (max-width: 600px) {
+    .profile-section .user-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-section .details h2 {
+        text-align: center;
+    }
+}
