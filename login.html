@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Header</title>
+</head>
+
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  size:100%;
+}
+p{
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 1.1rem;
+}
+a{
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 1.1rem;
+}
+a:hover{
+  text-decoration: underline;
+}
+body{
+  background-color: #292929;
+}
+
+/* Header styling*/
+
+header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+}
+header:nth-child(2n){
+  flex-basis: 50%;
+}
+
+
+
+/*logo*/
+.header-logo{
+  display: flex;
+  align-items: center;
+}
+.header-logo-img{
+  width: 4rem;
+  margin-left: 10rem;
+}
+.header-logo>h1{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 2.5rem;
+
+  margin-right: 4rem;
+}
+.search-img{
+  width: 2rem;
+}
+.login-img{
+  width: 2rem;
+}
+.cart-img{
+  width: 2rem;
+}
+
+/*Search input*/
+.search{
+  display: flex;
+  align-items: center;
+  width: 50rem;
+  height: 2.6rem;
+  background-color: #191a1c;
+}
+.search>input{
+  width: 100%;
+  background-color: #191a1c;
+  border: none;
+  margin-left: 1rem;
+  color: white;
+  font-size: 1rem;
+}
+.search>input:focus{
+  outline: none;
+  border: none;
+}
+.search>input::placeholder{
+  color: white;
+}
+
+/*login/cart*/
+.login-cart{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 13rem;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.login{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cart{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: green;
+  width: 52%;
+}
+
+
+
+
+/*Nav styling*/
+
+nav{
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #4b4b4b;
+  font-size: 1.5rem;
+  border:1px;
+  border-style: outset;
+  border-color: #4b4b4b;
+}
+
+/* Main styling*/
+
+main{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.login-screen{
+  background-color: #4b4b4b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  padding: 5%;
+  border-radius: 5%;
+}
+.login-screen>img{
+  width: 4rem;
+}
+.login-header{
+  color: white;
+  margin-bottom: 2rem;
+}
+.register{
+  margin-top: 20%;
+}
+.login-input{
+  margin-bottom: 1rem;
+  height: 1.5rem;
+}
+
+</style>
+<body>
+  <header>
+    <section class="header-logo">
+      <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
+      <h1>Screw</h1>
+    </section>
+
+    <section class="search">
+      <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+      <input type="text" placeholder="Search...">
+    </section>
+
+    <section class="login-cart">
+      <section class="login">
+        <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
+        <a href="#">Logga in</a>      
+      </section>
+
+      <section class="cart">  
+        <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
+        <a href="#">Kundvagn</a>
+      </section>
+    </section>
+  </header>
+    
+    <nav>
+      <a href="#">Startsida</a>
+      <a class="produkter" href="#">Produkter</a>
+      <a class="erbjudande" href="#">Kampanjer</a>
+      <a class="about" href="#">Om oss</a>
+    </nav>
+    <main>
+      <section class="login-screen">
+        <img src="./assets/user-login-icon-14.png" alt="Login Screen">
+        <h2 class="login-header">Logga in</h2>
+        <p >Användarnamn: </p>
+        <input class="login-input" type="text">
+        <p >Lösernord:</p>
+        <input class="login-input" type="text">
+        <a href="#">Glömt lösenord?</a>
+        <a class="register" href="">Har du inget konto? Registrera dig här!</a>
+      </section>
+      
+    </main>
+
+</body>
+</html>
