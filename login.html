@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drillzone</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="OriginalCSS.css">
 </head>
 
 
@@ -24,43 +24,40 @@ a{
 a:hover{
   text-decoration: underline;
 }
-body{
-  background-color: #292929;
-}
+
 
 </style>
 <body>
   <header>
-    <section class="header-logo">
-      <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
-        <h1>Drillzone.se</h1>
-    </section>
-
+  <section class="header-logo">
+    <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
+    <h1>Drillzone.se</h1>
+  </section>
+  <section>
     <section class="search">
       <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
       <input type="text" placeholder="Search...">
     </section>
-
-    <section class="login-cart">
-      <section class="login">
-        <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
-        <a href="#">Logga in</a>
-      </section>
-
-      <section class="cart">
-        <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
-        <a href="#">Kundvagn</a>
-      </section>
-    </section>
-  </header>
+  </section>
+  <section class="login-cart">
+    <button class="login">
+      <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+      <a class="login-text" href="login.html">Logga in</a>
+    </button>
+      <button class="cart">
+      <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+      <a class="cart-text" href="#">Kundvagn</a>
+      </button>
+  </section>
+</header>
     
     <nav>
-      <a href="#">Startsida</a>
-      <a class="produkter" href="#">Produkter</a>
+      <a href="index.html">Startsida</a>
+      <a class="produkter" href="products.html">Produkter</a>
       <a class="erbjudande" href="#">Kampanjer</a>
       <a class="about" href="#">Om oss</a>
     </nav>
-    <main>
+    <!-- <main>
       <section class="login-screen">
         <img src="./assets/user-login-icon-14.png" alt="Login Screen">
         <h2 class="login-header">Logga in</h2>
@@ -72,7 +69,7 @@ body{
         <a class="register" href="">Har du inget konto? Registrera dig här!</a>
       </section>
       
-    </main>
+    </main> -->
 
 </body>
 </html>

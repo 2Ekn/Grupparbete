@@ -1,5 +1,5 @@
     :root{
-        --primary-color: #242526;
+        --primary-color: #292929;
         --secondary-color: #303233;
         --texty-color: #fff;
         --lines-color: #000;
@@ -36,6 +36,8 @@
         font-family: OpenSans;
         background-color: var(--primary-color);
     }
+
+    /*Header styling*/
     header {
     width: 100%;
     display: flex;
@@ -51,7 +53,6 @@
     .header-logo {
         display: flex;
         align-items: center; 
-
     }
 
     .header-logo-img {
@@ -60,20 +61,10 @@
     }
 
 
-    header > .name {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: rgb(111, 111, 111);
-        
-        font-size: 1.5rem;
-
-
-    }
         .header-logo>h1{
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             color: white;
-            font-size: 2.5rem;
-
-
+            font-size: 2rem;
         }
     .search-img{
     width: 2rem;
@@ -85,16 +76,16 @@
     .cart-img{
         width: 2rem;
     }
-
     /*Search input*/
     .search{
         display: flex;
         align-items: center;
         flex-grow: 1;
-        max-width: 50rem;
+        max-width: 30rem;
         height: 2.6rem;
         background-color: #191a1c;
         margin: 0 2rem;
+        position: inherit;
     }
     .search>input{
         width: 100%;
@@ -106,7 +97,6 @@
     }
     .search>input:focus{
     outline: none;
-
     }
     .search>input::placeholder{
     color: white;
@@ -114,27 +104,48 @@
 
     /*login/cart*/
     .login-cart{
-        
-    display: flex;
+        display: flex;
         align-items: center;
         gap: 1rem;
     }
+    .login{
+        background: none;
+    }
     .login, .cart {
-
         display: flex;
         align-items: center;
         color: white;
         font-size: 1.1rem;
+        border: none;
     }
     .login > a, .cart > a {
-        font-size: 10px;
+        font-size: 1.1rem;
         text-decoration: none;
         color: white;
     }
     .cart {
         background-color: green; 
-        padding: 0.5rem 1rem; 
-        border-radius: 0.3rem; /
+        padding: 0.2rem 1rem;
+        margin-right: 0.5rem ; 
+        border-radius: 0.3rem;
+        
+    }
+    @media (max-width: 808px) {
+        .cart > .cart-text  {
+            display: none;
+        }
+        .login > .login-text{
+            display: none;
+        }
+    }
+    @media (max-width:650px) {
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
     }
 
         /*NAVIGATION  */
