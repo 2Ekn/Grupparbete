@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webbshop</title>
+    <link rel="stylesheet" href="OriginalCSS.css">
     <style>
+        /*        skapar vi olika sidor, gör classes för varje sida. 
+exempelvid main > .profile-menu eller main > .checkout*/
     :root{
         --primary-color: #242526;
         --secondary-color: #303233;
@@ -14,6 +17,8 @@
         --button-color: #40A011;
         --button-hover-color: #4fbb19;
         --search-bar-color: #191A1B;
+
+
 
         --button-font-size: 12px;
         --p-font-size: 12px;
@@ -42,15 +47,104 @@
         background-color: var(--primary-color);
     }
     header {
-        background-color: var(--primary-color);
-        padding: 0.5rem;
-        text-align: center;
-        
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  
+    box-sizing: border-box;
+    background-color: var(--primary-color); 
+}
+
+/* Logo */
+    .header-logo {
+        display: flex;
+        align-items: center; 
+
     }
-    header img {
-        width: 20rem;
-        padding: 0.5rem;
-        border: var(--lines-color) 1px solid;
+
+    .header-logo-img {
+        width: 4rem;
+        margin-left: 0; 
+    }
+
+
+    header > .name {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(111, 111, 111);
+        
+        font-size: 1.5rem;
+    
+
+    }
+        .header-logo>h1{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 2.5rem;
+
+    
+        }
+    .search-img{
+      width: 2rem;
+    }
+    .login-img{
+
+      width: 2rem;
+    }
+    .cart-img{
+        width: 2rem;
+    }
+
+    /*Search input*/
+    .search{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        max-width: 50rem;
+        height: 2.6rem;
+        background-color: #191a1c;
+        margin: 0 2rem;
+    }
+    .search>input{
+        width: 100%;
+        background-color: #191a1c;
+        border: none;
+        margin-left: 1rem;
+        color: white;
+        font-size: 1rem;
+    }
+    .search>input:focus{
+    outline: none;
+    
+    }
+    .search>input::placeholder{
+    color: white;
+    }
+
+    /*login/cart*/
+    .login-cart{
+        
+    display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .login, .cart {
+
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.1rem;
+    }
+    .login > a, .cart > a {
+        font-size: 10px;
+        text-decoration: none;
+        color: white;
+    }
+    .cart {
+        background-color: green; 
+        padding: 0.5rem 1rem; 
+        border-radius: 0.3rem; /
     }
 
         /*NAVIGATION  */
@@ -418,15 +512,37 @@ main {
 
 </head>
 <body>
-    <!-- <header>
-        <img src="./assets/bild.jpg" alt="header image">
+    <header>
+        <section class="header-logo">
+          <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
+          
+        </section>
+        <section class="name">
+            <h1>Drillzone.se</h1>
+        </section>
+    
+        <section class="search">
+          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+          <input type="text" placeholder="Search...">
+        </section>
+    
+        <section class="login-cart">
+          <section class="login">
+            <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
+            <a href="#">Logga in</a>      
+          </section>
+    
+          <section class="cart">  
+            <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
+            <a href="#">Kundvagn</a>
+          </section>
+        </section>
+      </header>
 
-
-    </header> -->
     <nav>
         <ul>
             
-            <li><a href="#">Skruvdragare</a></li>
+            <li><a href="products.html">Skruvdragare</a></li>
             <li><a href="#">Tillbehör</a></li>
             <li><a href="#">Utförsäljning</a></li>
 

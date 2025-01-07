@@ -23,12 +23,94 @@ body {
 }
 
 /* Header */
-.header {
-    background-color: var(--secondary-color);
-    color: var(--texty-color);
-    text-align: center;
-    padding: 20px 0;
-}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+  }
+  header:nth-child(2n){
+    flex-basis: 50%;
+  }
+  
+  
+  
+  /*logo*/
+  .header-logo{
+    display: flex;
+    align-items: center;
+  }
+  .header-logo-img{
+    width: 4rem;
+    margin-left: 10rem;
+  }
+  .header-logo>h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 2.5rem;
+  
+    margin-right: 4rem;
+  }
+  .search-img{
+    width: 2rem;
+  }
+  .login-img{
+    width: 2rem;
+  }
+  .cart-img{
+    width: 2rem;
+  }
+  
+  /*Search input*/
+  .search{
+    display: flex;
+    align-items: center;
+    width: 50rem;
+    height: 2.6rem;
+    background-color: #191a1c;
+  }
+  .search>input{
+    width: 100%;
+    background-color: #191a1c;
+    border: none;
+    margin-left: 1rem;
+    color: white;
+    font-size: 1rem;
+  }
+  .search>input:focus{
+    outline: none;
+    border: none;
+  }
+  .search>input::placeholder{
+    color: white;
+  }
+  
+  /*login/cart*/
+  .login-cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 13rem;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  .login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: green;
+    width: 52%;
+  }
+  
 
 /* Användarprofil */
 .profile-section {
