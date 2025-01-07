@@ -1,0 +1,363 @@
+    :root{
+        --primary-color: #242526;
+        --secondary-color: #303233;
+        --texty-color: #fff;
+        --lines-color: #000;
+        --hover-color: #1489FF;
+        --button-color: #40A011;
+        --button-hover-color: #4fbb19;
+        --search-bar-color: #191A1B;
+
+
+
+        --button-font-size: 12px;
+        --p-font-size: 12px;
+        --font-family:
+        }
+    * {
+        box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    @font-face{
+        font-family: OpenSans;
+        src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
+    }
+
+    html, body {
+    height: 100%; 
+    margin: 0; 
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin:0;
+        font-family: OpenSans;
+        background-color: var(--primary-color);
+    }
+    header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    background-color: var(--primary-color); 
+    }
+
+    /* Logo */
+    .header-logo {
+        display: flex;
+        align-items: center; 
+
+    }
+
+    .header-logo-img {
+        width: 4rem;
+        margin-left: 0; 
+    }
+
+
+    header > .name {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(111, 111, 111);
+        
+        font-size: 1.5rem;
+
+
+    }
+        .header-logo>h1{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 2.5rem;
+
+
+        }
+    .search-img{
+    width: 2rem;
+    }
+    .login-img{
+
+    width: 2rem;
+    }
+    .cart-img{
+        width: 2rem;
+    }
+
+    /*Search input*/
+    .search{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        max-width: 50rem;
+        height: 2.6rem;
+        background-color: #191a1c;
+        margin: 0 2rem;
+    }
+    .search>input{
+        width: 100%;
+        background-color: #191a1c;
+        border: none;
+        margin-left: 1rem;
+        color: white;
+        font-size: 1rem;
+    }
+    .search>input:focus{
+    outline: none;
+
+    }
+    .search>input::placeholder{
+    color: white;
+    }
+
+    /*login/cart*/
+    .login-cart{
+        
+    display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .login, .cart {
+
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.1rem;
+    }
+    .login > a, .cart > a {
+        font-size: 10px;
+        text-decoration: none;
+        color: white;
+    }
+    .cart {
+        background-color: green; 
+        padding: 0.5rem 1rem; 
+        border-radius: 0.3rem; /
+    }
+
+        /*NAVIGATION  */
+
+    nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+        background-color: var(--secondary-color);
+    
+        margin-bottom: 1rem;
+        flex-wrap: nowrap; 
+        box-sizing: border-box;
+    }
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0; 
+        margin: 0; 
+
+    }
+    nav > ul > li {
+    list-style: none;
+    display: inline-flex;
+    }
+    nav > ul > li > a {
+        border-right: 1px solid var(--lines-color);
+        text-decoration: none;
+        color: var(--texty-color);
+        font-size: 10px;
+        padding: 0.8rem;
+        list-style: none;
+
+    }
+    nav > ul > li > a:hover {
+        text-decoration: none;
+        color: var(--hover-color);
+        font-style: bold;
+        
+    
+    }
+    nav > .search-bar {
+        display: flex;
+    align-items: center;
+    max-width: 340px; 
+    flex-grow: 1; 
+    margin-left: 1rem;
+    transition: max-width 0.3s ease; 
+        
+        
+    }
+
+    nav > .search-bar > input {
+        font-size: 12px;
+        color: var(--texty-color);
+        opacity: 80%;
+        padding: 0.2rem;
+        margin: 0.2rem;
+        border: none;
+        background-color: var(--search-bar-color);
+        border-radius: 2px;
+        flex: 1;
+    
+        min-width: 60px; 
+    }
+    nav > .search-bar > input:focus {
+        outline: 1px solid var(--texty-color);
+        
+    }
+    nav > .search-bar > button {
+        background-color: #1489FF;
+        color: var(--texty-color);
+        font-size: var(--button-font-size);
+        border: none;
+        border-radius: 2px;
+        padding: 0.2rem;
+        width: 1.5rem;
+        margin: 0.1rem;
+        cursor: pointer;
+        
+    }
+
+    nav > button {
+        background-color: var(--button-color);
+        color: var(--texty-color);
+        font-size: var(--button-font-size);
+        border: none;
+        border-radius: 2px;
+        padding: 0.2rem;
+        width: 2rem;
+        
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out;
+    }
+    nav > button:hover {
+        background-color: var(--button-hover-color);
+    
+    }
+
+    nav > p > a {
+    position: absolute; 
+    top: 0.8rem;
+        right: 4rem;
+        display: block; 
+        margin-top: auto; 
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+
+    }
+    nav > p > a:hover {
+        color: var(--hover-color);
+    }
+    /* SCALABILITY SEARCH BAR */
+    @media (max-width: 756px) {
+    nav {
+        flex-wrap: nowrap; 
+    }
+
+    nav > .search-bar {
+        max-width: 250px;
+    }
+
+    nav > .search-bar > input {
+        font-size: 11px; 
+    }
+    }
+
+
+    @media (max-width: 670px) {
+    nav {
+        flex-wrap: nowrap; 
+    }
+
+    nav > .search-bar {
+        max-width: 200px; 
+    }
+
+    nav > .search-bar > input {
+        font-size: 10px;
+        padding: 0.2rem;
+    }
+
+    nav > p > a {
+        top: 0.8rem; 
+        right: 4rem;
+    }
+    }
+    @media (max-width: 610px) {
+    nav {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem; 
+    }
+
+    nav > .search-bar {
+        max-width: 95%; 
+        width: 100%;
+        margin-left: 0; 
+    }
+
+    nav > button {
+        position: absolute;
+        top: -0.7rem;
+        right: 1rem;
+        margin: 0;
+    }
+
+    nav > button {
+        margin-top: 1rem;
+    }
+
+    nav > p > a {
+        top: 0.8rem; 
+        right: 4rem;
+    }
+    }
+
+
+
+
+
+            /*  FOOTER */
+            footer{
+                width: 100%;
+                position: relative;
+                bottom: 0%;
+                background-color: var(--secondary-color);
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid var(--lines-color);
+            padding: 1rem 0;
+            height: 4rem;
+            flex-shrink: 0;
+            }
+        
+            footer >  ul {
+                text-decoration: none;
+                color: #fff;
+            
+                display: flex;
+                list-style-type: none;
+                justify-content: center;
+            }
+            footer > ul > li > a {
+                text-decoration: none;
+                font-size: 10px;
+                color: #fff;
+                padding: 2rem;
+            
+            }
+            footer > ul > li > a:hover {
+                text-decoration: none;
+                color: var(--hover-color);
+                font-style: bold;
+                
+            
+            }
