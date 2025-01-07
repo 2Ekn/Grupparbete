@@ -3,19 +3,491 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Webbshop</title>
+    <style>
+    :root{
+        --primary-color: #242526;
+        --secondary-color: #303233;
+        --texty-color: #fff;
+        --lines-color: #000;
+        --hover-color: #1489FF;
+        --button-color: #40A011;
+        --button-hover-color: #4fbb19;
+        --search-bar-color: #191A1B;
+
+        --button-font-size: 12px;
+        --p-font-size: 12px;
+        --font-family:
+        }
+    * {
+        box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    @font-face{
+        font-family: OpenSans;
+        src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
+    }
+
+    html, body {
+    height: 100%; 
+    margin: 0; 
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin:0;
+        font-family: OpenSans;
+        background-color: var(--primary-color);
+    }
+    header {
+        background-color: var(--primary-color);
+        padding: 0.5rem;
+        text-align: center;
+        
+    }
+    header img {
+        width: 20rem;
+        padding: 0.5rem;
+        border: var(--lines-color) 1px solid;
+    }
+
+        /*NAVIGATION  */
+
+    nav {
+       display: flex;
+       position: relative;
+       align-items: center;
+       justify-content: space-between;
+        background-color: var(--secondary-color);
+     
+        margin-bottom: 1rem;
+        flex-wrap: nowrap; 
+        box-sizing: border-box;
+    }
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0; 
+        margin: 0; 
+
+    }
+    nav > ul > li {
+       list-style: none;
+       display: inline-flex;
+    }
+    nav > ul > li > a {
+        border-right: 1px solid var(--lines-color);
+        text-decoration: none;
+        color: var(--texty-color);
+        font-size: 10px;
+        padding: 0.8rem;
+        list-style: none;
+ 
+    }
+    nav > ul > li > a:hover {
+        text-decoration: none;
+        color: var(--hover-color);
+        font-style: bold;
+        
+      
+    }
+    nav > .search-bar {
+        display: flex;
+    align-items: center;
+    max-width: 340px; 
+    flex-grow: 1; 
+    margin-left: 1rem;
+    transition: max-width 0.3s ease; 
+        
+        
+    }
+ 
+    nav > .search-bar > input {
+        font-size: 12px;
+        color: var(--texty-color);
+        opacity: 80%;
+        padding: 0.2rem;
+        margin: 0.2rem;
+        border: none;
+        background-color: var(--search-bar-color);
+        border-radius: 2px;
+        flex: 1;
+       
+        min-width: 60px; 
+    }
+    nav > .search-bar > input:focus {
+        outline: 1px solid var(--texty-color);
+        
+    }
+    nav > .search-bar > button {
+        background-color: #1489FF;
+        color: var(--texty-color);
+        font-size: var(--button-font-size);
+        border: none;
+        border-radius: 2px;
+        padding: 0.2rem;
+        width: 1.5rem;
+        margin: 0.1rem;
+        cursor: pointer;
+        
+    }
+
+    nav > button {
+        background-color: var(--button-color);
+        color: var(--texty-color);
+        font-size: var(--button-font-size);
+        border: none;
+        border-radius: 2px;
+        padding: 0.2rem;
+        width: 2rem;
+        
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out;
+    }
+    nav > button:hover {
+        background-color: var(--button-hover-color);
+       
+    }
+
+    nav > p > a {
+       position: absolute; 
+       top: 0.8rem;
+         right: 4rem;
+        display: block; 
+        margin-top: auto; 
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+    
+    }
+    nav > p > a:hover {
+        color: var(--hover-color);
+    }
+    /* SCALABILITY SEARCH BAR */
+    @media (max-width: 756px) {
+    nav {
+        flex-wrap: nowrap; 
+    }
+
+    nav > .search-bar {
+        max-width: 250px;
+    }
+
+    nav > .search-bar > input {
+        font-size: 11px; 
+    }
+}
+
+
+@media (max-width: 670px) {
+    nav {
+        flex-wrap: nowrap; 
+    }
+
+    nav > .search-bar {
+        max-width: 200px; 
+    }
+
+    nav > .search-bar > input {
+        font-size: 10px;
+        padding: 0.2rem;
+    }
+
+    nav > p > a {
+        top: 0.8rem; 
+        right: 4rem;
+    }
+}
+@media (max-width: 610px) {
+    nav {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem; 
+    }
+
+    nav > .search-bar {
+        max-width: 95%; 
+        width: 100%;
+        margin-left: 0; 
+    }
+
+    nav > button {
+        position: absolute;
+        top: -0.7rem;
+        right: 1rem;
+        margin: 0;
+    }
+
+    nav > button {
+        margin-top: 1rem;
+    }
+
+    nav > p > a {
+        top: 0.8rem; 
+        right: 4rem;
+    }
+}
+ /* INFORMATION */
+.info {
+    width: 600px; 
+    margin: 0 auto; 
+    padding: 1rem; 
+    background-color: #1E1F20; 
+    color: var(--texty-color); 
+    border: 1px solid var(--lines-color);
+    text-align: center; 
+   
+    box-sizing: border-box; 
+    } 
+    .info > p {
+        font-family: OpenSans;
+        font-size: 10px;
+    }   
+    .info > p > a {
+        color: var(--hover-color);
+        text-decoration: none;
+    }
+    .info > p > a:hover {
+    text-decoration: underline; 
+}
+
+@media (max-width: 600px) {
+    .info {
+        width: 91%; 
+        padding: 1rem;
+        
+    }
+    .info > p {
+        font-size: 11px; 
+    }
+}
+/* MAIN */
+main {
+        
+        display:flex;
+        flex-wrap: wrap; 
+        gap: 1rem;
+        justify-content: center;
+        padding: 1rem;  
+        box-sizing: border-box;
+        
+        
+    }
+
+    main > h4 {
+        text-decoration: none;
+    font-size: 16px; 
+    font-style: normal;
+    color: var(--texty-color);
+    background-color: var(--secondary-color);
+    width: 100%; 
+    margin: 0; 
+    padding: 1rem; 
+    text-align: center; 
+    box-sizing: border-box;
+    border: 1px solid var(--lines-color); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    display: block; 
+    }
+    main > article > h6 {
+        color: var(--texty-color);
+        font-size: 10px;
+        text-align: center;
+    }
+
+
+
+    main > article   {
+        
+        color: var(--texty-color); 
+        display: flex; 
+        flex-direction: column;
+       justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--lines-color);
+      
+        padding: 1rem;
+        width: calc(25% - 1rem);
+        background-color: var(--secondary-color);
+        box-shadow: 0 2px 5px(0,0,0,0.3);
+        
+        box-sizing: border-box;
+        min-height: 18rem;
+        flex-grow: 0; 
+
+
+    }
+    main > article > .price {
+        color: var(--hover-color); 
+        font-size: 16px; 
+        /* font-weight: bold;  */
+        margin: 0.5rem 0; 
+    }
+
+    main > article > .description {
+        font-size: 10px; 
+        color: var(--texty-color); 
+        text-align: center; 
+        margin: 0.5rem 0; 
+    }
+
+    main > article > button {
+    background-color: var(--button-color);
+    color: var(--texty-color);
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    padding: 0.5rem;
+    margin: 0.1rem;
+    cursor: pointer;
+    align-self: stretch; 
+    text-align: center; 
+}
+    main > article >  button:hover {
+        background-color: var(--button-hover-color);
+        
+    }
+    main > article >  img {
+        width: 100%;
+        height: auto;
+        
+        border-radius: 2px; 
+        display: block;   
+    }
+    /* MAIN SCALABILITY */
+    @media (max-width: 600px) {
+    main > article {
+        width: 100%; 
+    }
+
+    main {
+        justify-content: center; 
+    }
+    main > h4 {
+        font-size: 14px; /
+        padding: 1.5rem;
+        text-align: center; 
+      
+    }
+}
+        /*  FOOTER */
+    footer{
+        width: 100%;
+        position: relative;
+        bottom: 0%;
+        background-color: var(--secondary-color);
+     text-align: center;
+     margin-top: 2rem;
+     border-top: 1px solid var(--lines-color);
+     padding: 1rem 0;
+     height: 4rem;
+     flex-shrink: 0;
+    }
+
+    footer >  ul {
+        text-decoration: none;
+        color: #fff;
+      
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+    }
+    footer > ul > li > a {
+        text-decoration: none;
+        font-size: 10px;
+        color: #fff;
+        padding: 2rem;
+       
+    }
+    footer > ul > li > a:hover {
+        text-decoration: none;
+        color: var(--hover-color);
+        font-style: bold;
+        
+      
+    }
+
+    </style>
+
 </head>
 <body>
-    <header>
-        <h1>Hej gruppen</h1>
-        <h1>Hej// Markus</h1>
-        <h1>Hej jag är Farzad</h1>
-        <h1>jonas</h1>
+    <!-- <header>
+        <img src="./assets/bild.jpg" alt="header image">
 
-        <h1>
-            hEJ Johannes
-        </h1>
 
-    </header>
+    </header> -->
+    <nav>
+        <ul>
+            
+            <li><a href="#">Skruvdragare</a></li>
+            <li><a href="#">Tillbehör</a></li>
+            <li><a href="#">Utförsäljning</a></li>
+
+        
+        </ul>
+                <form class="search-bar" action="search" method="GET">
+                    <input type="text" name="search" placeholder="Sök efter produkter..">
+                    <button type="submit">&#x1F50E;&#xFE0E;</button>
+                </form>
+                    <p><a href="#">Logga in</a></p>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20" fill="currentColor" class="shopping-cart">
+                            <path d="M528.12 301.319l47.273-208C577.91 81.088 561.055 64 540.046 64H135.564l-6.49-32.253A24.004 24.004 0 0 0 105.404 16H24C10.745 16 0 26.745 0 40s10.745 24 24 24h67.392l53.053 263.638c-22.657 12.131-38.06 36.76-38.06 65.362 0 40.8 33.2 74 74 74s74-33.2 74-74c0-10.84-2.359-21.133-6.59-30.434h143.181c-4.23 9.301-6.59 19.594-6.59 30.434 0 40.8 33.2 74 74 74s74-33.2 74-74c0-36.248-25.829-66.446-60.171-72.346zm-57.469-181.319l-30.314 133.178H173.931L143.617 120H484.64zM210 400c0 13.234-10.766 24-24 24s-24-10.766-24-24 10.766-24 24-24 24 10.766 24 24zm260 24c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24z"/>
+                          </svg>
+                    </button>
+    </nav>
+    <article class="info">
+        <p>Vi på Screw.se hjälper dig att hitta rätt skruvdragare för alla jobb oavsett om du är en hobbysnickare eller företagare.</p>
+        <p>Med vårt gedigna sortiment av skruvdragare och tillbehör garanterar vi att alla projekt i framtiden kommer bli en fröjd. <br> Har du några frågor tveka inte på att <a href="#">kontakta oss</a>.</p>
+    </article>
+    <main>
+        <h4>Våra mest sålda och populära produkter</h4>
+        <article>
+            <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Black and decker">
+            <h6>Black & Decker BCD001C1</h6>
+            <p class ="description">En högpresterande 18V lithium-ion borr-/ skruvdragare.</p>
+            <p class="price">890;-</p>
+            
+            <button>Add to cart</button>
+        </article>
+        <article>
+            <img src="./product-images/Makita DDF484RTJ - 4790kr.jpg" alt="Makita DDF484RTJ">
+            <h6>Makita DDF484RTJ</h6>
+            <p class ="description">Kolborstfri 18V borrskruvdragare med snabbchuck. Utrustad med dubbel LED-belysning och XP</p>
+            <p class="price">4790;-</p>
+            <button>Add to cart</button>
+        </article>
+        <article>
+            <img src="./product-images/Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="Milwaukee M18 BLDDRC-502C">
+            <h6>Milwaukee M18 BLDDRC-502C</h6>
+            <p class ="description">Extremt kompakt kolborstfri borrskruvdragare på endast 145 mm</p>
+            <p class="price">3590;-</p>
+            <button>Add to cart</button>
+        </article>
+        <article>
+            <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch GSR 12V-15">
+            <h6>Bosch GSR 12V-15</h6>
+            <p class ="description">Borrskruvdragaren med välbalanserad prestanda inom 12 V-klassen</p>
+            <p class="price">1590;-</p>
+            <button>Add to cart</button>
+        </article>
+    </main>
+
+    <footer>
+       <ul>
+        <li><a href ="#">Contact</a></li>
+        <li><a href ="#">About</a></li>
+        <li><a href ="#">FAQ</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
