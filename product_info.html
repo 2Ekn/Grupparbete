@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt information</title>
+    <style>
+        :root{
+            --primary-bg: #242526;
+            --header-bg: #303233;
+            --button-bg: #079702;
+            --font: Arial, Helvetica, sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: var(--font);
+        }
+        body{
+            background-color: var(--primary-bg);
+        }
+        .productinfo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 80%;
+        }
+        .productinfo > .bigpicture{
+            display: flex;
+            justify-content: center;
+        }
+        .productinfo > .gallery{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .productinfo > .gallery >img{
+            width: 7vw;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main class="productdisplay">
+
+        <section class="productinfo">
+
+            <section class="bigpicture">
+                <img src="product-images\Makita DDF484RTJ - 4790kr.jpg" alt="Makita">
+            </section>
+
+            <section class="gallery">
+                <img src="product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="Black & Decker">
+                <img src="product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch liten">
+                <img src="product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="Bosch stor">
+                <img src="product-images\Flex DD 2G - 2890kr.jpg" alt="Flex">
+                <img src="product-images\HiKOKI DS18DD - 2590kr.jpg" alt="Hikoki">
+                <img src="product-images\Makita DDF484RTJ - 4790kr.jpg" alt="Makita">
+                <img src="product-images\Metabo BS 18 - 3190kr.jpg" alt="Metabo">
+                <img src="product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="Milwaukee liten">
+                <img src="product-images/Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="Milwaukee stor">
+                <img src="product-images\STANLEY FatMax -  2690kr.jpg" alt="Stanley">
+            </section>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
