@@ -366,46 +366,14 @@
     }
     }
 
+    
 
 
 
 
-            /*  FOOTER */
-            /* footer{
-                width: 100%;
-                position: relative;
-                bottom: 0%;
-                background-color: var(--secondary-color);
-            text-align: center;
-            margin-top: 2rem;
-            border-top: 1px solid var(--lines-color);
-            padding: 1rem 0;
-            height: 4rem;
-            flex-shrink: 0;
-            }
-        
-            footer >  ul {
-                text-decoration: none;
-                color: #fff;
-            
-                display: flex;
-                list-style-type: none;
-                justify-content: center;
-            }
-            footer > ul > li > a {
-                text-decoration: none;
-                font-size: 10px;
-                color: #fff;
-                padding: 2rem;
-            
-            }
-            footer > ul > li > a:hover {
-                text-decoration: none;
-                color: var(--hover-color);
-                font-style: bold;
-                
-            
-            } */
+
+
+    
             /* Användarprofil */
 .profile-section {
     margin: 20px auto;
@@ -578,8 +546,7 @@
     }
 }
 
-/*Login screeen*/
-
+   /*Login screeen*/
 .login-screen-container{
     display: flex;
     flex-direction: column;
