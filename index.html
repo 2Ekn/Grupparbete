@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webbshop</title>
+    <title>Drillzone.se</title>
     <link rel="stylesheet" href="OriginalCSS.css">
     <style>
         /*        skapar vi olika sidor, gör classes för varje sida. 
@@ -388,8 +388,9 @@ main {
     padding: 1rem; 
     text-align: center; 
     box-sizing: border-box;
-    border: 1px solid var(--lines-color); 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 8px;
+    /* border: 1px solid var(--lines-color);  */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  */
     display: block; 
     }
     main > article > h6 {
@@ -407,8 +408,8 @@ main {
         flex-direction: column;
        justify-content: space-between;
         align-items: center;
-        border: 1px solid var(--lines-color);
-      
+        /* border: 1px solid var(--lines-color); */
+        border-radius: 8px;
         padding: 1rem;
         width: calc(25% - 1rem);
         background-color: var(--secondary-color);
@@ -439,7 +440,7 @@ main {
     color: var(--texty-color);
     font-size: 12px;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 0.5rem;
     margin: 0.1rem;
     cursor: pointer;
@@ -458,7 +459,7 @@ main {
         display: block;   
     }
     /* MAIN SCALABILITY */
-    @media (max-width: 600px) {
+     @media(max-width: 600px) {
     main > article {
         width: 100%; 
     }
@@ -467,7 +468,7 @@ main {
         justify-content: center; 
     }
     main > h4 {
-        font-size: 14px; /
+        font-size: 14px; 
         padding: 1.5rem;
         text-align: center; 
       
@@ -479,12 +480,12 @@ main {
         position: relative;
         bottom: 0%;
         background-color: var(--secondary-color);
-     text-align: center;
-     margin-top: 2rem;
-     border-top: 1px solid var(--lines-color);
-     padding: 1rem 0;
-     height: 4rem;
-     flex-shrink: 0;
+        text-align: center;
+        margin-top: 2rem;
+        border-top: 1px solid var(--lines-color);
+        padding: 1rem 0;
+        height: 4rem;
+        flex-shrink: 0;
     }
 
     footer >  ul {
@@ -531,7 +532,7 @@ main {
         <section class="login-cart">
           <section class="login">
             <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
-            <a href="#">Logga in</a>      
+            <a href="login.html">Logga in</a>      
           </section>
     
           <section class="cart">  
@@ -550,19 +551,19 @@ main {
 
         
         </ul>
-                <form class="search-bar" action="search" method="GET">
+                <!-- <form class="search-bar" action="search" method="GET">
                     <input type="text" name="search" placeholder="Sök efter produkter..">
                     <button type="submit">&#x1F50E;&#xFE0E;</button>
-                </form>
-                    <p><a href="#">Logga in</a></p>
-                    <button>
+                </form> -->
+                    <p>Besök oss på:</p>
+                    <!-- <button>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20" fill="currentColor" class="shopping-cart">
                             <path d="M528.12 301.319l47.273-208C577.91 81.088 561.055 64 540.046 64H135.564l-6.49-32.253A24.004 24.004 0 0 0 105.404 16H24C10.745 16 0 26.745 0 40s10.745 24 24 24h67.392l53.053 263.638c-22.657 12.131-38.06 36.76-38.06 65.362 0 40.8 33.2 74 74 74s74-33.2 74-74c0-10.84-2.359-21.133-6.59-30.434h143.181c-4.23 9.301-6.59 19.594-6.59 30.434 0 40.8 33.2 74 74 74s74-33.2 74-74c0-36.248-25.829-66.446-60.171-72.346zm-57.469-181.319l-30.314 133.178H173.931L143.617 120H484.64zM210 400c0 13.234-10.766 24-24 24s-24-10.766-24-24 10.766-24 24-24 24 10.766 24 24zm260 24c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24z"/>
                           </svg>
-                    </button>
+                    </button> -->
     </nav>
     <article class="info">
-        <p>Vi på Screw.se hjälper dig att hitta rätt skruvdragare för alla jobb oavsett om du är en hobbysnickare eller företagare.</p>
+        <p>Vi på Drillzone.se hjälper dig att hitta rätt skruvdragare för alla jobb oavsett om du är en hobbysnickare eller företagare.</p>
         <p>Med vårt gedigna sortiment av skruvdragare och tillbehör garanterar vi att alla projekt i framtiden kommer bli en fröjd. <br> Har du några frågor tveka inte på att <a href="#">kontakta oss</a>.</p>
     </article>
     <main>
