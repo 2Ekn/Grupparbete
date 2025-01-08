@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drillzone.se</title>
+    <title>Drillzone.se/contact</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
         /*        skapar vi olika sidor, gör classes för varje sida. 
@@ -35,7 +35,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
         @font-face {
             font-family: OpenSans;
             src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
-        } 
+        }
 
         html,
         body {
@@ -56,28 +56,28 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
         /* MAIN  */
         .social-media {
-        display: flex;
-        justify-content: center;
-        gap: .5rem;
-        width: 5rem;
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            width: 5rem;
 
 
-    }
+        }
 
 
 
-    nav>p {
-        position: absolute;
-        top: 0.8rem;
-        right: 5rem;
-        display: block;
-        margin-top: auto;
-        color: var(--texty-color);
-        text-decoration: underline;
-        font-size: 10px;
-        margin-left: 2rem;
+        nav>p {
+            position: absolute;
+            top: 0.8rem;
+            right: 5rem;
+            display: block;
+            margin-top: auto;
+            color: var(--texty-color);
+            text-decoration: underline;
+            font-size: 10px;
+            margin-left: 2rem;
 
-    }
+        }
 
 
 
@@ -102,6 +102,34 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
             }
         }
+
+        .contact>.contact-info>p>a {
+            text-decoration: underline;
+            font-size: 12px;
+            color: var(--texty-color);
+        }
+
+        /* .contact .contact-info img {
+            width: 100%;
+
+            height: 100%;
+
+            max-width: 300px;
+
+            transition: transform 0.3s ease;
+            margin-top: 3rem;
+            border-radius: 50%;
+
+        } */
+        .contact .contact-info img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin-top: 3rem;
+            border-radius: 2px;
+            opacity: 0.8;
+          
+        }
     </style>
 
 </head>
@@ -109,28 +137,28 @@ exempelvid main > .profile-menu eller main > .checkout*/
 <body>
     <header>
         <button class="icon-button">
-          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
-          <a href="index.html">Drillzone.se</a>
+            <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+            <a href="index.html">Drillzone.se</a>
         </button>
-    
-    
+
+
         <section class="search">
-          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
-          <input type="text" placeholder="Search...">
+            <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+            <input type="text" placeholder="Search...">
         </section>
-    
+
         <section class="login-cart">
-          <button class="login">
-            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
-            <a class="login-text" href="login.html">Logga in</a>
-          </button>
-    
-          <button class="cart">
-            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="#">Kundvagn</a>
-          </button>
+            <button class="login">
+                <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+                <a class="login-text" href="login.html">Logga in</a>
+            </button>
+
+            <button class="cart">
+                <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+                <a class="cart-text" href="#">Kundvagn</a>
+            </button>
         </section>
-      </header>
+    </header>
 
     <nav>
         <ul>
@@ -154,7 +182,15 @@ exempelvid main > .profile-menu eller main > .checkout*/
     <main class="contact">
         <article class="contact-info">
             <h4>Här nedan hittar du några olika sätt att kontakta oss</h4>
-            <p>Har du frågor? Hör gärna av dig till oss nedan</p>
+            <p>Har du frågor? Hör gärna av dig till oss på något av alternativen nedan. </p>
+            <p>Dem vanligast ställda frågorna finner du här <a href="faq.html">kundsupport/faq </a></p>
+            <section class="kundsupport">
+                <img src="./assets/kundsupport.jpg" alt="kundsupport">
+            </section>
+
+
+        </article>
+        <article class="kundsupport">
 
         </article>
 
@@ -165,13 +201,13 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 <p>Göteborg: <a href="tel:070-7221005">070-7221005</a></p>
                 <p>Malmö: <a href="tel:070-7221004">070-7221004</a></p>
             </section>
-       
+
             <section>
                 <h5>Mail</h5>
-                
-                    <p>Ställ en fråga på mail<br> Vi svarar alltid inom 24h</p>
-                    
-                
+
+                <p>Ställ en fråga på mail<br> Vi svarar alltid inom 24h</p>
+
+
                 <img src="./assets/mail.png" alt="mail" width="40px" height="40px" onclick="openMail()"
                     style="cursor: pointer;">
 
@@ -185,17 +221,18 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 <h5>Besök oss</h5>
                 <ul>
                     <li>
-                        Stockholm: 
-                        <a href="https://www.google.com/maps/place/Västra+Trädgårdsgatan+15,+111+53+Stockholm" target="_blank">
+                        Stockholm:
+                        <a href="https://www.google.com/maps/place/Västra+Trädgårdsgatan+15,+111+53+Stockholm"
+                            target="_blank">
                             Västra Trädgårdsgatan 15, 111 53
                     </li>
                     <li>
-                        Göteborg: 
+                        Göteborg:
                         <a href="https://www.google.com/maps/place/Avenyn+31,+411+36+Göteborg" target="_blank">
                             Avenyn 31, 411 36
                         </a>
-                        
-                        Malmö: 
+
+                        Malmö:
                         <a href="https://www.google.com/maps/place/Stortorget+12,+211+34+Malmö" target="_blank">
                             Stortorget 12, 211 34
                         </a>
@@ -208,10 +245,10 @@ exempelvid main > .profile-menu eller main > .checkout*/
     <footer class="footer">
         <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
         <ul>
-            <li><a href="#">Hem</a></li>
+            <li><a href="index.html">Hem</a></li>
             <li><a href="products.html">Produkter</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Om oss</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="about.html">Om oss</a></li>
         </ul>
     </footer>
 </body>
