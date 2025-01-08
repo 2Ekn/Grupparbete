@@ -4,69 +4,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkt information</title>
+    <link rel="stylesheet" href="./OriginalCSS.css">
     <style>
-        :root{
-            --primary-bg: #242526;
-            --header-bg: #303233;
-            --button-bg: #079702;
-            --font: Arial, Helvetica, sans-serif;
+        /* Product_info (Jonas) */
+        .productdisplay h2{
+            font-size: 2vw;
+            margin: 2%;
+            padding: 2%;
+            text-align: center;
+            color: white;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
         }
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: var(--font);
+        .productdisplay .productinfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 0.5rem;
         }
-        body{
-            background-color: var(--primary-bg);
+        
+        .productdisplay .product-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
         }
-        .productinfo{
+        .productdisplay .product-item img { /*gallery-pictures */
+            width: 7vw;
+        }
+        .productdisplay .product-item .bigarticel {
+            display: flex;
+            position: absolute;
+            opacity: 0;  
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+            border: 1px solid var(--lines-color);
+            gap: 2rem;
+            margin-top: 100%;
+            width: 25vw;
+            font-size: clamp(2px, 1.5vw, 16px);
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        .productdisplay .product-item:hover{
+            cursor: pointer;
+        }
+        .productdisplay .product-item:hover .bigarticel {
+            opacity: 1;
+        }
+
+        .productdisplay .product-item .bigarticel img { /*big-picture */
+            width: 8rem;
+        }
+        .productdisplay .product-item .bigarticel .info {
+            
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
-            width: 80%;
-        }
-        .productinfo > .bigpicture{
-            display: flex;
             justify-content: center;
+            color: var(--texty-color);
         }
-        .productinfo > .gallery{
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-        }
-        .productinfo > .gallery >img{
-            width: 7vw;
-            border: 1px solid red;
+
+        .productdisplay .product-item .bigarticel .info > h3 {
+            margin-bottom: 2rem;
         }
     </style>
 </head>
 <body>
-    <header></header>
-    <nav></nav>
-    <main class="productdisplay">
 
-        <section class="productinfo">
-
-            <section class="bigpicture">
-                <img src="product-images\Makita DDF484RTJ - 4790kr.jpg" alt="Makita">
-            </section>
-
-            <section class="gallery">
-                <img src="product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="Black & Decker">
-                <img src="product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch liten">
-                <img src="product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="Bosch stor">
-                <img src="product-images\Flex DD 2G - 2890kr.jpg" alt="Flex">
-                <img src="product-images\HiKOKI DS18DD - 2590kr.jpg" alt="Hikoki">
-                <img src="product-images\Makita DDF484RTJ - 4790kr.jpg" alt="Makita">
-                <img src="product-images\Metabo BS 18 - 3190kr.jpg" alt="Metabo">
-                <img src="product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="Milwaukee liten">
-                <img src="product-images/Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="Milwaukee stor">
-                <img src="product-images\STANLEY FatMax -  2690kr.jpg" alt="Stanley">
-            </section>
-
+    <header>
+        <section class="header-logo">
+          <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
+          
         </section>
+        <section class="name">
+            <h1>Drillzone.se</h1>
+        </section>
+    
+        <section class="search">
+          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+          <input type="text" placeholder="Search...">
+        </section>
+    
+        <section class="login-cart">
+          <section class="login">
+            <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
+            <a href="login.html">Logga in</a>      
+          </section>
+    
+          <section class="cart">  
+            <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
+            <a href="#">Kundvagn</a>
+          </section>
+        </section>
+      </header>
+
+    <nav>
+        <ul>
+            
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="#">Tillbehör</a></li>
+            <li><a href="#">Utförsäljning</a></li>
+
+        
+        </ul>
+                <!-- <form class="search-bar" action="search" method="GET">
+                    <input type="text" name="search" placeholder="Sök efter produkter..">
+                    <button type="submit">&#x1F50E;&#xFE0E;</button>
+                </form> -->
+                    <p>Besök oss på:</p>
+                    <!-- <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20" fill="currentColor" class="shopping-cart">
+                            <path d="M528.12 301.319l47.273-208C577.91 81.088 561.055 64 540.046 64H135.564l-6.49-32.253A24.004 24.004 0 0 0 105.404 16H24C10.745 16 0 26.745 0 40s10.745 24 24 24h67.392l53.053 263.638c-22.657 12.131-38.06 36.76-38.06 65.362 0 40.8 33.2 74 74 74s74-33.2 74-74c0-10.84-2.359-21.133-6.59-30.434h143.181c-4.23 9.301-6.59 19.594-6.59 30.434 0 40.8 33.2 74 74 74s74-33.2 74-74c0-36.248-25.829-66.446-60.171-72.346zm-57.469-181.319l-30.314 133.178H173.931L143.617 120H484.64zM210 400c0 13.234-10.766 24-24 24s-24-10.766-24-24 10.766-24 24-24 24 10.766 24 24zm260 24c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24z"/>
+                          </svg>
+                    </button> -->
+    </nav>
+    
+    <main class="productdisplay">
+        <h2>Produkt information</h2>
+        <article class="productinfo">
+
+            <section class="product-item">
+                <img src="product-images/Makita DDF484RTJ - 4790kr.jpg" alt="Makita DDF484RTJ">
+                <section class="bigarticel">
+                    <!-- <img src="product-images/Makita DDF484RTJ - 4790kr.jpg" alt="Makita DDF484RTJ"> -->
+                    <section class="info">
+                        <h3>Makita DDF484RTJ</h3>
+                        <p>Borrskruvdragare på 18V med kolborstfri motor och momentläge i 21 steg. Vridmoment på 54Nm med varvtal upp till 2000/min. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="Black & Decker BCD001C1">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="Black & Decker BCD001C1"> -->
+                    <section class="info">
+                        <h3>Black & Decker BCD001C1</h3>
+                        <p>Borrskruvdragare på 18 V med 11 momentsteg, maximalt vridmoment på 37 Nm och hastighet på 0-600 varv/min. Ultrakompakt, lätt design för svåråtkomliga, begränsade ytor. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch GSR 12V-15">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch GSR 12V-15"> -->
+                    <section class="info">
+                        <h3>Bosch GSR 12V-15</h3>
+                        <p>Borrskruvdragare på 12V med ett varvtal på upp till 1300 varv/min 30 Nm vridmoment. Dess kompakta design ger optimal hantering och gör den perfekt för arbete över huvudhöjd samt i trånga utrymmen. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="Bosch GSR 18V-EC">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="Bosch GSR 18V-EC"> -->
+                    <section class="info">
+                        <h3>Bosch GSR 18V-EC</h3>
+                        <p>Borrskruvdragare på 18 V med kolborstfri motor, varvtal på upp till 1900/min och vridmoment på upp till 60 Nm. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\Flex DD 2G - 2890kr.jpg" alt="Flex DD 2G">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\Flex DD 2G - 2890kr.jpg" alt="Flex DD 2G"> -->
+                    <section class="info">
+                        <h3>Flex DD 2G</h3>
+                        <p>Borrskruvdragare på 10,8V med två hastigheter, elektroniskt snabbstopp och höger/vänster-rotation med säkerhetsspärr. Vridmoment på 34Nm och upp till 1300 varv/min. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\HiKOKI DS18DD - 2590kr.jpg" alt="HiKOKI DS18DD">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\HiKOKI DS18DD - 2590kr.jpg" alt="HiKOKI DS18DD"> -->
+                    <section class="info">
+                        <h3>HiKOKI DS18DD</h3>
+                        <p>Borrskruvdragare på 18V med upp till 55 Nm i moment, 13 mm:s snabbchuck, motorbroms samt en kolborstfri motor för ökad drifttid och längre livstid. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\Metabo BS 18 - 3190kr.jpg" alt="Metabo BS 18">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\Metabo BS 18 - 3190kr.jpg" alt="Metabo BS 18"> -->
+                    <section class="info">
+                        <h3>Metabo BS 18</h3>
+                        <p>Kompakt 18 V borrskruvdragare med kort design och ett vridmoment mellan 24-48 Nm. Skruvdragaren har ett integrerat arbetsljus för belysning av arbetsplatsen samt praktisk bälteskrok och bitsförvaring, och verktygslös montering till höger eller vänster. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="Milwaukee M12 BDD-202C">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="Milwaukee M12 BDD-202C"> -->
+                    <section class="info">
+                        <h3>Milwaukee M12 BDD-202C</h3>
+                        <p>Borrskruvdragare på 12V med momentläge i 21 steg och 2 hastigheter. Vridmoment på 30Nm och upp till 1500 varv/min. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\STANLEY FatMax -  2690kr.jpg" alt="STANLEY FatMax">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\STANLEY FatMax -  2690kr.jpg" alt="STANLEY FatMax"> -->
+                    <section class="info">
+                        <h3>STANLEY FatMax</h3>
+                        <p>Slagborrmaskin på 18 V med upp till 5,950/25,500 slag per minut och maximalt vridmoment på 50 Nm. Utrustad med en kraftfull motor som ger 1500 varv/minut och möjliggör effektiv borrning och skruvdragning i trä, metall och plast. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="product-item">
+                <img src="product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="Milwaukee M18 BLDDRC-502C">
+                <section class="bigarticel">
+                    <!-- <img src="product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="Milwaukee M18 BLDDRC-502C"> -->
+                    <section class="info">
+                        <h3>Milwaukee M18 BLDDRC-502C</h3>
+                        <p>Milwaukee M18 BLDDRC-502C är en kompakt borrskruvdragare som endast är 145 mm lång, vilket gör den perfekt för åtkomst i trånga utrymmen. Den har en avancerad 13 mm metallchuck och erbjuder ett högt vridmoment på 62 Nm, samtidigt som den är lätt och hanterbar. Levereras med batteri och laddare</p>
+                    </section>
+                </section>
+            
+        </article>
     </main>
     <footer></footer>
 </body>

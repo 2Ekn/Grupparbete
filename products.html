@@ -4,123 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkter</title>
+    <link rel="stylesheet" href="./OriginalCSS.css">
+
     <style>
-        :root{
-            --primary-bg: #242526;
-            --header-bg: #303233;
-            --button-bg: #079702;
-            --font: Arial, Helvetica, sans-serif;
-        }
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: var(--font);
-        }
-        body{
-            background-color: var(--primary-bg);
-        }
 
-        /* Header */
-        header{
-            background-color: var(--header-bg);
-            padding: 0.3rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 1rem;
-            justify-content: space-between;
-            border-bottom: 3px solid #dfdfdf;
-        }
-        .left-section{
-            display: flex;
-            align-items: center;
-            margin-left: 1vw;
-            border: 5px solid hsl(0, 0%, 57%);
-            border-radius: 20px;
-            padding-left: 4vw;
-            padding-right: 4vw;
-        }
-        .left-section >*{
-            text-decoration: none;
-            color: white;
-            font-weight: bolder;
-            font-family: sans-serif;
-            font-size: 3vw;
-        }
-        .left-section p {
-            color: var(--button-bg);
-        }
-        .middle-section{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-        }
-        .search-bar{
-            display: flex;
-            width: 30vw;
-            padding: 0.5vw;
-            font-size: 1.5vw;
-        }
-        .right-section{
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-right: 2vw;
-
-        }
-        .login-button{
-            display: flex;
-            flex-wrap: wrap;
-            background-color: var(--button-bg); 
-            color: white; 
-            border: none; 
-            padding: 0.5vw 2vw; 
-            font-size: 1.5vw; 
-            border-radius: 0.5vw; 
-            cursor: pointer; 
-        }
-
-        /* Navigationbar */
-        nav{
-            background-color: rgb(223, 223, 223);
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-        }
-        .links{
-            text-decoration: none;
-            color: #242526;
-            font-size: 1.5vw;
-        }
-
-        /* Products */
-        h2{
+        /* Products(Jonas) */
+        .products h2{
             font-size: 2vw;
             margin: 2%;
+            padding: 2%;
             text-align: center;
             color: white;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
         }
-        .allproducts{
+        .products .allproducts{
             max-width: 800px;
             margin: 0 auto;
-            border: 2px solid white;
-            border-radius: 2rem;
+            
             padding: 1rem;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 1rem;
-            row-gap: 2rem;
-            color: white;
+            row-gap: 1rem;
+            color: var(--texty-color);
         }
-        .product-image{
+        .products .allproducts .full-article{
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            border: 1px solid white ;
+            padding: 8%;
+        }
+        .products .product-image{
+            cursor: pointer; 
             width: 100%;
             display: flex;
-            border-radius: 1.5rem;
+            border-radius: 2px;
         }
-        .buy-button{
-            background-color: #079702; 
-            color: white; 
+        .products .buy-button{
+            background-color: var(--button-color);
+            color: var(--texty-color); 
             border: none; 
             width: 100%;
             padding: 10px 20px; 
@@ -129,14 +52,13 @@
             cursor: pointer; 
             margin-top: 10%;
         }
-        .articel-data{
-            margin: 5% 0;
+        .products .articel-data{
             text-align: center;
-            font-size: clamp(2px, 2vw, 24px);
+            font-size: clamp(1px, 2vw, 24px);
         }
-        .product-name{
+        .products .product-name{
             font-size: 1.5vw;
-            font-size: clamp(2px, 1.5vw, 16px);
+            font-size: clamp(2px, 1.5vw, 14px);
             margin: 5% 0;
             font-weight: bold;
         }
@@ -144,28 +66,60 @@
 </head>
 <body>
     <header>
-        <div class="left-section">
-            <a href="">DRILLZONE</a>
-            <p>.se</p>
-        </div>
-        <div class="middle-section">
-            <input class="search-bar" placeholder="Sök produkt" type="text">
-        </div>
-        <div class="right-section">
-            <button class="login-button">Logga in</button>
-        </div>
-    </header>
+        <section class="header-logo">
+          <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
+          
+        </section>
+        <section class="name">
+            <h1>Drillzone.se</h1>
+        </section>
     
-        <nav>
-            <a class="links" href="">Produkter</a>
-            <a class="links" href="">Erbjudanden</a>
-        </nav>
+        <section class="search">
+          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+          <input type="text" placeholder="Search...">
+        </section>
+    
+        <section class="login-cart">
+          <section class="login">
+            <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
+            <a href="login.html">Logga in</a>      
+          </section>
+    
+          <section class="cart">  
+            <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
+            <a href="#">Kundvagn</a>
+          </section>
+        </section>
+      </header>
+
+    <nav>
+        <ul>
+            
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="#">Tillbehör</a></li>
+            <li><a href="#">Utförsäljning</a></li>
+
+        
+        </ul>
+                <!-- <form class="search-bar" action="search" method="GET">
+                    <input type="text" name="search" placeholder="Sök efter produkter..">
+                    <button type="submit">&#x1F50E;&#xFE0E;</button>
+                </form> -->
+                    <p>Besök oss på:</p>
+                    <!-- <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20" fill="currentColor" class="shopping-cart">
+                            <path d="M528.12 301.319l47.273-208C577.91 81.088 561.055 64 540.046 64H135.564l-6.49-32.253A24.004 24.004 0 0 0 105.404 16H24C10.745 16 0 26.745 0 40s10.745 24 24 24h67.392l53.053 263.638c-22.657 12.131-38.06 36.76-38.06 65.362 0 40.8 33.2 74 74 74s74-33.2 74-74c0-10.84-2.359-21.133-6.59-30.434h143.181c-4.23 9.301-6.59 19.594-6.59 30.434 0 40.8 33.2 74 74 74s74-33.2 74-74c0-36.248-25.829-66.446-60.171-72.346zm-57.469-181.319l-30.314 133.178H173.931L143.617 120H484.64zM210 400c0 13.234-10.766 24-24 24s-24-10.766-24-24 10.766-24 24-24 24 10.766 24 24zm260 24c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24z"/>
+                          </svg>
+                    </button> -->
+    </nav>
         
     <main class="products">
         <h2>Produkter</h2>
         <section class="allproducts">
-            <article>
-                <img class="product-image" src="./product-images\Makita DDF484RTJ - 4790kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\Makita DDF484RTJ - 4790kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">Makita DDF484RTJ</p>
                     <p class="price-button">4790:-</p>
@@ -173,8 +127,10 @@
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">Bosch GSR 18V-EC</p>
                     <p class="price-button">3679:-</p>
@@ -182,17 +138,21 @@
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
-                    <p class="product-name">Milwaukee M18 BLDDRC-502C</p>
+                    <p class="product-name">Milwaukee M18 BLDDRC</p>
                     <p class="price-button">3590:-</p>
                     <button class="buy-button">KÖP</button>
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\HiKOKI DS18DD - 2590kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\HiKOKI DS18DD - 2590kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">HiKOKI DS18DD</p>
                     <p class="price-button">2590:-</p>
@@ -200,8 +160,10 @@
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\STANLEY FatMax -  2690kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\STANLEY FatMax -  2690kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">STANLEY FatMax</p>
                     <p class="price-button">2690:-</p>
@@ -209,8 +171,10 @@
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\Metabo BS 18 - 3190kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\Metabo BS 18 - 3190kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">Metabo BS 18</p>
                     <p class="price-button">3190:-</p>
@@ -218,8 +182,10 @@
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">Milwaukee M12 BDD-202C</p>
                     <p class="price-button">2390:-</p>
@@ -227,8 +193,10 @@
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">Black & Decker BCD001C1</p>
                     <p class="price-button">890:-</p>
@@ -236,8 +204,10 @@
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\Flex DD 2G - 2890kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\Flex DD 2G - 2890kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">Flex DD 2G</p>
                     <p class="price-button">2890:-</p>
@@ -245,8 +215,10 @@
                 </div>
             </article>
     
-            <article>
-                <img class="product-image" src="./product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="produktbild">
+            <article class="full-article">
+                <a href="./product_info.html">
+                    <img class="product-image" src="./product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="produktbild">
+                </a>
                 <div class="articel-data">
                     <p class="product-name">Bosch GSR 12V-15</p>
                     <p class="price-button">1590:-</p>
