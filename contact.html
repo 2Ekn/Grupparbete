@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drillzone.se</title>
+    <link rel="stylesheet" href="OriginalCSS.css">
+    <style>
+        /*        skapar vi olika sidor, gör classes för varje sida. 
+exempelvid main > .profile-menu eller main > .checkout*/
+        :root {
+            /* --primary-color: #242526; */
+            --secondary-color: #303233;
+            --texty-color: #fff;
+            --lines-color: #000;
+            --hover-color: #1489FF;
+            --button-color: #40A011;
+            --button-hover-color: #4fbb19;
+            --search-bar-color: #191A1B;
+
+
+
+            --button-font-size: 12px;
+            --p-font-size: 12px;
+            --font-family:
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: OpenSans;
+            src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: OpenSans;
+            background-color: var(--primary-color);
+        }
+
+
+
+        /* MAIN  */
+
+
+
+
+
+
+
+
+
+        @media(max-width: 600px) {
+            main>article {
+                width: 100%;
+            }
+
+            main {
+                justify-content: center;
+            }
+
+            main>h4 {
+                font-size: 14px;
+                padding: 1.5rem;
+                text-align: center;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <section class="header-logo">
+            <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
+
+        </section>
+        <section class="name">
+            <h1>Drillzone.se</h1>
+        </section>
+
+        <section class="search">
+            <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+            <input type="text" placeholder="Search...">
+        </section>
+
+        <section class="login-cart">
+            <section class="login">
+                <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
+                <a href="login.html">Logga in</a>
+            </section>
+
+            <section class="cart">
+                <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
+                <a href="#">Kundvagn</a>
+            </section>
+        </section>
+    </header>
+
+    <nav>
+        <ul>
+
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="products.html">Tillbehör</a></li>
+            <li><a href="products.html">Utförsäljning</a></li>
+
+
+        </ul>
+
+        <p>Besök oss på:</p>
+        <article class="social-media">
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
+                    height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
+                    height="20px"></a>
+        </article>
+    </nav>
+
+    <main class="contact">
+        <article class="contact-info">
+            <h4>Här nedan hittar du några olika sätt att kontakta oss</h4>
+            <p>Har du frågor? Hör gärna av dig till oss nedan</p>
+
+        </article>
+
+        <article class="contact-options">
+            <section>
+                <h5>Telefon</h5>
+                <p>Stockholm: <a href="tel:070-7221006">070-7221006</a></p>
+                <p>Göteborg: <a href="tel:070-7221005">070-7221005</a></p>
+                <p>Malmö: <a href="tel:070-7221004">070-7221004</a></p>
+            </section>
+       
+            <section>
+                <h5>Mail</h5>
+                
+                    <p>Ställ en fråga på mail<br> Vi svarar alltid inom 24h</p>
+                    
+                
+                <img src="./assets/mail.png" alt="mail" width="40px" height="40px" onclick="openMail()"
+                    style="cursor: pointer;">
+
+                <script>
+                    function openMail() {
+                        window.location.href = "mailto:info@drillzone.se?subject=Jag%20har%20en%20fråga";
+                    }
+                </script>
+            </section>
+            <section>
+                <h5>Besök oss</h5>
+                <ul>
+                    <li>
+                        Stockholm: 
+                        <a href="https://www.google.com/maps/place/Västra+Trädgårdsgatan+15,+111+53+Stockholm" target="_blank">
+                            Västra Trädgårdsgatan 15, 111 53
+                    </li>
+                    <li>
+                        Göteborg: 
+                        <a href="https://www.google.com/maps/place/Avenyn+31,+411+36+Göteborg" target="_blank">
+                            Avenyn 31, 411 36
+                        </a>
+                        
+                        Malmö: 
+                        <a href="https://www.google.com/maps/place/Stortorget+12,+211+34+Malmö" target="_blank">
+                            Stortorget 12, 211 34
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+        <ul>
+            <li><a href="#">Hem</a></li>
+            <li><a href="products.html">Produkter</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Om oss</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
