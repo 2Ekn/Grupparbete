@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkt information</title>
-    <link rel="stylesheet" href="./OriginalCSS.css">
+    <link rel="stylesheet" href="./OriginalStyling.css">
     <style>
         /* Product_info (Jonas) */
         .productdisplay h2{
@@ -68,58 +68,74 @@
         .productdisplay .product-item .bigarticel .info > h3 {
             margin-bottom: 2rem;
         }
+
+        /* extra */
+        .social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+        }
+
+        nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <section class="header-logo">
-          <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
-          
-        </section>
-        <section class="name">
-            <h1>Drillzone.se</h1>
-        </section>
-    
-        <section class="search">
-          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
-          <input type="text" placeholder="Search...">
-        </section>
-    
-        <section class="login-cart">
-          <section class="login">
-            <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
-            <a href="login.html">Logga in</a>      
-          </section>
-    
-          <section class="cart">  
-            <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
-            <a href="#">Kundvagn</a>
-          </section>
-        </section>
-      </header>
+      <button class="icon-button">
+        <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+        <a href="index.html">Drillzone.se</a>
+      </button>
+  
+  
+      <section class="search">
+        <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+        <input type="text" placeholder="Search...">
+      </section>
+  
+      <section class="login-cart">
+        <button class="login">
+          <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+          <a class="login-text" href="login.html">Logga in</a>
+        </button>
+  
+        <button class="cart">
+          <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+          <a class="cart-text" href="#">Kundvagn</a>
+        </button>
+      </section>
+    </header>
 
+    <!-- Navigationbar -->
     <nav>
         <ul>
-            
             <li><a href="products.html">Skruvdragare</a></li>
-            <li><a href="#">Tillbehör</a></li>
-            <li><a href="#">Utförsäljning</a></li>
-
-        
+            <li><a href="products.html">Tillbehör</a></li>
+            <li><a href="products.html">Utförsäljning</a></li>
         </ul>
-                <!-- <form class="search-bar" action="search" method="GET">
-                    <input type="text" name="search" placeholder="Sök efter produkter..">
-                    <button type="submit">&#x1F50E;&#xFE0E;</button>
-                </form> -->
-                    <p>Besök oss på:</p>
-                    <!-- <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20" fill="currentColor" class="shopping-cart">
-                            <path d="M528.12 301.319l47.273-208C577.91 81.088 561.055 64 540.046 64H135.564l-6.49-32.253A24.004 24.004 0 0 0 105.404 16H24C10.745 16 0 26.745 0 40s10.745 24 24 24h67.392l53.053 263.638c-22.657 12.131-38.06 36.76-38.06 65.362 0 40.8 33.2 74 74 74s74-33.2 74-74c0-10.84-2.359-21.133-6.59-30.434h143.181c-4.23 9.301-6.59 19.594-6.59 30.434 0 40.8 33.2 74 74 74s74-33.2 74-74c0-36.248-25.829-66.446-60.171-72.346zm-57.469-181.319l-30.314 133.178H173.931L143.617 120H484.64zM210 400c0 13.234-10.766 24-24 24s-24-10.766-24-24 10.766-24 24-24 24 10.766 24 24zm260 24c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24z"/>
-                          </svg>
-                    </button> -->
+
+        <p>Besök oss på:</p>
+        <article class="social-media">
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
+                    height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
+                    height="20px"></a>
+        </article>
     </nav>
     
+    <!-- Main -->
     <main class="productdisplay">
         <h2>Produkt information</h2>
         <article class="productinfo">
@@ -235,6 +251,14 @@
             
         </article>
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="products.html">Produkter</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="#">Om oss</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
