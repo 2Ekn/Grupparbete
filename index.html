@@ -46,7 +46,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
         font-family: OpenSans;
         background-color: var(--primary-color);
     }
-    header {
+    /* header {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -57,7 +57,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
     background-color: var(--primary-color); 
 }
 
-/* Logo */
+Logo
     .header-logo {
         display: flex;
         align-items: center; 
@@ -94,10 +94,10 @@ exempelvid main > .profile-menu eller main > .checkout*/
     }
     .cart-img{
         width: 2rem;
-    }
+    } */
 
     /*Search input*/
-    .search{
+    /* .search{
         display: flex;
         align-items: center;
         flex-grow: 1;
@@ -123,7 +123,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
     }
 
     /*login/cart*/
-    .login-cart{
+    /* .login-cart{
         
     display: flex;
         align-items: center;
@@ -134,8 +134,8 @@ exempelvid main > .profile-menu eller main > .checkout*/
         display: flex;
         align-items: center;
         color: white;
-        font-size: 1.1rem;
-    }
+        font-size: 1.1rem; */
+    /* }
     .login > a, .cart > a {
         font-size: 10px;
         text-decoration: none;
@@ -145,11 +145,74 @@ exempelvid main > .profile-menu eller main > .checkout*/
         background-color: green; 
         padding: 0.5rem 1rem; 
         border-radius: 0.3rem; /
+    } */ 
+
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+
+
+    }
+
+
+
+    nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+
+    }
+    /*MAIN INFORMATION */
+    .index-info {
+        width: 600px;
+        margin: 0 auto;
+        padding: 1rem;
+        background-color: #1E1F20;
+        color: var(--texty-color);
+        border: 1px solid var(--lines-color);
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+    .index-info>p {
+        font-family: OpenSans;
+        font-size: 10px;
+    }
+
+    .index-info>p>a {
+        color: var(--hover-color);
+        text-decoration: none;
+    }
+
+    .index-info>p>a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        .index-info {
+            width: 91%;
+            padding: 1rem;
+
+        }
+
+        .index-info>p {
+            font-size: 11px;
+        }
     }
 
  
 /* MAIN */
-main {
+ main {
         
         display:flex;
         flex-wrap: wrap; 
@@ -185,20 +248,20 @@ main {
     main > article > h6 > a {
         text-decoration: underline;
         color: var(--texty-color);
-    }
-    main > article > h6 > a:hover {
-        color: var(--hover-color);
-    }
+    } */
+     main > article > h6 > a:hover {
+        color: var(--hover-color); 
+    } 
 
 
 
-    main > article   {
+     main > article   {
         
         color: var(--texty-color); 
         display: flex; 
         flex-direction: column;
        justify-content: space-between;
-        align-items: center;
+        align-items: center; */
         /* border: 1px solid var(--lines-color); */
         border-radius: 8px;
         padding: 1rem;
@@ -208,15 +271,15 @@ main {
         
         box-sizing: border-box;
         min-height: 18rem;
-        flex-grow: 0; 
+        flex-grow: 0;  
 
 
     }
-    main > article > .price {
+     main > article > .price {
         color: var(--hover-color); 
         font-size: 16px; 
         /* font-weight: bold;  */
-        margin: 0.5rem 0; 
+         margin: 0.5rem 0; 
     }
 
     main > article > .description {
@@ -224,9 +287,9 @@ main {
         color: var(--texty-color); 
         text-align: center; 
         margin: 0.5rem 0; 
-    }
+    }  
 
-    main > article > button {
+     main > article > button {
     background-color: var(--button-color);
     color: var(--texty-color);
     font-size: 12px;
@@ -237,8 +300,8 @@ main {
     cursor: pointer;
     align-self: stretch; 
     text-align: center; 
-}
-    main > article >  button:hover {
+} 
+     main > article >  button:hover {
         background-color: var(--button-hover-color);
         
     }
@@ -250,7 +313,7 @@ main {
         display: block;   
     }
     /* MAIN SCALABILITY */
-     @media(max-width: 600px) {
+      @media(max-width: 600px) {
     main > article {
         width: 100%; 
     }
@@ -263,8 +326,8 @@ main {
         padding: 1.5rem;
         text-align: center; 
       
-    }
-}
+    } 
+} 
 
 
     </style>
@@ -272,13 +335,11 @@ main {
 </head>
 <body>
     <header>
-        <section class="header-logo">
-          <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
-          
-        </section>
-        <section class="name">
-            <h1>Drillzone.se</h1>
-        </section>
+        <button class="icon-button">
+          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+          <a href="index.html">Drillzone.se</a>
+        </button>
+    
     
         <section class="search">
           <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
@@ -286,15 +347,15 @@ main {
         </section>
     
         <section class="login-cart">
-          <section class="login">
-            <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
-            <a href="login.html">Logga in</a>      
-          </section>
+          <button class="login">
+            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="login.html">Logga in</a>
+          </button>
     
-          <section class="cart">  
-            <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
-            <a href="#">Kundvagn</a>
-          </section>
+          <button class="cart">
+            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="#">Kundvagn</a>
+          </button>
         </section>
       </header>
 
@@ -359,7 +420,7 @@ main {
         <ul>
             <li><a href="#">Hem</a></li>
             <li><a href="products.html">Produkter</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
             <li><a href="#">Om oss</a></li>
         </ul>
     </footer>
