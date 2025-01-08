@@ -47,7 +47,6 @@
     header>button{
         display: flex;
         align-items: center;
-        gap: 5px;
         background: none;
         border: none;
     }
@@ -70,6 +69,10 @@
         align-items: center;
     }
     .icon-button>a{
+        display: flex;
+        flex-direction: row;
+    }
+    .icon-button>a{
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color: white;
         font-size: 2rem;
@@ -81,7 +84,6 @@
     }
     
     .login-img{
-        
         width: 2rem;
     }
     .cart-img{
