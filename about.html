@@ -110,7 +110,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             }
         }
 
-        
+
 
         .about {
             background-color: var(--secondary-color);
@@ -146,11 +146,11 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
         .välkommen>section {
             flex: 1;
-            min-width: 200px;
+            min-width: 220px;
             max-width: 300px;
         }
 
-        .välkommen>section>h4 {
+        .välkommen>section>h5 {
             font-size: 2rem;
             text-decoration: none;
 
@@ -179,7 +179,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             box-sizing: border-box;
         }
 
-        .värderingar>section>h4 {
+        .värderingar>section>h5 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -190,6 +190,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             border-radius: 8px;
             overflow: hidden;
         }
+
         .värderingar>section>p {
             font-size: .8rem;
         }
@@ -198,6 +199,9 @@ exempelvid main > .profile-menu eller main > .checkout*/
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: flex-start;
+            padding: 1.5rem;
+
 
         }
 
@@ -209,6 +213,60 @@ exempelvid main > .profile-menu eller main > .checkout*/
         .om-oss>p {
             font-size: .8rem;
             color: var(--texty-color);
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                width: 80%;
+                padding: 2rem;
+                min-width: 500;
+            }
+
+            .välkommen>section,
+            .värderingar>section {
+                flex: 1 1 100%;
+
+            }
+
+           
+            .värderingar>section>h5 {
+                font-size: 1.2rem;
+
+            }
+
+           
+            .värderingar>section>p {
+
+            }
+        }
+
+    
+        @media (max-width: 480px) {
+            .about {
+                width: 90%;
+
+                padding: 1rem;
+            }
+
+            .välkommen>section,
+            .värderingar>section {
+                flex: 1 1 100%;
+        
+                max-width: 100%;
+
+            }
+
+            
+            .värderingar>section>h5 {
+                font-size: 1rem;
+
+            }
+
+            .välkommen>section>p,
+            .värderingar>section>p {
+                font-size: 0.8rem;
+
+            }
         }
     </style>
 
@@ -273,36 +331,42 @@ exempelvid main > .profile-menu eller main > .checkout*/
         </article>
         <article class="värderingar">
             <section>
-                <h4>Medlemsrabatter</h4>
-                <p>Hos oss kan du alltid räkna med en bra medlemsrabbat. Vi sätter alltid trogna kunder i första ledet! </p>
+                <h5>Medlemsrabatter</h5>
+                <p>Hos oss kan du alltid räkna med en bra medlemsrabbat. Vi sätter alltid trogna kunder i första ledet!
+                </p>
             </section>
             <section>
-                <h4>Fria returer</h4>
-                <p>Vi på Drillzone vill att alla skall vara nöjda. Är du inte nöjd? Hör av dig, för hoss oss har du fria returer. </p>
+                <h5>Fria returer</h5>
+                <p>Vi på Drillzone vill att alla skall vara nöjda. Är du inte nöjd? Hör av dig, för hoss oss har du fria
+                    returer. </p>
             </section>
             <section>
-                <h4>30 dagars ångersrätt</h4>
-                <p>Vi erbjuder alltid 30 dagars ångerrätt på produkterna som köps. Är slagborren inte som du tänkt dig? Hör av dig!! </p>
+                <h5>30 dagars ångersrätt</h5>
+                <p>Vi erbjuder alltid 30 dagars ångerrätt på produkterna som köps. Är slagborren inte som du tänkt dig?
+                    Hör av dig!! </p>
             </section>
             <section>
-                <h4>Personlig rådgivning</h4>
+                <h5>Personlig rådgivning</h5>
                 <p>Vi erbjuder personlig rådgivning för företag och privatpersoner.</p>
             </section>
         </article>
 
         <article class="om-oss">
             <h4>Om oss</h4>
-            <p>Drillzone.se grundades 2025 av fyra passionerade entreprenörer med ett gemensamt intresse för innovation och teknik. Vår vision är att erbjuda kvalitetsprodukter och tjänster som gör skillnad i vardagen. Vi strävar efter att alltid ligga i framkant och leverera en förstklassig kundupplevelse. Med vårt breda utbud och vårt engagerade team är vi här för att hjälpa dig hitta exakt det du söker</p>
+            <p>Drillzone.se grundades 2025 av fyra passionerade entreprenörer med ett gemensamt intresse för innovation
+                och teknik. Vår vision är att erbjuda kvalitetsprodukter och tjänster som gör skillnad i vardagen. Vi
+                strävar efter att alltid ligga i framkant och leverera en förstklassig kundupplevelse. Med vårt breda
+                utbud och vårt engagerade team är vi här för att hjälpa dig hitta exakt det du söker</p>
         </article>
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
         <ul>
-            <li><a href="#">Hem</a></li>
+            <li><a href="index.html">Hem</a></li>
             <li><a href="products.html">Produkter</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Om oss</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="about.html">Om oss</a></li>
         </ul>
     </footer>
 </body>
