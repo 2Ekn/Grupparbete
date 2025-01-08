@@ -147,6 +147,69 @@ Logo
         border-radius: 0.3rem; /
     } */ 
 
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+
+
+    }
+
+
+
+    nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+
+    }
+    /*MAIN INFORMATION */
+    .index-info {
+        width: 600px;
+        margin: 0 auto;
+        padding: 1rem;
+        background-color: #1E1F20;
+        color: var(--texty-color);
+        border: 1px solid var(--lines-color);
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+    .index-info>p {
+        font-family: OpenSans;
+        font-size: 10px;
+    }
+
+    .index-info>p>a {
+        color: var(--hover-color);
+        text-decoration: none;
+    }
+
+    .index-info>p>a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        .index-info {
+            width: 91%;
+            padding: 1rem;
+
+        }
+
+        .index-info>p {
+            font-size: 11px;
+        }
+    }
+
  
 /* MAIN */
  main {
@@ -357,7 +420,7 @@ Logo
         <ul>
             <li><a href="#">Hem</a></li>
             <li><a href="products.html">Produkter</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
             <li><a href="#">Om oss</a></li>
         </ul>
     </footer>
