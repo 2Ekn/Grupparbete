@@ -53,6 +53,9 @@ header>button{
 header>a{
     text-decoration: none;
     color:inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 1.1rem;
 }
 .icon-button>a{
     font-size: 2.5rem;
@@ -127,6 +130,14 @@ color: white;
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+.login:hover{
+    text-decoration: underline;
+    color: white;
+}
+.cart:hover{
+    text-decoration: underline;
+    color: white;
 }
 .login{
     display: flex;
