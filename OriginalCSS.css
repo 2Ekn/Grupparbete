@@ -1,5 +1,5 @@
     :root{
-        --primary-color: #242526;
+        --primary-color: #292929;
         --secondary-color: #303233;
         --texty-color: #fff;
         --lines-color: #000;
@@ -36,66 +36,66 @@
         font-family: OpenSans;
         background-color: var(--primary-color);
     }
-    header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 
-    box-sizing: border-box;
-    background-color: var(--primary-color); 
+    /*Header styling*/
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    header>button{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: none;
+        border: none ;
+    }
+    header>a{
+        text-decoration: none;
+        color:inherit;
     }
 
     /* Logo */
     .header-logo {
         display: flex;
-        align-items: center; 
-
+        align-items: center;
     }
-
+    .header-logo>h1{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: 2rem;
+    }
     .header-logo-img {
         width: 4rem;
         margin-left: 0; 
-    }
-
-
-    header > .name {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: rgb(111, 111, 111);
-        
-        font-size: 1.5rem;
-
-
-    }
-        .header-logo>h1{
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: white;
-            font-size: 2.5rem;
-
-
-        }
-    .search-img{
-    width: 2rem;
+        flex:0 0;
     }
     .login-img{
-
-    width: 2rem;
+        
+        width: 2rem;
     }
     .cart-img{
         width: 2rem;
     }
-
     /*Search input*/
     .search{
         display: flex;
+        flex-direction: row;
         align-items: center;
         flex-grow: 1;
-        max-width: 50rem;
-        height: 2.6rem;
         background-color: #191a1c;
+        height: 2.6rem;
         margin: 0 2rem;
+        flex: 1 1 auto;
+        min-width: 200px;
+        max-width: 660px;
     }
+    .search-img{
+        width: 2rem;
+        margin-left: 0.5rem;
+    }
+
     .search>input{
         width: 100%;
         background-color: #191a1c;
@@ -106,7 +106,6 @@
     }
     .search>input:focus{
     outline: none;
-
     }
     .search>input::placeholder{
     color: white;
@@ -114,33 +113,67 @@
 
     /*login/cart*/
     .login-cart{
-        
-    display: flex;
+        display: flex;
         align-items: center;
         gap: 1rem;
     }
+    .login{
+        display: flex;
+        gap: 0.5rem;
+        background: none;
+    }
     .login, .cart {
-
         display: flex;
         align-items: center;
         color: white;
         font-size: 1.1rem;
+        border: none;
     }
     .login > a, .cart > a {
-        font-size: 10px;
+        font-size: 1.1rem;
         text-decoration: none;
         color: white;
     }
     .cart {
         background-color: green; 
-        padding: 0.5rem 1rem; 
-        border-radius: 0.3rem; /
+        padding: 0.2rem 1rem;
+        margin-right: 0.5rem ; 
+        border-radius: 0.3rem;
+        
     }
+    @media (max-width: 906px) {
+        .cart > .cart-text  {
+            display: none;
+        }
+        .login > .login-text{
+            display: none;
+        }
+    }
+    @media(max-width: 784px){
+        .search{
+            width: 250px;
+        }
+    }
+    @media (max-width: 725px){
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .login-cart{
+            position:absolute;
+            top: 0.5rem;
+            margin-left: 75%;
+        }
+        .search{
+            margin-left: 1.5rem;
+            width: 90%;
+        }
+    }
+    /*NAVIGATION  */
 
-        /*NAVIGATION  */
-
-    nav {
-    display: flex;
+        nav {
+            display: flex;
     position: relative;
     align-items: center;
     justify-content: space-between;
