@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drillzone.se/contact</title>
+    <title>Drillzone.se/about</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
         /*        skapar vi olika sidor, gör classes för varje sida. 
@@ -52,6 +52,13 @@ exempelvid main > .profile-menu eller main > .checkout*/
             background-color: var(--primary-color);
         }
 
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            gap: 2rem;
+        }
 
 
         /* MAIN  */
@@ -128,7 +135,113 @@ exempelvid main > .profile-menu eller main > .checkout*/
             margin-top: 3rem;
             border-radius: 2px;
             opacity: 0.8;
-          
+
+        }
+
+        .about {
+            background-color: var(--secondary-color);
+            width: 60%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 8px;
+            gap: 2rem;
+            box-sizing: border-box;
+            font-family: OpenSans;
+        }
+
+
+        .about>.välkommen {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem;
+            background-color: var(--secondary-color);
+            color: var(--texty-color);
+            border: 1px solid var(--lines-color);
+            padding: 2rem;
+            background-color: var(--primary-color);
+        }
+
+        .välkommen>section {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+        }
+
+        .välkommen>section>h4 {
+            font-size: 2rem;
+            text-decoration: none;
+
+
+        }
+
+        .välkommen>section>p {
+            font-size: 1rem;
+        }
+
+        .värderingar {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow items to wrap to the next row */
+            justify-content: center;
+            /* Center items horizontally */
+            align-items: flex-start;
+            /* Align items at the top of each row */
+            gap: 2rem;
+            /* Add spacing between the items */
+            margin: 2rem;
+            background-color: var(--secondary-color);
+            color: var(--texty-color)
+        }
+
+        .värderingar>section {
+            flex: 0 0 calc(50% - 2rem);
+            /* Take 50% of the row minus the gap */
+            min-width: 200px;
+            /* Ensure sections don’t shrink too small */
+            max-width: 300px;
+            /* Prevent sections from growing too large */
+            box-sizing: border-box;
+        }
+
+        .värderingar>section>h4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--lines-color);
+            padding: 0.2rem 0.5rem;
+            background-color: var(--button-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .värderingar>section>p {
+            font-size: .8rem;
+        }
+
+        .om-oss {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .om-oss>h4 {
+            font-size: 1.5rem;
+            color: var(--texty-color);
+        }
+
+        .om-oss>p {
+            font-size: .8rem;
+            color: var(--texty-color);
         }
     </style>
 
@@ -179,67 +292,41 @@ exempelvid main > .profile-menu eller main > .checkout*/
         </article>
     </nav>
 
-    <main class="contact">
-        <article class="contact-info">
-            <h4>Här nedan hittar du några olika sätt att kontakta oss</h4>
-            <p>Har du frågor? Hör gärna av dig till oss på något av alternativen nedan. </p>
-            <p>Dem vanligast ställda frågorna finner du här <a href="faq.html">kundsupport/faq </a></p>
-            <section class="kundsupport">
-                <img src="./assets/kundsupport.jpg" alt="kundsupport">
+    <main class="about">
+        <article class="välkommen">
+            <section>
+                <h4>Drillzone.se</h4>
+                <p>Vi på Drillzone arbetar alltid för att hålla hög kvalitet, god och nära kundservice. Vi älskar att ge
+                    våra kunder den bästa servicen som är möjligt att få. Nedan finner du några av våra värderingar vi
+                    ständigt strävar efter. </p>
             </section>
-
-
+            <section>
+                <img src="./assets/logo.jpg" alt="Contact us" width="250px">
+            </section>
         </article>
-        <article class="kundsupport">
-
+        <article class="värderingar">
+            <section>
+                <h4>Medlemsrabatter</h4>
+                <p>Hos oss kan du alltid räkna med en bra medlemsrabbat. Vi sätter alltid trogna kunder i första ledet! </p>
+            </section>
+            <section>
+                <h4>Fria returer</h4>
+                <p>Vi på Drillzone vill att alla skall vara nöjda. Är du inte nöjd? Hör av dig, för hoss oss har du fria returer. </p>
+            </section>
+            <section>
+                <h4>30 dagars ångersrätt</h4>
+                <p>Vi erbjuder alltid 30 dagars ångerrätt på produkterna som köps. Är slagborren inte som du tänkt dig? Hör av dig!! </p>
+            </section>
+            <section>
+                <h4>Personlig rådgivning</h4>
+                <p>Vi erbjuder personlig rådgivning för företag och privatpersoner.</p>
+            </section>
         </article>
 
-        <article class="contact-options">
-            <section>
-                <h5>Telefon</h5>
-                <p>Stockholm: <a href="tel:070-7221006">070-7221006</a></p>
-                <p>Göteborg: <a href="tel:070-7221005">070-7221005</a></p>
-                <p>Malmö: <a href="tel:070-7221004">070-7221004</a></p>
-            </section>
-
-            <section>
-                <h5>Mail</h5>
-
-                <p>Ställ en fråga på mail<br> Vi svarar alltid inom 24h</p>
-
-
-                <img src="./assets/mail.png" alt="mail" width="40px" height="40px" onclick="openMail()"
-                    style="cursor: pointer;">
-
-                <script>
-                    function openMail() {
-                        window.location.href = "mailto:info@drillzone.se?subject=Jag%20har%20en%20fråga";
-                    }
-                </script>
-            </section>
-            <section>
-                <h5>Besök oss</h5>
-                <ul>
-                    <li>
-                        Stockholm:
-                        <a href="https://www.google.com/maps/place/Västra+Trädgårdsgatan+15,+111+53+Stockholm"
-                            target="_blank">
-                            Västra Trädgårdsgatan 15, 111 53
-                    </li>
-                    <li>
-                        Göteborg:
-                        <a href="https://www.google.com/maps/place/Avenyn+31,+411+36+Göteborg" target="_blank">
-                            Avenyn 31, 411 36
-                        </a>
-
-                        Malmö:
-                        <a href="https://www.google.com/maps/place/Stortorget+12,+211+34+Malmö" target="_blank">
-                            Stortorget 12, 211 34
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
+        <article class="om-oss">
+            <h4>Om oss</h4>
+            <p>Drillzone.se grundades 2025 av fyra passionerade entreprenörer med ett gemensamt intresse för innovation och teknik. Vår vision är att erbjuda kvalitetsprodukter och tjänster som gör skillnad i vardagen. Vi strävar efter att alltid ligga i framkant och leverera en förstklassig kundupplevelse. Med vårt breda utbud och vårt engagerade team är vi här för att hjälpa dig hitta exakt det du söker</p>
+        </article>
     </main>
 
     <footer class="footer">

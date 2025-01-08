@@ -622,7 +622,7 @@ margin-bottom: 1rem;
 }
 
 .contact>.contact-info>p {
-font-size: 15px;
+font-size: 12px;
 color: var(--texty-color);
 }
 
@@ -631,7 +631,7 @@ display: flex;
 flex-wrap: nowrap;
 justify-content: space-around;
 align-items: stretch;
-margin-top: 10rem;
+margin-top: 2rem;
 width: 100%;
 gap: 20px; 
 }
