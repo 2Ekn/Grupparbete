@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundvagn</title>
+    <link rel="stylesheet" href="OriginalCSS.css">
+</head>
+<body>
+
+<header>
+    <section class="header-logo">
+        <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
+        <h1>Screw</h1>
+    </section>
+
+    <section class="search">
+        <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+        <input type="text" placeholder="Search...">
+    </section>
+
+    <section class="login-cart">
+        <section class="login">
+            <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
+            <a href="login.html">Logga in</a>      
+        </section>
+
+        <section class="cart">  
+            <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
+            <a href="kundvagn.html">Kundvagn</a>
+        </section>
+    </section>
+</header>
+
+<main>
+    <section class="cart-section">
+        <h1>Kundvagn</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Produktnamn</th>
+                    <th>Antal</th>
+                    <th>Pris per styck (SEK)</th>
+                    <th>Totalpris (SEK)</th>
+                    <th>Åtgärder</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild"></td>
+                    <td>Black & Decker BCD001C1</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>890</td>
+                    <td>890</td>
+                    <td>
+                        <button class="btn delete">Ta bort</button>
+                    </td>
+                </tr>
+                <!-- Lägg till fler produkter här -->
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <h2>Sammanfattning</h2>
+            <p><strong>Totalt:</strong> 890 SEK</p>
+            <button class="btn checkout">Till kassan</button>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+    <ul>
+        <li><a href="#">Hem</a></li>
+        <li><a href="products.html">Produkter</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Om oss</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
