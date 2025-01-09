@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drillzone.se/about</title>
+    <link rel="stylesheet" href="OriginalStyling.css">
+    <style>
+        /*        skapar vi olika sidor, gör classes för varje sida. 
+exempelvid main > .profile-menu eller main > .checkout*/
+        :root {
+            /* --primary-color: #242526; */
+            --secondary-color: #303233;
+            --texty-color: #fff;
+            --lines-color: #000;
+            --hover-color: #1489FF;
+            --button-color: #40A011;
+            --button-hover-color: #4fbb19;
+            --search-bar-color: #191A1B;
+
+
+
+            --button-font-size: 12px;
+            --p-font-size: 12px;
+            --font-family:
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: OpenSans;
+            src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: OpenSans;
+            background-color: var(--primary-color);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            gap: 2rem;
+        }
+
+
+        /* MAIN  */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            width: 5rem;
+
+
+        }
+
+
+
+        nav>p {
+            position: absolute;
+            top: 0.8rem;
+            right: 5rem;
+            display: block;
+            margin-top: auto;
+            color: var(--texty-color);
+            text-decoration: underline;
+            font-size: 10px;
+            margin-left: 2rem;
+
+        }
+
+
+
+
+
+
+
+
+        @media(max-width: 600px) {
+            main>article {
+                width: 100%;
+            }
+
+            main {
+                justify-content: center;
+            }
+
+            main>h4 {
+                font-size: 14px;
+                padding: 1.5rem;
+                text-align: center;
+
+            }
+        }
+
+
+
+        .about {
+            background-color: var(--secondary-color);
+            width: 60%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 8px;
+            gap: 2rem;
+            box-sizing: border-box;
+            font-family: OpenSans;
+        }
+
+
+        .about>.välkommen {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem;
+            background-color: var(--secondary-color);
+            color: var(--texty-color);
+            border: 1px solid var(--lines-color);
+            padding: 2rem;
+            background-color: var(--primary-color);
+        }
+
+        .välkommen>section {
+            flex: 1;
+            min-width: 220px;
+            max-width: 300px;
+        }
+
+        .välkommen>section>h5 {
+            font-size: 2rem;
+            text-decoration: none;
+
+
+        }
+
+        .välkommen>section>p {
+            font-size: 1rem;
+        }
+
+        .värderingar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            margin: 2rem;
+            background-color: var(--secondary-color);
+            color: var(--texty-color)
+        }
+
+        .värderingar>section {
+            flex: 0 0 calc(50% - 2rem);
+            min-width: 200px;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+
+        .värderingar>section>h5 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--lines-color);
+            padding: 0.2rem 0.5rem;
+            background-color: var(--button-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .värderingar>section>p {
+            font-size: .8rem;
+        }
+
+        .om-oss {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1.5rem;
+
+
+        }
+
+        .om-oss>h4 {
+            font-size: 1.5rem;
+            color: var(--texty-color);
+        }
+
+        .om-oss>p {
+            font-size: .8rem;
+            color: var(--texty-color);
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                width: 80%;
+                padding: 2rem;
+                min-width: 500;
+            }
+
+            .välkommen>section,
+            .värderingar>section {
+                flex: 1 1 100%;
+
+            }
+
+           
+            .värderingar>section>h5 {
+                font-size: 1.2rem;
+
+            }
+
+           
+            .värderingar>section>p {
+
+            }
+        }
+
+    
+        @media (max-width: 480px) {
+            .about {
+                width: 90%;
+
+                padding: 1rem;
+            }
+
+            .välkommen>section,
+            .värderingar>section {
+                flex: 1 1 100%;
+        
+                max-width: 100%;
+
+            }
+
+            
+            .värderingar>section>h5 {
+                font-size: 1rem;
+
+            }
+
+            .välkommen>section>p,
+            .värderingar>section>p {
+                font-size: 0.8rem;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <button class="icon-button">
+            <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+            <a href="index.html">Drillzone.se</a>
+        </button>
+
+
+        <section class="search">
+            <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+            <input type="text" placeholder="Search...">
+        </section>
+
+        <section class="login-cart">
+            <button class="login">
+                <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+                <a class="login-text" href="login.html">Logga in</a>
+            </button>
+
+            <button class="cart">
+                <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+                <a class="cart-text" href="#">Kundvagn</a>
+            </button>
+        </section>
+    </header>
+
+    <nav>
+        <ul>
+
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="products.html">Tillbehör</a></li>
+            <li><a href="products.html">Utförsäljning</a></li>
+
+
+        </ul>
+
+        <p>Besök oss på:</p>
+        <article class="social-media">
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
+                    height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
+                    height="20px"></a>
+        </article>
+    </nav>
+
+    <main class="about">
+        <article class="välkommen">
+            <section>
+                <h4>Drillzone.se</h4>
+                <p>Vi på Drillzone arbetar alltid för att hålla hög kvalitet, god och nära kundservice. Vi älskar att ge
+                    våra kunder den bästa servicen som är möjligt att få. Nedan finner du några av våra värderingar vi
+                    ständigt strävar efter. </p>
+            </section>
+            <section>
+                <img src="./assets/logo.jpg" alt="Contact us" width="250px">
+            </section>
+        </article>
+        <article class="värderingar">
+            <section>
+                <h5>Medlemsrabatter</h5>
+                <p>Hos oss kan du alltid räkna med en bra medlemsrabbat. Vi sätter alltid trogna kunder i första ledet!
+                </p>
+            </section>
+            <section>
+                <h5>Fria returer</h5>
+                <p>Vi på Drillzone vill att alla skall vara nöjda. Är du inte nöjd? Hör av dig, för hoss oss har du fria
+                    returer. </p>
+            </section>
+            <section>
+                <h5>30 dagars ångersrätt</h5>
+                <p>Vi erbjuder alltid 30 dagars ångerrätt på produkterna som köps. Är slagborren inte som du tänkt dig?
+                    Hör av dig!! </p>
+            </section>
+            <section>
+                <h5>Personlig rådgivning</h5>
+                <p>Vi erbjuder personlig rådgivning för företag och privatpersoner.</p>
+            </section>
+        </article>
+
+        <article class="om-oss">
+            <h4>Om oss</h4>
+            <p>Drillzone.se grundades 2025 av fyra passionerade entreprenörer med ett gemensamt intresse för innovation
+                och teknik. Vår vision är att erbjuda kvalitetsprodukter och tjänster som gör skillnad i vardagen. Vi
+                strävar efter att alltid ligga i framkant och leverera en förstklassig kundupplevelse. Med vårt breda
+                utbud och vårt engagerade team är vi här för att hjälpa dig hitta exakt det du söker</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="products.html">Produkter</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="about.html">Om oss</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
