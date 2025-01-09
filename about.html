@@ -144,20 +144,20 @@ exempelvid main > .profile-menu eller main > .checkout*/
             background-color: var(--primary-color);
         }
 
-        .välkommen>section {
+        .välkommen>article {
             flex: 1;
             min-width: 220px;
             max-width: 300px;
         }
 
-        .välkommen>section>h5 {
+        .välkommen>article>h5 {
             font-size: 2rem;
             text-decoration: none;
 
 
         }
 
-        .välkommen>section>p {
+        .välkommen>article>p {
             font-size: 1rem;
         }
 
@@ -172,14 +172,14 @@ exempelvid main > .profile-menu eller main > .checkout*/
             color: var(--texty-color)
         }
 
-        .värderingar>section {
+        .värderingar>article {
             flex: 0 0 calc(50% - 2rem);
             min-width: 200px;
             max-width: 300px;
             box-sizing: border-box;
         }
 
-        .värderingar>section>h5 {
+        .värderingar>article>h5 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -191,7 +191,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             overflow: hidden;
         }
 
-        .värderingar>section>p {
+        .värderingar>article>p {
             font-size: .8rem;
         }
 
@@ -222,20 +222,19 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 min-width: 500;
             }
 
-            .välkommen>section,
-            .värderingar>section {
+            .välkommen > article,.värderingar > article {
                 flex: 1 1 100%;
 
             }
 
-           
-            .värderingar>section>h5 {
+            
+            .välkommen > article,.värderingar > article > h5 {
                 font-size: 1.2rem;
 
             }
 
            
-            .värderingar>section>p {
+            .välkommen > article, .värderingar > article > p {
 
             }
         }
@@ -248,22 +247,20 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 padding: 1rem;
             }
 
-            .välkommen>section,
-            .värderingar>section {
+            .välkommen > article, .värderingar>article {
                 flex: 1 1 100%;
         
                 max-width: 100%;
 
             }
 
-            
-            .värderingar>section>h5 {
+            .välkommen > article > h5, .värderingar > article > h5 {
                 font-size: 1rem;
 
             }
 
-            .välkommen>section>p,
-            .värderingar>section>p {
+            .välkommen > article > p,
+            .värderingar > article > p {
                 font-size: 0.8rem;
 
             }
@@ -318,38 +315,38 @@ exempelvid main > .profile-menu eller main > .checkout*/
     </nav>
 
     <main class="about">
-        <article class="välkommen">
-            <section>
+        <section class="välkommen">
+            <article>
                 <h4>Drillzone.se</h4>
                 <p>Vi på Drillzone arbetar alltid för att hålla hög kvalitet, god och nära kundservice. Vi älskar att ge
                     våra kunder den bästa servicen som är möjligt att få. Nedan finner du några av våra värderingar vi
                     ständigt strävar efter. </p>
-            </section>
-            <section>
+            </article>
+            <article>
                 <img src="./assets/logo.jpg" alt="Contact us" width="250px">
-            </section>
-        </article>
-        <article class="värderingar">
-            <section>
+            </article>
+        </section>
+        <section class="värderingar">
+            <article>
                 <h5>Medlemsrabatter</h5>
                 <p>Hos oss kan du alltid räkna med en bra medlemsrabbat. Vi sätter alltid trogna kunder i första ledet!
                 </p>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h5>Fria returer</h5>
                 <p>Vi på Drillzone vill att alla skall vara nöjda. Är du inte nöjd? Hör av dig, för hoss oss har du fria
                     returer. </p>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h5>30 dagars ångersrätt</h5>
                 <p>Vi erbjuder alltid 30 dagars ångerrätt på produkterna som köps. Är slagborren inte som du tänkt dig?
                     Hör av dig!! </p>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h5>Personlig rådgivning</h5>
                 <p>Vi erbjuder personlig rådgivning för företag och privatpersoner.</p>
-            </section>
-        </article>
+            </article>
+        </section>
 
         <article class="om-oss">
             <h4>Om oss</h4>
@@ -364,9 +361,9 @@ exempelvid main > .profile-menu eller main > .checkout*/
         <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
         <ul>
             <li><a href="index.html">Hem</a></li>
-            <li><a href="products.html">Produkter</a></li>
             <li><a href="contact.html">Kontakt</a></li>
             <li><a href="about.html">Om oss</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </footer>
 </body>
