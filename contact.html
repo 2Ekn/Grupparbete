@@ -80,26 +80,79 @@ exempelvid main > .profile-menu eller main > .checkout*/
         }
 
 
+        @media(max-width: 800px) {
+            .contact>.contact-options>article {
+                flex: 1 1 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 0rem;
+                margin-top: 0;
+            }
+
+            .contact>.contact-options>article:first-child {
+                border: none;
+            }
+
+            .contact>.contact-options>article:nth-child(2) {
+                border: none;
+            }
+            
+            .contact>.contact-options>article:last-child {
+                border: none;
+            }
+        }
 
 
 
 
 
-
-        @media(max-width: 600px) {
-            main>section {
+        @media(max-width: 700px) {
+            main>article {
                 width: 100%;
+                height: auto;
+                flex-direction: column;
+
             }
 
             main {
                 justify-content: center;
+                min-width: 255px;
             }
 
-            main>h4 {
-                font-size: 14px;
-                padding: 1.5rem;
+            .contact > .contact-info > p {
+                font-size: 12px;
+                padding: rem;
+                text-align: center;
+                
+            }
+            
+            .contact > .contact-info > h4 {
+                font-size: 12px;
+                padding: rem;
                 text-align: center;
 
+            }
+            .contact>.contact-options {
+                flex-direction: column;
+                border: none;
+                gap: 2rem;
+                max-width: 230px;
+                
+            }
+
+            .contact>.contact-options>section {
+                flex: 1;
+            }
+            .contact>.contact-options>article:last-child {
+                /* max-width: 250px; */
+                align-content: stretch;
+                border: none;
+                /* gap: 1rem; */
+                /* justify-content: center;
+                align-content: center; */
             }
         }
 
@@ -128,7 +181,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             margin-top: 3rem;
             border-radius: 2px;
             opacity: 0.8;
-          
+
         }
     </style>
 
@@ -155,7 +208,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
             <button class="cart">
                 <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-                <a class="cart-text" href="#">Kundvagn</a>
+                <a class="cart-text" href="cart.html">Kundvagn</a>
             </button>
         </section>
     </header>

@@ -594,7 +594,7 @@ width: 10rem;
 .contact {
 background-color: var(--secondary-color);
 width: 60%;
-height: 800px;
+height: auto;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -604,6 +604,7 @@ padding: 2rem;
 border-radius: 8px;
 gap: 2rem;
 box-sizing: border-box;
+
 }
 
 .contact-info {
@@ -640,6 +641,7 @@ align-items: stretch;
 margin-top: 2rem;
 width: 100%;
 gap: 20px; 
+
 }
 
 .contact>.contact-options>article {
@@ -707,7 +709,7 @@ text-decoration: underline;
 color: var(--hover-color); 
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 800px) {
 .contact {
     width: 90%;
     padding: 1rem;
@@ -715,10 +717,11 @@ color: var(--hover-color);
 
 .contact>.contact-options {
     flex-direction: column;
+    border: none;
     gap: 2rem;
 }
 
 .contact>.contact-options>section {
     flex: 1;
 }
-}
+} */
