@@ -3,9 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produkt-information</title>
+    <link rel="stylesheet" href="./OriginalStyling.css">
+    <style>
+        /* Product_info (Jonas) */
+        .productdisplay h2{
+            font-size: 2vw;
+            margin: 2%;
+            padding: 2%;
+            text-align: center;
+            color: white;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+        }
+        .productdisplay .productinfo {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            background-color: var(--secondary-color);
+
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 2%;
+            margin-bottom: 2%;
+        }
+
+        .productdisplay .productinfo .bigarticel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .productdisplay .productinfo img {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .productdisplay .productinfo .bigarticel:hover img {
+            transform: scale(1.05); 
+        }
+        
+        .productdisplay .productinfo .bigarticel .info {
+            position: absolute;
+            font-size: 12px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--texty-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0; 
+            padding: 1rem;
+            transition: opacity 0.3s ease;
+
+        }
+        
+        .productdisplay .productinfo .bigarticel:hover .info {
+            cursor: default;
+            opacity: 1;
+        }
+
+        @media(max-width: 768px) {
+            .productdisplay .productinfo {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+        }
+        }
+        /* extra */
+        .social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+        }
+
+        nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+        }
+        
+    </style>
 </head>
 <body>
+
+    <!-- Header -->
+    <header>
+        <button class="icon-button">
+          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+          <a href="index.html">Drillzone.se</a>
+        </button>
+
+        <section class="search">
+          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+          <input type="text" placeholder="Search...">
+        </section>
+
+        <section class="login-cart">
+          <button class="login">
+            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="login.html">Logga in</a>
+          </button>
+
+          <button class="cart">
+            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="#">Kundvagn</a>
+          </button>
+        </section>
+      </header>
+
+    <!-- Navigationbar -->
+    <nav>
+        <ul>
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="products.html">Tillbehör</a></li>
+            <li><a href="products.html">Utförsäljning</a></li>
+        </ul>
+
+        <p>Besök oss på:</p>
+        <article class="social-media">
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
+                    height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
+                    height="20px"></a>
+        </article>
+    </nav>
     
+    <!-- Main -->
+    <main class="productdisplay">
+        <h2>Information om tillbehör</h2>
+        <article class="productinfo">
+
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\Metallborrsats 680kr.jpg" alt="">
+                <section class="info">
+                    <h3>Metallborrsats</h3>
+                    <p>Milwaukee HSSG-TIN POF 19P är en metallborrsats i 19 delar. Slagtåliga borr med ¼″ hexfäste optimerade för mutterdragare. Chip Breaker spetsen flisar det borrade spånmaterialet för snabbare bortförsel vilket också ger lägre värmeuppbyggnad i det borrade materialet.</p>
+                </section>
+            </section>
+
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\Bosch Borr- och bitssats 290kr.jpg" alt="">
+                <section class="info">
+                    <h3>Borr- och bitssats</h3>
+                    <p>43-delars skruvbits- och hylssats med snabbyteshållare samt magnetisk universalhållare i praktisk förvaringslåda.</p>
+                </section>
+            </section>
+            
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\Dewalt DT7275-QZ Torxbits.jpg" alt="">
+                <section class="info">
+                    <h3>Torxbits</h3>
+                    <p>10-delars FLEXTORQ-bits med nyckelring.</p>
+                </section>
+            </section>
+
+            <section class="bigarticel">
+                <img src="product-images/accessories-images/Wera KK28 073240 Bitsmejsel.jpg" alt="">
+                <section class="info">
+                    <h3>Bitsmejsel</h3>
+                    <p>Kompakt bitsmejsel med teleskopisk klinga 1/4" x 100mm och integrerat bitsmagasin.</p>
+                </section>
+            </section>
+            
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\PELA 488440 Hålsågssats.jpg" alt="">
+                <section class="info">
+                    <h3>Hålsågssats</h3>
+                    <p>Pela 488440 är en perfekt hålsågsats i 13 delar, för borrning i de flesta material såsom stål, rostfritt stål, icke järnhaltiga material, aluminium, trä, fiberträ, PVS och gips.</p>
+                </section>
+            </section>
+
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\Milwaukee 4932479228 Adapterset.jpg" alt="">
+                <section class="info">
+                    <h3>Adapterset</h3>
+                    <p>Till SHW-hylsor. 1 x ¼″Hex - ¼″-fyrkant, 1 x ¼″Hex - ⅜″-fyrkant, 1 x ¼″Hex - ½″-fyrkant.</p>
+                </section>
+            </section>
+
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\Milwaukee Shockwave Impact Duty Bitshållare.jpg" alt="">
+                <section class="info">
+                    <h3>Bitshållare</h3>
+                    <p>Bitshållare i magnetiskt utförande eller med snabbyte. Hållaren finns i storlekarna 152 mm och 305 mm.</p>
+                </section>
+            </section>
+
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\Dewalt DT8976 Hammarborrsats.jpg" alt="">
+                <section class="info">
+                    <h3>Hammarborrsats</h3>
+                    <p>Hammarborrsats i 7 delar med SDS-Plusfäste, Ø 5/6/8x110 och Ø 6/8/10/12x160mm i praktisk metallförpackning.</p>
+                </section>
+            </section>
+
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\Bosch 2607000548 Djupanslag.jpg" alt="">
+                <section class="info">
+                    <h3>Djupanslag</h3>
+                    <p>Djupanslag inklusive nyckel. Diameter på 6, 8 och 10mm</p>
+                </section>
+            </section>
+
+            <section class="bigarticel">
+                <img src="product-images\accessories-images\Milwaukee PH2 Bits.jpg" alt="">
+                <section class="info">
+                    <h3>Bits</h3>
+                    <p>PH2-bits på 25mm i 25-pack med särskilt tåliga egenskaper. Profilerna i bitset är köldpressade och kroppen är tillverkad av S2 Europeiskt stål av högsta kvalitet.</p>
+                </section>
+            </section>
+            
+        </article>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="products.html">Produkter</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="about.html">Om oss</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
