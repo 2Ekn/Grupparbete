@@ -20,7 +20,40 @@
   color: white;
   font-size: 1.1rem;
 }
-</style>
+.social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+
+
+    }
+    nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+
+    }
+    .logga-in-button{
+      font-family: OpenSans;
+      background-color: var(--button-color);
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5%;
+      margin-bottom: 1rem;
+    }
+    .logga-in-button a{
+      text-decoration: none;
+      color: var(--texty-color);
+    }
+    </style>
 
 <body>
   <header>
@@ -37,12 +70,12 @@
         
     <section class="login-cart">
       <button class="login">
-        <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+        <a href="login.html"><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
         <a class="login-text" href="login.html">Logga in</a>
       </button>
 
       <button class="cart">
-        <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+        <a href="cart.html"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
         <a class="cart-text" href="#">Kundvagn</a>
       </button>
     </section>
@@ -51,11 +84,11 @@
   <nav>
     <ul>
         <li><a href="products.html">Skruvdragare</a></li>
-        <li><a href="products.html">Tillbehör</a></li>
-        <li><a href="products.html">Utförsäljning</a></li>
+        <li><a href="accessories.html">Tillbehör</a></li>
+        <li><a href="sales.html">Utförsäljning</a></li>
     </ul>
         <p>Besök oss på:</p>
-          <article class="social-media">
+        <article class="social-media">
           <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px" height="20px"></a>
           <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px" height="20px"></a>
         </article>
@@ -68,17 +101,18 @@
         <input class="login-input" type="text">
         <p >Lösernord:</p>
         <input class="login-input" type="text">
+        <button class="logga-in-button"><a href="profile.html">Logga in</a></button>
         <a href="#">Glömt lösenord?</a>
-        <a class="register" href="">Har du inget konto? Registrera dig här!</a>
+        <a class="register" href="#">Har du inget konto? Registrera dig här!</a>
       </section>
     </main>
     <footer class="footer">
       <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
       <ul>
-          <li><a href="#">Hem</a></li>
-          <li><a href="products.html">Produkter</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Om oss</a></li>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="about.html">Om oss</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
       </ul>
   </footer>
 </body>

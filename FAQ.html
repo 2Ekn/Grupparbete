@@ -10,6 +10,76 @@
 
 <style>
   
+  .FAQ-main{
+    color: var(--texty-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 50%;
+  }
+  .QA-FAQ{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 2%;
+    margin: 4%;
+    padding: 4%;
+    }
+  .QA-FAQ>section{
+    border-bottom: 5px solid var(--primary-color);
+  }
+  .QA-FAQ>h2{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+  }
+  .QA-FAQ p{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .QA-FAQ button{
+    text-decoration: none;
+    background-color: var(--button-color);
+    padding: 0.1rem;
+    border: none;
+    margin-bottom: 0.2rem;
+    border-radius: 3%;
+  }
+  .QA-FAQ a {
+    color: var(--texty-color);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .QA-FAQ a:hover{
+    font-weight: bold;
+  }
+
+
+
+
+  .social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+    }
+    nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+    }
 </style>
 
 <body>
@@ -26,42 +96,72 @@
             
         <section class="login-cart">
           <button class="login">
-            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a href="login.html"><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
             <a class="login-text" href="login.html">Logga in</a>
           </button>
     
           <button class="cart">
-            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="#">Kundvagn</a>
+            <a href="cart.html"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="cart.html">Kundvagn</a>
           </button>
         </section>
       </header>
         
       <nav>
-        <ul> 
+        <ul>
             <li><a href="products.html">Skruvdragare</a></li>
-            <li><a href="#">Tillbehör</a></li>
-            <li><a href="#">Utförsäljning</a></li>
-        </ul>    
-            <p>Besök oss på:</p>      
+            <li><a href="products.html">Tillbehör</a></li>
+            <li><a href="products.html">Utförsäljning</a></li>
+        </ul>
+
+        <p>Besök oss på:</p>
+        <article class="social-media">
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
+                    height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
+                    height="20px"></a>
+        </article>
       </nav>
 
-      <main>
+      <main class="FAQ-main">
+        <section class="QA-FAQ">
           <h2>FAQ</h2>
-          <ul>
-            <li>Vad är eran leveranstid?</li>
-            <li></li>
-          </ul>
+          <section class="item-1">
+            <h3>Vad är eran leveranstid?</h3>
+            <p>Vi har en leveranstid på 3-5 arbetsdagar. Kan variera beroende på högtider.</p>
+           <button><a href="contact.html">Om problem skulle uppstå tveka inte på att höra av dig till oss!</a></button> 
+         </section>
+          <section class="item-2">
+            <h3 >Hur väljer jag rätt skruvdragare?</h3>
+            <p >Användningsområde: Hemmabruk eller professionellt?
+              Batterikapacitet: Kontrollera spänning (t.ex. 12V, 18V) och amperetimmar (Ah).
+              Varvtal och moment: Högre tal för tyngre arbete.
+              Tillbehör: Kontrollera kompatibilitet med bits och borr.</p>
+             <button><a href="products.html">Klicka här för att se våra produkter och hitta rätt maskin just för dig!</a></button> 
+          </section>
 
+          <section class="item-3">
+            <h3>Hur underhåller jag min skruvdragare?</h3>
+            <p>Rengör regelbundet från damm och smuts.
+                Ladda batteriet enligt tillverkarens instruktioner.
+                Kontrollera bits och borr för slitage.</p>
+            <button><a href="accessories.html">Klicka här för hitta till vårat utbud tillbehör till din maskin!</a></button>
+          </section>
+
+          <section class="item-4">
+            <h3>Hur lång batteritid har en batteridriven skruvdragare?</h3>
+            <p>Batteritiden beror på batteriets kapacitet (Ah) och användningsintensitet. Ett 2.0 Ah-batteri kan räcka i 30 minuter till flera timmar beroende på uppgiften.</p>
+          </section>
+        </section>
       </main>
 
       <footer class="footer">
         <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
         <ul>
-            <li><a href="#">Hem</a></li>
-            <li><a href="products.html">Produkter</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Om oss</a></li>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="about.html">Om oss</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </footer>
 </body>
