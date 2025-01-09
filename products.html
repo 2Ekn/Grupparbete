@@ -31,7 +31,6 @@
         .products .allproducts .full-article{
             background-color: var(--secondary-color);
             border-radius: 8px;
-            border: 1px solid white ;
             padding: 8%;
         }
         .products .product-image{
@@ -69,7 +68,15 @@
             margin: 5% 0;
             font-weight: bold;
         }
+        
+        @media(max-width: 768px) {
+            .products .allproducts {
+                width: 100%; 
+                display: flex;
+                flex-direction: column;
+            }
 
+        }
         /* extra */
         .social-media {
         display: flex;
@@ -98,19 +105,18 @@
           <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
           <a href="index.html">Drillzone.se</a>
         </button>
-    
-    
+
         <section class="search">
           <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
           <input type="text" placeholder="Search...">
         </section>
-    
+
         <section class="login-cart">
           <button class="login">
             <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
             <a class="login-text" href="login.html">Logga in</a>
           </button>
-    
+
           <button class="cart">
             <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
             <a class="cart-text" href="#">Kundvagn</a>
@@ -140,145 +146,167 @@
         <h2>Produkter</h2>
         <section class="allproducts">
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\Makita DDF484RTJ - 4790kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">Makita DDF484RTJ</p>
-                    <p class="price-button">4790:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="1" data-product-name="Makita DDF484RTJ" data-product-price="4790">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\Makita DDF484RTJ - 4790kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">Makita DDF484RTJ</p>
+                        <p class="price-button">4790:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">Bosch GSR 18V-EC</p>
-                    <p class="price-button">3679:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="2" data-product-name="Bosch GSR 18V-EC" data-product-price="3679">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\Bosch GSR 18V-EC - 3679kr .jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">Bosch GSR 18V-EC</p>
+                        <p class="price-button">3679:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">Milwaukee M18 BLDDRC</p>
-                    <p class="price-button">3590:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="3" data-product-name="Milwaukee M18 BLDDRC" data-product-price="3590">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">Milwaukee M18 BLDDRC</p>
+                        <p class="price-button">3590:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\HiKOKI DS18DD - 2590kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">HiKOKI DS18DD</p>
-                    <p class="price-button">2590:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="4" data-product-name="HiKOKI DS18DD" data-product-price="2590">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\HiKOKI DS18DD - 2590kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">HiKOKI DS18DD</p>
+                        <p class="price-button">2590:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\STANLEY FatMax -  2690kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">STANLEY FatMax</p>
-                    <p class="price-button">2690:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="5" data-product-name="STANLEY FatMax" data-product-price="2690">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\STANLEY FatMax -  2690kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">STANLEY FatMax</p>
+                        <p class="price-button">2690:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\Metabo BS 18 - 3190kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">Metabo BS 18</p>
-                    <p class="price-button">3190:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="6" data-product-name="Metabo BS 18" data-product-price="3190">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\Metabo BS 18 - 3190kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">Metabo BS 18</p>
+                        <p class="price-button">3190:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">Milwaukee M12 BDD-202C</p>
-                    <p class="price-button">2390:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="7" data-product-name="Milwaukee M12 BDD-202C" data-product-price="2390">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\Milwaukee M12 BDD-202C - 2390kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">Milwaukee M12 BDD-202C</p>
+                        <p class="price-button">2390:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">Black & Decker BCD001C1</p>
-                    <p class="price-button">890:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="8" data-product-name="Black & Decker BCD001C1" data-product-price="890">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">Black & Decker BCD001C1</p>
+                        <p class="price-button">890:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\Flex DD 2G - 2890kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">Flex DD 2G</p>
-                    <p class="price-button">2890:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="9" data-product-name="Flex DD 2G" data-product-price="2890">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\Flex DD 2G - 2890kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">Flex DD 2G</p>
+                        <p class="price-button">2890:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
     
             <article class="full-article">
-                <a href="./product_info.html">
-                    <img class="product-image" src="./product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="produktbild">
-                </a>
-                <div class="articel-data">
-                    <p class="product-name">Bosch GSR 12V-15</p>
-                    <p class="price-button">1590:-</p>
-                    <a href="cart.html">
-                        <button class="buy-button">KÖP</button>
+                <section data-product-id="10" data-product-name="Bosch GSR 12V-15" data-product-price="1590">
+                    <a href="./product_info.html">
+                        <img class="product-image" src="./product-images\Bosch GSR 12V-15 - 1590kr.jpg" alt="produktbild">
                     </a>
-                </div>
+                    <div class="articel-data">
+                        <p class="product-name">Bosch GSR 12V-15</p>
+                        <p class="price-button">1590:-</p>
+                        <a href="cart.html">
+                            <button class="buy-button">KÖP</button>
+                        </a>
+                    </div>
+                </section>
             </article>
         </section>
     
+    </main>
+    <!-- Footer -->
         <footer class="footer">
             <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
             <ul>
                 <li><a href="index.html">Hem</a></li>
                 <li><a href="products.html">Produkter</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="#">Om oss</a></li>
+                <li><a href="about.html">Om oss</a></li>
             </ul>
         </footer>
-    </main>
+        <script src="cart.js"></script>
 </body>
 </html>
