@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kundvagn</title>
     <link rel="stylesheet" href="OriginalStyling.css">
+    <style>
+        table th, table td {
+            padding: 10px 15px;
+            text-align: center;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+        .cart-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .cart-section table td img {
+            display: block;
+            margin: 0 auto;
+        }
+        .cart-section .btn {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -48,7 +70,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild"></td>
+                    <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild" style="width: 100px; height: auto;"></td>
                     <td>Black & Decker BCD001C1</td>
                     <td><input type="number" value="1" min="1"></td>
                     <td>890</td>
@@ -57,12 +79,21 @@
                         <button class="btn delete">Ta bort</button>
                     </td>
                 </tr>
-                <!-- Lägg till fler produkter här -->
+                <tr>
+                    <td><img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Produktbild" style="width: 100px; height: auto;"></td>
+                    <td>Bosch GSR 12V-15</td>
+                    <td><input type="number" value="2" min="1"></td>
+                    <td>1590</td>
+                    <td>3180</td>
+                    <td>
+                        <button class="btn delete">Ta bort</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <div class="cart-summary">
             <h2>Sammanfattning</h2>
-            <p><strong>Totalt:</strong> 890 SEK</p>
+            <p><strong>Totalt:</strong> 4070 SEK</p>
             <button class="btn checkout">Till kassan</button>
         </div>
     </section>
