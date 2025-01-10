@@ -44,7 +44,7 @@ for (let i = 1; i <= 10; i++) {
     document.getElementById(`articelname${i}`).textContent = articles[`articelname${i}`];
     document.getElementById(`articelprice${i}`).textContent = articles[`articelprice${i}`];
   }
-  
+
 // document.getElementById("articelname1").textContent = articelname1;
 // document.getElementById("articelprice1").textContent = articelprice1;
 // // document.getElementById("articeldescription1").textContent = articeldescription1;
