@@ -80,26 +80,79 @@ exempelvid main > .profile-menu eller main > .checkout*/
         }
 
 
+        @media(max-width: 800px) {
+            .contact>.contact-options>article {
+                flex: 1 1 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 0rem;
+                margin-top: 0;
+            }
+
+            .contact>.contact-options>article:first-child {
+                border: none;
+            }
+
+            .contact>.contact-options>article:nth-child(2) {
+                border: none;
+            }
+            
+            .contact>.contact-options>article:last-child {
+                border: none;
+            }
+        }
 
 
 
 
 
-
-        @media(max-width: 600px) {
+        @media(max-width: 700px) {
             main>article {
                 width: 100%;
+                height: auto;
+                flex-direction: column;
+
             }
 
             main {
                 justify-content: center;
+                min-width: 255px;
             }
 
-            main>h4 {
-                font-size: 14px;
-                padding: 1.5rem;
+            .contact > .contact-info > p {
+                font-size: 12px;
+                padding: rem;
+                text-align: center;
+                
+            }
+            
+            .contact > .contact-info > h4 {
+                font-size: 12px;
+                padding: rem;
                 text-align: center;
 
+            }
+            .contact>.contact-options {
+                flex-direction: column;
+                border: none;
+                gap: 2rem;
+                max-width: 230px;
+                
+            }
+
+            .contact>.contact-options>section {
+                flex: 1;
+            }
+            .contact>.contact-options>article:last-child {
+                /* max-width: 250px; */
+                align-content: stretch;
+                border: none;
+                /* gap: 1rem; */
+                /* justify-content: center;
+                align-content: center; */
             }
         }
 
@@ -128,7 +181,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             margin-top: 3rem;
             border-radius: 2px;
             opacity: 0.8;
-          
+
         }
     </style>
 
@@ -155,7 +208,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
             <button class="cart">
                 <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-                <a class="cart-text" href="#">Kundvagn</a>
+                <a class="cart-text" href="cart.html">Kundvagn</a>
             </button>
         </section>
     </header>
@@ -180,29 +233,29 @@ exempelvid main > .profile-menu eller main > .checkout*/
     </nav>
 
     <main class="contact">
-        <article class="contact-info">
+        <section class="contact-info">
             <h4>Här nedan hittar du några olika sätt att kontakta oss</h4>
             <p>Har du frågor? Hör gärna av dig till oss på något av alternativen nedan. </p>
             <p>Dem vanligast ställda frågorna finner du här <a href="FAQ.html">kundsupport/faq </a></p>
-            <section class="kundsupport">
+            <article class="kundsupport">
                 <img src="./assets/kundsupport.jpg" alt="kundsupport">
-            </section>
+            </article>
 
 
-        </article>
-        <article class="kundsupport">
+        </section>
+        <section class="kundsupport">
 
-        </article>
+        </section>
 
-        <article class="contact-options">
-            <section>
+        <section class="contact-options">
+            <article>
                 <h5>Telefon</h5>
                 <p>Stockholm: <a href="tel:070-7221006">070-7221006</a></p>
                 <p>Göteborg: <a href="tel:070-7221005">070-7221005</a></p>
                 <p>Malmö: <a href="tel:070-7221004">070-7221004</a></p>
-            </section>
-            
-            <section>
+            </article>
+
+            <article>
                 <h5>Mail</h5>
 
                 <p>Ställ en fråga på mail<br> Vi svarar alltid inom 24h</p>
@@ -216,8 +269,8 @@ exempelvid main > .profile-menu eller main > .checkout*/
                         window.location.href = "mailto:info@drillzone.se?subject=Jag%20har%20en%20fråga";
                     }
                 </script>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h5>Besök oss</h5>
                 <ul>
                     <li>
@@ -238,7 +291,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
                         </a>
                     </li>
                 </ul>
-            </section>
+            </article>
 
     </main>
 
@@ -246,9 +299,9 @@ exempelvid main > .profile-menu eller main > .checkout*/
         <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
         <ul>
             <li><a href="index.html">Hem</a></li>
-            <li><a href="products.html">Produkter</a></li>
             <li><a href="contact.html">Kontakt</a></li>
             <li><a href="about.html">Om oss</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </footer>
 </body>
