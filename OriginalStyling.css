@@ -54,7 +54,6 @@ header>button{
 header>a{
     text-decoration: none;
     color:inherit;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     font-size: 1.1rem;
 }
@@ -71,16 +70,18 @@ header>a{
 .icon-button {
     display: flex;
     align-items: center;
+    font-family: OpenSans;
+    margin-left: auto;
 }
 .icon-button>a{
     display: flex;
     flex-direction: row;
 }
 .icon-button>a{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     font-size: 2rem;
     font-weight: 800;
+    text-decoration: none;
 }
 .header-logo-img {
     width: 5rem;
@@ -95,6 +96,7 @@ header>a{
 }
 /*Search input*/
 .search{
+    font-family: OpenSans;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -105,6 +107,7 @@ header>a{
     flex: 1 1 auto;
     min-width: 200px;
     max-width: 660px;
+    margin-right: auto;
 }
 .search-img{
     width: 2rem;
@@ -137,10 +140,10 @@ color: white;
     color: white;
 }
 .cart:hover{
-    text-decoration: underline;
-    color: white;
+    background-color: var(--button-hover-color);
 }
 .login{
+    font-family: OpenSans;
     display: flex;
     gap: 0.5rem;
     background: none;
@@ -162,7 +165,7 @@ color: white;
     padding: 0.2rem 1rem;
     margin-right: 0.5rem ; 
     border-radius: 0.3rem;
-    
+    font-family: OpenSans;
 }
 @media (max-width: 906px) {
     .cart > .cart-text  {
@@ -184,6 +187,9 @@ color: white;
         align-items: flex-start;
         margin-bottom: 0.5rem;
     }
+    .icon-button{
+        margin-left: 0;
+    }
     .login-cart{
         position:absolute;
         top: 0.5rem;
@@ -191,7 +197,13 @@ color: white;
     }
     .search{
         margin-left: 1.5rem;
-        width: 90%;
+        width: 91%;
+    }
+    @media (max-width: 724px) {
+        header{
+            display: flex;
+            flex-shrink: 1;
+        }
     }
 }
 /*NAVIGATION  */
@@ -539,7 +551,7 @@ font-weight: bold;
 }
 
 .footer ul li a:hover {
-text-decoration: underline;
+    color: var(--hover-color);
 }
 
 /* Responsiv design */
