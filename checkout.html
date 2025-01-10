@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="OriginalStyling.css">
+    <style>
+        table th, table td {
+            padding: 10px 15px;
+            text-align: center;
+        }
+        table th {
+            background-color: var(--hover-color);
+        }
+        .cart-summary table {
+            color: var(--texty-color);
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .cart-summary table td img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80px;
+            max-height: 80px;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="icon-button">
+        <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+        <a href="index.html">Drillzone.se</a>
+    </button>
+
+    <section class="search">
+        <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+        <input type="text" placeholder="Search...">
+    </section>
+
+    <section class="login-cart">
+        <button class="login">
+            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="login.html">Logga ut</a>
+        </button>
+
+        <button class="cart">
+            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="cart.html">Kundvagn</a>
+        </button>
+    </section>
+</header>
+
+<main>
+    <section>
+        <h1>Checkout</h1>
+
+        <!-- Display selected products -->
+        <div class="cart-summary">
+            <h2>Sammanfattning av din kundvagn</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Antal</th>
+                        <th>Pris per styck (SEK)</th>
+                        <th>Totalpris (SEK)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Black & Decker BCD001C1">
+                            <p>Black & Decker BCD001C1</p>
+                        </td>
+                        <td>1</td>
+                        <td>890</td>
+                        <td>890</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch GSR 12V-15">
+                            <p>Bosch GSR 12V-15</p>
+                        </td>
+                        <td>2</td>
+                        <td>1590</td>
+                        <td>3180</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Totalt:</strong></td>
+                        <td><strong>4070 SEK</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Checkout form -->
+        <form action="thankyou.html" method="POST">
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" placeholder="Ange ditt namn" required>
+            
+            <label for="address">Adress:</label>
+            <input type="text" id="address" name="address" placeholder="Ange din adress" required>
+            
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ange ditt telefonnummer" required>
+            
+            <label for="email">E-postadress:</label>
+            <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
+            
+            <label for="account">Bankkonto:</label>
+            <input type="text" id="account" name="account" placeholder="Ange ditt bankkonto" required>
+            
+            <button type="submit">Slutför köp</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Din Butik. Alla rättigheter förbehållنا.</p>
+    <ul>
+        <li><a href="#">Hem</a></li>
+        <li><a href="products.html">Produkter</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Om oss</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>

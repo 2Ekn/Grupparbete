@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logga ut</title>
+    <link rel="stylesheet" href="OriginalStyling.css">
+</head>
+<body>
+
+    <header>
+        <section class="header-logo">
+          <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
+          <h1>Screw</h1>
+        </section>
+    </header>
+
+    <section class="logout-section">
+        <h1>Logga ut</h1>
+        <p>Är du säker på att du vill logga ut?</p>
+        <!-- Här skulle man normalt sätta en funktion för att logga ut via backend (t.ex. genom att ta bort sessionen) -->
+        <form action="index.html" method="get">
+            <button type="submit" class="btn logout-btn">Ja, logga ut</button>
+        </form>
+        <a href="profile.html" class="btn cancel-btn">Avbryt</a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="products.html">Produkter</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="about.html">Om oss</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
