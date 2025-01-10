@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter</title>
+    <link rel="stylesheet" href="./OriginalStyling.css">
+
+    <style>
+        /* Products(Jonas) */
+        .products h2{
+            font-size: 2vw;
+            margin: 2%;
+            padding: 2%;
+            text-align: center;
+            color: white;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+        }
+        .products .allproducts{
+            max-width: 800px;
+            margin: 0 auto;
+            
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            color: var(--texty-color);
+        }
+        .products .allproducts .full-article{
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 8%;
+        }
+        .products .product-image{
+            cursor: pointer; 
+            width: 100%;
+            display: flex;
+            border-radius: 2px;
+            transition: filter 0.3s ease;
+        }
+        .products .product-image:hover{
+            filter: brightness(1.2);
+        }
+        .products .buy-button{
+            background-color: var(--button-color);
+            color: var(--texty-color); 
+            border: none; 
+            width: 100%;
+            padding: 10px 20px; 
+            font-size: 2vw; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-top: 10%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .products .buy-button:hover{
+            background-color: var(--button-hover-color);
+        }
+        .products .articel-data{
+            text-align: center;
+            font-size: clamp(1px, 2vw, 24px);
+        }
+        .products .product-name{
+            font-size: 1.5vw;
+            font-size: clamp(2px, 1.5vw, 14px);
+            margin: 5% 0;
+            font-weight: bold;
+        }
+        
+        @media(max-width: 768px) {
+            .products .allproducts {
+                width: 100%; 
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+        /* extra */
+        .social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+        }
+
+        nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <button class="icon-button">
+          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+          <a href="index.html">Drillzone.se</a>
+        </button>
+
+        <section class="search">
+          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+          <input type="text" placeholder="Search...">
+        </section>
+
+        <section class="login-cart">
+          <button class="login">
+            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="login.html">Logga in</a>
+          </button>
+
+          <button class="cart">
+            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="#">Kundvagn</a>
+          </button>
+        </section>
+      </header>
+
+      <!-- Navigationbar -->
+      <nav>
+        <ul>
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="products.html">Tillbehör</a></li>
+            <li><a href="products.html">Utförsäljning</a></li>
+        </ul>
+
+        <p>Besök oss på:</p>
+        <article class="social-media">
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
+                    height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
+                    height="20px"></a>
+        </article>
+    </nav>
+        
+    <!-- Main -->
+    <main class="products">
+        <h2>Tillbehör</h2>
+        <section class="allproducts">
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\Metallborrsats 680kr.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Metallborrsats</p>
+                    <p class="price-button">680:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\Bosch Borr- och bitssats 290kr.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Borr- och bitssats</p>
+                    <p class="price-button">290:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\Dewalt DT7275-QZ Torxbits.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Torxbits</p>
+                    <p class="price-button">140:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images/accessories-images/Wera KK28 073240 Bitsmejsel.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Bitsmejsel</p>
+                    <p class="price-button">420:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\PELA 488440 Hålsågssats.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Hålsågssats</p>
+                    <p class="price-button">490:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\Milwaukee 4932479228 Adapterset.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Adapterset</p>
+                    <p class="price-button">200:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\Milwaukee Shockwave Impact Duty Bitshållare.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Bitshållare</p>
+                    <p class="price-button">140:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\Dewalt DT8976 Hammarborrsats.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Hammarborrsats</p>
+                    <p class="price-button">490:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\Bosch 2607000548 Djupanslag.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Djupanslag</p>
+                    <p class="price-button">95:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+    
+            <article class="full-article">
+                <a href="./accessories-info.html">
+                    <img class="product-image" src="./product-images\accessories-images\Milwaukee PH2 Bits.jpg" alt="produktbild">
+                </a>
+                <div class="articel-data">
+                    <p class="product-name">Bits</p>
+                    <p class="price-button">190:-</p>
+                    <a href="cart.html">
+                        <button class="buy-button">KÖP</button>
+                    </a>
+                </div>
+            </article>
+        </section>
+    
+    </main>
+    <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="about.html">Om oss</a></li>
+            </ul>
+        </footer>
+</body>
+</html>
