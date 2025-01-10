@@ -43,7 +43,6 @@
         text-decoration: underline;
         font-size: 10px;
         margin-left: 2rem;
-
     }
     .logga-in-button{
       font-family: OpenSans;
@@ -57,6 +56,12 @@
     .logga-in-button a{
       text-decoration: none;
       color: var(--texty-color);
+    }
+    .logga-in-button a:hover{
+      color: var(--texty-color);
+    }
+    .logga-in-button:hover{
+      background-color: var(--button-hover-color);
     }
     </style>
 
@@ -81,7 +86,7 @@
 
       <button class="cart">
         <a href="cart.html"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-        <a class="cart-text" href="#">Kundvagn</a>
+        <a class="cart-text" href="cart.html">Kundvagn</a>
       </button>
     </section>
   </header>
@@ -108,7 +113,7 @@
         <input class="login-input" type="password">
         <button class="logga-in-button"><a href="profile.html">Logga in</a></button>
         <a href="#">Glömt lösenord?</a>
-        <a class="register" href="#">Har du inget konto? Registrera dig här!</a>
+        <a class="register" href="register.html">Har du inget konto? Registrera dig här!</a>
       </section>
     </main>
     <footer class="footer">

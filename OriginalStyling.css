@@ -71,6 +71,7 @@ header>a{
     display: flex;
     align-items: center;
     font-family: OpenSans;
+    margin-left: auto;
 }
 .icon-button>a{
     display: flex;
@@ -106,6 +107,7 @@ header>a{
     flex: 1 1 auto;
     min-width: 200px;
     max-width: 660px;
+    margin-right: auto;
 }
 .search-img{
     width: 2rem;
@@ -184,6 +186,9 @@ color: white;
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 0.5rem;
+    }
+    .icon-button{
+        margin-left: 0;
     }
     .login-cart{
         position:absolute;
