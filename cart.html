@@ -5,32 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kundvagn</title>
     <link rel="stylesheet" href="OriginalStyling.css">
+    <style>
+        table th, table td {
+            padding: 10px 15px;
+            text-align: center;
+        }
+        table th {
+            background-color: var(--secondary-color)
+        }
+        .cart-section table {
+            color: var(--texty-color);
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .cart-section table td img {
+            display: block;
+            margin: 0 auto;
+        }
+        .cart-section .btn {
+            margin: 0 auto;
+            display: block;
+        }
+        .login-cart {
+            display: flex;
+            align-items: center;
+        }
+        .login-cart section {
+            margin-right: 15px;
+        }
+        .logout a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #f44336;
+            font-weight: bold;
+        }
+        .logout a:hover {
+            color: #d32f2f;
+
+        }
+        .social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+
+
+    }
+
+
+
+    nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+
+    } 
+    </style>
 </head>
 <body>
 
-<header>
-    <section class="header-logo">
-        <img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo">
-        <h1>Screw</h1>
-    </section>
+    <header>
+        <button class="icon-button">
+          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+          <a href="index.html">Drillzone.se</a>
+        </button>
 
-    <section class="search">
-        <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
-        <input type="text" placeholder="Search...">
-    </section>
-
-    <section class="login-cart">
-        <section class="login">
-            <img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo">
-            <a href="login.html">Logga in</a>      
+        <section class="search">
+          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+          <input type="text" placeholder="Search...">
         </section>
 
-        <section class="cart">  
-            <img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart">
-            <a href="kundvagn.html">Kundvagn</a>
+        <section class="login-cart">
+          <button class="login">
+            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="login.html">Logga ut</a>
+          </button>
+
+          <button class="cart">
+            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="cart.html">Kundvagn</a>
+          </button>
         </section>
-    </section>
-</header>
+      </header>
+      <nav>
+        <ul>
+
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="products.html">Tillbehör</a></li>
+            <li><a href="products.html">Utförsäljning</a></li>
+
+
+        </ul>
+                <!-- <form class="search-bar" action="search" method="GET">
+                    <input type="text" name="search" placeholder="Sök efter produkter..">
+                    <button type="submit">&#x1F50E;&#xFE0E;</button>
+                </form> -->
+                    <p>Besök oss på:</p>
+                    <article class="social-media">
+                        <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px" height="20px"></a>
+                        <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px" height="20px"></a>
+                    </article>
+    </nav>
 
 <main>
     <section class="cart-section">
@@ -43,27 +125,36 @@
                     <th>Antal</th>
                     <th>Pris per styck (SEK)</th>
                     <th>Totalpris (SEK)</th>
-                    <th>Åtgärder</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild"></td>
+                    <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild" style="width: 100px; height: auto;"></td>
                     <td>Black & Decker BCD001C1</td>
                     <td><input type="number" value="1" min="1"></td>
                     <td>890</td>
                     <td>890</td>
                     <td>
-                        <button class="btn delete">Ta bort</button>
                     </td>
                 </tr>
-                <!-- Lägg till fler produkter här -->
+                <tr>
+                    <td><img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Produktbild" style="width: 100px; height: auto;"></td>
+                    <td>Bosch GSR 12V-15</td>
+                    <td><input type="number" value="2" min="1"></td>
+                    <td>1590</td>
+                    <td>3180</td>
+                    <td>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <div class="cart-summary">
             <h2>Sammanfattning</h2>
-            <p><strong>Totalt:</strong> 890 SEK</p>
-            <button class="btn checkout">Till kassan</button>
+            <p><strong>Totalt:</strong> 4070 SEK</p>
+            <button class="btn checkout">
+                <a href="checkout.html" style="text-decoration: none; color: inherit;">Till kassan</a>
+            </button>
+            
         </div>
     </section>
 </main>
