@@ -479,7 +479,7 @@ padding: 10px;
     margin-bottom: 20px;
 }
 .order-history table th {
-background-color: var(--hover-color);
+background-color:  var(--secondary-color)
 color: var(--texty-color);
 }
 
