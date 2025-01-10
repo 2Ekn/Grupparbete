@@ -380,6 +380,7 @@ nav > p > a {
 
         /* Användarprofil */
 .profile-section {
+    color: var(--texty-color);  
 margin: 20px auto;
 max-width: 900px;
 background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
@@ -458,10 +459,11 @@ color: var(--texty-color);
 
 /* Orderhistorik */
 .order-history table {
+    color: var(--texty-color);   
 width: 100%;
 border-collapse: collapse;
 margin-top: 20px;
-background: var(--primary-color);
+background: var(--secondary-color);
 border-radius: 8px;
 overflow: hidden;
 }
@@ -472,9 +474,12 @@ border: 1px solid var(--lines-color);
 text-align: center;
 padding: 10px;
 }
-
+.order-history h2 {
+    color: var(--texty-color);
+    margin-bottom: 20px;
+}
 .order-history table th {
-background-color: var(--hover-color);
+background-color:  var(--secondary-color)
 color: var(--texty-color);
 }
 
