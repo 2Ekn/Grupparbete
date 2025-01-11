@@ -33,7 +33,47 @@
             background-color: var(--secondary-color);
             border-radius: 8px;
             color: var(--texty-color);
-            
+            margin-bottom: 1rem;
+        }
+        .trall-counter .buttons{
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 1rem;
+            column-gap: 0.5rem;
+            top: 80%;
+            position: absolute;
+        }
+
+        .trall-counter .buttons .color1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 1rem;
+        }
+        .trall-counter .buttons .color1 button{
+            background-color: var(--button-color);
+            color: var(--texty-color); 
+            border: none; 
+            padding: 5px 20px; 
+            font-size: clamp(1px, 2vw, 24px);
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .trall-counter .buttons .color1 button:hover{
+            background-color: var(--button-hover-color);
+        }
+        .trall-counter .clickbild{
+            position: absolute;
+            top: 23%;
+            width: 25%;
+        }
+        .trall-counter .clickbild img{
+            width: 100%;
+            width: 100%;
+            height: auto; 
+            object-fit: contain;
+
         }
         .trallbild{
             display: flex;
@@ -43,14 +83,7 @@
             height: 100%;
             overflow: hidden;
         }
-        .trallbild img{
-            border-radius: 5px;
-            width: 100%;
-            height: auto; 
-            object-fit: contain;
-            filter: brightness(0.8);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+        
         
         .trall-counter h4{
             font-size: clamp(1px, 2vw, 24px);
@@ -86,7 +119,7 @@
             transform: translate(-50%, -50%); 
             font-size: clamp(1px, 4vw, 40px);
         }
-        .trall-counter button{
+        .trall-counter .button1{
             position: absolute; 
             top: 80%; 
             left: 50%; 
@@ -102,7 +135,7 @@
 
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .trall-counter button:hover{
+        .trall-counter .button1:hover{
             background-color: var(--button-hover-color);
         }
         
@@ -142,18 +175,19 @@
           <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
           <a href="index.html">Drillzone.se</a>
         </button>
-
+        
+    
         <section class="search">
           <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
           <input type="text" placeholder="Search...">
         </section>
-
+            
         <section class="login-cart">
           <button class="login">
             <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
             <a class="login-text" href="login.html">Logga in</a>
           </button>
-
+    
           <button class="cart">
             <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
             <a class="cart-text" href="#">Kundvagn</a>
@@ -182,15 +216,33 @@
     <main class="maincontainer">
         <h2>Hjälpmedel</h2>
         <section class="page-wrapper">
+            
             <section class="trall-counter">
                 <section class="trallbild">
-                    <img src="assets\trall.png" alt="bild på trall">
+                    <img src="./assets\skruvdragare.jpg" alt="bild på skruvdragare">
+                </section>
+                <h4>Vilken dragare söker du?</h4>
+                <section class="clickbild">
+                    <img id="current-image" src="" alt="">
+                </section>
+                <section class="buttons">
+                    <section class="color1">
+                        <button id="knapp1">Budget</button>
+                        <button id="knapp2">Prisvärd</button>
+                        <button id="knapp3">Toppklass</button>
+                    </section>
+                </section>
+            </section>
+
+            <section class="trall-counter">
+                <section class="trallbild">
+                    <img src="./assets\trall.png" alt="bild på trall">
                 </section>
                 <h4>Hur mycket skruv går det åt för Trall?</h4>
                 <label>Antal m²:</label>
                 <input type="text" id="input">
                 <p id="trallresultat"></p>
-                <button id="calculate">Beräkna</button>
+                <button class="button1" id="calculate">Beräkna</button>
             </section>
         </section>
     </main>
@@ -198,10 +250,10 @@
         <footer class="footer">
             <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
             <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="products.html">Produkter</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="about.html">Om oss</a></li>
+                <li><a href="./index.html">Hem</a></li>
+                <li><a href="./products.html">Produkter</a></li>
+                <li><a href="./contact.html">Kontakt</a></li>
+                <li><a href="./about.html">Om oss</a></li>
             </ul>
         </footer>
         <script src="calculationtools.js"></script>
