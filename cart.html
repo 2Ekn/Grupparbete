@@ -8,62 +8,55 @@
     <style>
         /* Tabellens stil med dubbla kanter */
         table {
-            width: 100%;
-            border-collapse: separate; /* För att tillåta separata kanter mellan celler */
-            border-spacing: 0; /* Tar bort mellanrum mellan celler */
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lägg till skugga för att göra tabellen mer framträdande */
-            border-radius: 10px; /* Rundade hörn på tabellen */
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
-        /* Cellerna i tabellen */
         table th, table td {
-            padding: 15px 20px;
+            padding: 10px 15px;
             text-align: center;
-            border: 2px solid #f0f0f0; /* Ljus kant för celler */
-            border-radius: 8px; /* Rundade hörn på cellerna */
-            background-color: var(--secondary-color); /* Vit bakgrundsfärg */
-            transition: all 0.3s ease; /* Animering för ändringar */
+            border: 2px solid #f0f0f0;
+            border-radius: 8px;
+            background-color: var(--secondary-color);
+            transition: all 0.3s ease;
         }
 
-        /* Stil för rubrikerna i tabellen */
         table th {
-            background-color: var(--primary-color); /* Blå bakgrundsfärg för rubrikerna */
-            color: white; /* Vit textfärg för rubrikerna */
-            font-size: 18px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 16px;
         }
 
-        /* Stil för cellerna vid hover */
         table th:hover, table td:hover {
-            background-color: var(--button-color); /* Ändrar bakgrundsfärg vid hover */
-            transform: scale(1.02); /* Gör cellerna lite större vid hover */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Lägg till skugga på celler vid hover */
-            border-color: #ddd; /* Ändrar färg på kantlinje vid hover till ljusare färg */
+            background-color: var(--button-color);
+            transform: scale(1.02);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-color: #ddd;
         }
 
-        /* Stil för jämna rader (för bättre utseende) */
         tbody tr:nth-child(even) {
-            background-color: #f9f9f9; /* Ljusare bakgrundsfärg för jämna rader */
+            background-color: #f9f9f9;
         }
 
-        /* Stil för udda rader */
         tbody tr:nth-child(odd) {
-            background-color: #ffffff; /* Vit bakgrundsfärg för udda rader */
+            background-color: #ffffff;
         }
 
-        /* Stil för bilder i tabellen */
         .cart-section table td img {
             display: block;
             margin: 0 auto;
-            max-width: 80px; /* Begränsar bildstorleken */
+            max-width: 60px;
         }
 
         .cart-section .btn {
-            margin: 0 auto;
+            margin: 10px auto;
             display: block;
         }
 
-        /* Login-cart stil */
         .login-cart {
             display: flex;
             align-items: center;
@@ -75,7 +68,7 @@
 
         .logout a {
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
             color: #f44336;
             font-weight: bold;
         }
@@ -84,7 +77,6 @@
             color: #d32f2f;
         }
 
-        /* Social media stil */
         .social-media {
             display: flex;
             justify-content: center;
@@ -114,18 +106,18 @@
         </button>
 
         <section class="search">
-            <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+            <img class="search-img" src="./assets/searchicon.png" alt="Förstoringsglas för att söka produkter i webbplatsens innehåll">
             <input type="text" placeholder="Search...">
         </section>
 
         <section class="login-cart">
             <button class="login">
-                <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+                <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="Användarinloggningsikon"></a>
                 <a class="login-text" href="login.html">Logga ut</a>
             </button>
 
             <button class="cart">
-                <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+                <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Ikon för kundvagn"></a>
                 <a class="cart-text" href="cart.html">Kundvagn</a>
             </button>
         </section>
@@ -140,8 +132,8 @@
 
         <p>Besök oss på:</p>
         <article class="social-media">
-            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px" height="20px"></a>
-            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px" height="20px"></a>
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="Instagram-logotyp" width="20px" height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="Facebook-logotyp" width="20px" height="20px"></a>
         </article>
     </nav>
 
@@ -151,25 +143,25 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Produkt</th>
-                        <th>Produktnamn</th>
-                        <th>Antal</th>
-                        <th>Pris per styck (SEK)</th>
-                        <th>Totalpris (SEK)</th>
+                        <th scope="col">Produkt</th>
+                        <th scope="col">Produktnamn</th>
+                        <th scope="col">Antal</th>
+                        <th scope="col">Pris per styck (SEK)</th>
+                        <th scope="col">Totalpris (SEK)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild" style="width: 100px; height: auto;"></td>
+                        <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild för Black & Decker BCD001C1"></td>
                         <td>Black & Decker BCD001C1</td>
-                        <td><input type="number" value="1" min="1"></td>
+                        <td><input type="number" value="1" min="1" aria-label="Antal"></td>
                         <td>890</td>
                         <td>890</td>
                     </tr>
                     <tr>
-                        <td><img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Produktbild" style="width: 100px; height: auto;"></td>
+                        <td><img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Produktbild för Bosch GSR 12V-15"></td>
                         <td>Bosch GSR 12V-15</td>
-                        <td><input type="number" value="2" min="1"></td>
+                        <td><input type="number" value="2" min="1" aria-label="Antal"></td>
                         <td>1590</td>
                         <td>3180</td>
                     </tr>
@@ -179,7 +171,7 @@
                 <h2>Sammanfattning</h2>
                 <p><strong>Totalt:</strong> 4070 SEK</p>
                 <button class="btn checkout">
-                    <a href="checkout.html" style="text-decoration: none; color: inherit;">Till kassan</a>
+                    <a href="checkout.html" style="text-decoration: none; color: inherit;">Gå Till kassan</a>
                 </button>
             </div>
         </section>
