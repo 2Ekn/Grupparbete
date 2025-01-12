@@ -297,7 +297,10 @@ Logo
     padding: 0.5rem;
     margin: 0.1rem;
     cursor: pointer;
-    align-self: stretch; 
+    /* align-self: stretch;  */
+    width: 100%;
+    max-width: 200px;
+    min-width: 150px;
     text-align: center; 
 } 
      main > section >  button:hover {
@@ -305,8 +308,9 @@ Logo
         
     }
     main > section >  img {
-        width: 100%;
+        width: 50%;
         height: auto;
+        /* max-width: 300; */
         
         border-radius: 2px; 
         display: block;   
@@ -389,33 +393,33 @@ Logo
             <h6><a href="product_info.html">Black & Decker BCD001C1</a></h6>
             <p class ="description">En högpresterande 18V lithium-ion borr-/ skruvdragare.</p>
             <p class="price">890;-</p>
-            <button onclick="addToCart(this)">Add to cart</button>
+            <button onclick="addToCart(this)">Köp</button>
         </section>
         <section data-product-id="3" data-product-name="Makita DDF484RTJ" data-product-price="4790">
             <img src="./product-images/Makita DDF484RTJ - 4790kr.jpg" alt="Makita DDF484RTJ">
             <h6><a href="./product_info.html"> DDF484RTJ</a></h6>
             <p class ="description">Kolborstfri 18V borrskruvdragare med snabbchuck. Utrustad med dubbel LED-belysning och XP</p>
             <p class="price">4790;-</p>
-            <button onclick="addToCart(this)">Add to cart</button>
+            <button onclick="addToCart(this)">Köp</button>
         </section>
         <section data-product-id="2" data-product-name="Milwaukee M18 BLDDRC-502C" data-product-price="3590">
             <img src="./product-images/Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="Milwaukee M18 BLDDRC-502C">
             <h6><a href="product_info.html">Milwaukee M18 BLDDRC-502C</a></h6>
             <p class ="description">Extremt kompakt kolborstfri borrskruvdragare på endast 145 mm</p>
             <p class="price">3590;-</p>
-            <button onclick="addToCart(this)">Add to cart</button>
+            <button onclick="addToCart(this)">Köp</button>
         </section>
         <section data-product-id="1" data-product-name="Bosch GSR 18V-EC" data-product-price="3679">
             <img src="./product-images/Bosch GSR 18V-EC - 3679kr .jpg" alt="Bosch GSR 18V-ECr">
             <h6><a href="product_info.html">Bosch GSR 18V-E</a></h6>
             <p class="description">En högpresterande 18V lithium-ion borr-/ skruvdragare.</p>
             <p class="price">3679;-</p>
-            <button onclick="addToCart(this)">Add to cart</button>
+            <button onclick="addToCart(this)">Köp</button>
         </section>
     </main>
        
         <footer class="footer">
-            <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+            <p>Copyright &copy; 2025 Dillzone AB</p>
             <ul>
                 <li><a href="index.html">Hem</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
