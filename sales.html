@@ -194,7 +194,15 @@ exempelvid main > .profile-menu eller main > .checkout*/
             filter: blur(40px);
             opacity: 0.99;
         }
-
+       
+        /* @media screen and (max-width: 850px) {
+            .block > h4{
+                width:200px;
+            }
+            .block > h4{
+                width: 200px;
+            }
+        } */
 
         .sales>.sale-product {
             background-image: url(./assets/Makita-DLX2289-Combo-Set.jpg);
@@ -439,115 +447,155 @@ exempelvid main > .profile-menu eller main > .checkout*/
         .sale-product>article>p {
             font-size: 1rem;
         }
+        /* För stora skärmar */
+@media (min-width: 1024px) {
+    .sales {
+        width: 60%;
+        padding: 2rem;
+    }
+    .sales>.hoverback {
+        width: 50%;
+        height: 5rem;
+    }
+}
 
-        .värderingar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 2rem;
-            margin: 2rem;
-            background-color: var(--secondary-color);
-            color: var(--texty-color)
-        }
+/* Mellanstora skärmar */
+@media (max-width: 780px) {
+    .sales {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    .sales>.hoverback {
+        width: 70%;
+        height: 4rem;
+        background-size: 180% 100%;
+    }
+    .sales>.hoverback:hover {
+        width: 80%;
+        height: 5.5rem;
+    }
+}
 
-        .värderingar>article {
-            flex: 0 0 calc(50% - 2rem);
-            min-width: 200px;
-            max-width: 300px;
-            box-sizing: border-box;
-        }
+/* Små skärmar */
+@media (max-width: 480px) {
+    .sales {
+        width: 95%;
+        padding: 1rem;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    .sales>.hoverback {
+        width: 80%;
+        height: auto; /* Anpassar höjden efter innehållet */
+        background-size: 150% 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+    .sales>.hoverback > section{
+        width: 80%;
+        height: 3rem;
+        background-size: 150% 100%;
+        flex-direction: column;
+    }
+    .sales>.hoverback:hover {
+        display:flex; 
+        top: 40%;
+        width: 90%;
+        height: 15rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sales>.hoverback>.hover-text {
+        font-size: 1rem;
+    }
+    .sales>.hoverback>.hover-in {
+        font-size: 1.2rem;
+        flex-direction: column;
+    }
+    .sales>.hoverback>section>.tidigare,
+    .sales>.hoverback>section>.nu {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+    .sales>.sale-product {
+        width: 200px;
+        height: 200px;
+    }
+    .sales>.sale-product>article>button {
+        font-size: 1.2rem;
+        width: 80%;
+        left: 10%;
+    }
+}
 
-        .värderingar>article>h5 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid var(--lines-color);
-            padding: 0.2rem 0.5rem;
-            background-color: var(--button-color);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .värderingar>article>p {
-            font-size: .8rem;
-        }
-
-        .om-oss {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 1.5rem;
-
-
-        }
-
-        .om-oss>h4 {
-            font-size: 1.5rem;
-            color: var(--texty-color);
-        }
-
-        .om-oss>p {
-            font-size: .8rem;
-            color: var(--texty-color);
-        }
-
-        @media (max-width: 768px) {
-            .about {
-                width: 80%;
-                padding: 2rem;
-                min-width: 500;
-            }
-
-            .välkommen>article,
-            .värderingar>article {
+        @media (max-width: 780px) {
+            .sales {
                 flex: 1 1 100%;
+                width: 100%;
 
+                padding: 1rem;
+                flex-direction: column;
             }
-
-
-            .välkommen>article,
-            .värderingar>article>h5 {
-                font-size: 1.2rem;
-
+            .sales > .block {
+                width: 400px;
             }
-
-
-            /* .välkommen > article, .värderingar > article > p {
-
-            } */
+            .sales > .block > h4 {
+                width: 400px;
+                font-size: 1.3rem;
+            }
+            .sales>.sale-product {
+                width: 300px;
+                height: 300px;
+            }
+            .sales>.sale-product > article > button {
+                flex: 1 1 100%;
+                width: 100%;
+                height: 4rem;
+                align-items: center;
+               
+                
+            }
+            
         }
+
+
 
 
         @media (max-width: 480px) {
-            .about {
-                width: 90%;
+            .sales {
+                margin-left: 3rem;
+                justify-content: center;
+                align-items: center;
+                flex: 1 1 100%;
+                width: 80%;
 
                 padding: 1rem;
+                flex-direction: column;
             }
-
-            .välkommen>article,
-            .värderingar>article {
+            .sales > .block {
+                width: 200px;
+            }
+            .sales > .block > h4 {
+                width: 200px;
+            }
+            .sales > .sale-product {
+                width: 250px;
+                height: 250px;
+            }
+            .sales>.sale-product > article > button {
                 flex: 1 1 100%;
+                width: 100%;
+                height: 3rem;
+                align-items: center;
+                font-size:2rem;
+                left: 15%;
 
-                max-width: 100%;
-
-            }
-
-            .välkommen>article>h5,
-            .värderingar>article>h5 {
-                font-size: 1rem;
-
-            }
-
-            .välkommen>article>p,
-            .värderingar>article>p {
-                font-size: 0.8rem;
-
-            }
         }
+
+
     </style>
 
 </head>
