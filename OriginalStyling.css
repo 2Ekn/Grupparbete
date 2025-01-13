@@ -319,7 +319,7 @@ nav > p > a:hover {
 /* SCALABILITY SEARCH BAR */
 @media (max-width: 756px) {
 nav {
-    flex-wrap: nowrap; 
+    flex-wrap: wrap; 
 }
 
 nav > .search-bar {
@@ -334,16 +334,15 @@ nav > .search-bar > input {
 
 @media (max-width: 670px) {
 nav {
-    flex-wrap: nowrap; 
+    flex-wrap: wrap; 
 }
 
-nav > .search-bar {
-    max-width: 200px; 
-}
-
-nav > .search-bar > input {
-    font-size: 10px;
-    padding: 0.2rem;
+.social-media {
+   
+    display: flex;
+    justify-content: center;
+   
+    width: 5rem;
 }
 
 nav > p > a {
@@ -353,38 +352,57 @@ nav > p > a {
 }
 @media (max-width: 610px) {
 nav {
-    flex-direction: column; 
-    align-items: flex-start; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between;
 }
 
 nav ul {
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 1rem; 
+   
 }
 
-nav > .search-bar {
-    max-width: 95%; 
-    width: 100%;
-    margin-left: 0; 
+nav > p {
+    display: none;
+    opacity: 0;
 }
+.social-media {
+   
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    width: 5rem;
+}
+.social-media > a{
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    
+}
+    
 
-nav > button {
-    position: absolute;
-    top: -0.7rem;
-    right: 1rem;
-    margin: 0;
 }
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row; 
+        align-items: center; 
+    }
+    
+    nav ul {
+        justify-content: flex-start;
+        align-items: center;
+     
+    }
+ 
+    nav > p {
+        display: none;
+        opacity: 0;
+    }
+    
 
-nav > button {
-    margin-top: 1rem;
-}
-
-nav > p > a {
-    top: 0.8rem; 
-    right: 4rem;
-}
-}
+    }
 
         /* Användarprofil */
 .profile-section {

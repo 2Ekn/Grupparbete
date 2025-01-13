@@ -3,98 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>Kundvagn och Checkout</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
-        table th, table td {
-            padding: 10px 15px;
-            text-align: center;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--secondary-color);
         }
+
+        h1 {
+            text-align: center;
+            color: var(--texty-color);
+        }
+
+
+        .cart-summary {
+            margin-bottom: 20px;
+      }
+
         table th {
             background-color:  var(--secondary-color)
+
         }
-        .cart-summary table {
-            color: var(--texty-color);
+
+        table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
+            background-color: var(--secondary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .cart-summary table td img {
-            display: block;
-            margin: 0 auto;
-            max-width: 80px;
-            max-height: 80px;
-        }
-        form {
-            max-width: 600px;
-            margin: 20px auto;
+
+        table th, table td {
             padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+            text-align: center;
+            border: 1px solid #ddd;
         }
-        form label {
+
+        table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        table td img {
+            max-width: 60px;
+            display: block;
+            margin: auto;
+        }
+
+        table tr:hover {
+            background-color:#4fbb19; 
+        }
+
+        form {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: var(--primary-color);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .method input {
+            margin-right: 10px;
+        }
+
+        .method img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            transition: transform 0.3s, border 0.3s;
+        }
+
+        /* Aktivt tillstånd för ikoner */
+        input[type="radio"]:checked + img {
+            border: 2px solid #28a745; /* Grön kantlinje */
+            transform: scale(1.1); /* Förstorar ikonen */
+        }
+
+        label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-        form input {
+
+        input[type="text"], input[type="tel"], input[type="email"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
-        form button {
-            display: block;
+
+        input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+
+        button {
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #28a745;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        form button:hover {
-            background-color: #45a049;
+
+        button:hover {
+            background-color: #218838;
         }
-        
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .flex-container fieldset {
+            flex: 1;
+            background-color: var(--secondary-color);
+            padding: 15px;
+            border: 1px solid #4fbb19;
+            border-radius: 5px;
+        }
+
+        /* Media query för små skärmar (mobiler) */
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column; /* Ändrar till vertikal layout för små skärmar */
+            }
+
+            .method img {
+                width: 30px; /* Minskar storleken på ikonerna */
+                height: 30px;
+            }
+
+            .cart-summary table {
+                font-size: 12px; /* Minskar textstorleken i tabellen */
+            }
+
+            form {
+                padding: 15px; /* Minskar padding för små skärmar */
+            }
+
+            button {
+                padding: 12px; /* Justerar knappstorlek för mindre skärmar */
+            }
+        }
+
+        /* Media query för tablet-skärmar */
+        @media screen and (max-width: 1024px) {
+            .flex-container {
+                flex-direction: column; /* Justering av layouten för tablet-storlekar */
+            }
+
+            .method img {
+                width: 35px;
+                height: 35px;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-
-<header>
-    <button class="icon-button">
-        <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
-        <a href="index.html">Drillzone.se</a>
-    </button>
-
-    <section class="search">
-        <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
-        <input type="text" placeholder="Search...">
-    </section>
-
-    <section class="login-cart">
-        <button class="login">
-            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
-            <a class="login-text" href="login.html">Logga ut</a>
-        </button>
-
-        <button class="cart">
-            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="cart.html">Kundvagn</a>
-        </button>
-    </section>
-</header>
-
-<main>
     <section>
-        <h1>Checkout</h1>
-
-        <!-- Display selected products -->
+        <h1>Sammanfattning av din kundvagn</h1>
         <div class="cart-summary">
-            <h2>Sammanfattning av din kundvagn</h2>
             <table>
                 <thead>
                     <tr>
@@ -107,7 +208,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Black & Decker BCD001C1">
+                            <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Black & Decker">
                             <p>Black & Decker BCD001C1</p>
                         </td>
                         <td>1</td>
@@ -116,7 +217,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch GSR 12V-15">
+                            <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch">
                             <p>Bosch GSR 12V-15</p>
                         </td>
                         <td>2</td>
@@ -132,27 +233,8 @@
                 </tfoot>
             </table>
         </div>
-
-        <!-- Checkout form -->
-        <form action="thankyou.html" method="POST">
-            <label for="name">Namn:</label>
-            <input type="text" id="name" name="name" placeholder="Ange ditt namn" required>
-            
-            <label for="address">Adress:</label>
-            <input type="text" id="address" name="address" placeholder="Ange din adress" required>
-            
-            <label for="phone">Telefonnummer:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Ange ditt telefonnummer" required>
-            
-            <label for="email">E-postadress:</label>
-            <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
-            
-            <label for="account">Bankkonto:</label>
-            <input type="text" id="account" name="account" placeholder="Ange ditt bankkonto" required>
-            
-            <button type="submit">Slutför köp</button>
-        </form>
     </section>
+
 </main>
 
 <footer class="footer">
@@ -165,5 +247,59 @@
     </ul>
 </footer>
 
+
+    <form action="thankyou.html" method="POST">
+        <h1>Checkout</h1>
+        <div class="flex-container">
+            <fieldset>
+                <legend>Fraktmetod:</legend>
+                <label class="method">
+                    <input type="radio" name="delivery-method" value="hämta-i-butik" required>
+                    <img src="./check out bilder/store-3d-icon-png.png" alt="Hämta i butik"> Hämta i butik
+                </label>
+                <label class="method">
+                    <input type="radio" name="delivery-method" value="dhl-ombud" required>
+                    <img src="./check out bilder/DHL-Emblema.png" alt="DHL Ombud"> DHL Ombud
+                </label>
+                <label class="method">
+                    <input type="radio" name="delivery-method" value="postnord-ombud" required>
+                    <img src="./check out bilder/th.jpg" alt="Postnord Ombud"> Postnord Ombud
+                </label>
+                <label class="method">
+                    <input type="radio" name="delivery-method" value="instabox-paketskåp" required>
+                    <img src="./check out bilder/instabox-logo.webp" alt="Instabox Paketskåp"> Instabox Paketskåp
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Betalningsmetod:</legend>
+                <label class="method">
+                    <input type="radio" name="payment-method" value="swish" required>
+                    <img src="./check out bilder/swish_vertical_main_rgb-png.webp" alt="Swish"> Swish
+                </label>
+                <label class="method">
+                    <input type="radio" name="payment-method" value="faktura" required>
+                    <img src="./check out bilder/invoice-1024.webp" alt="Faktura"> Faktura 14 dagar
+                </label>
+                <label class="method">
+                    <input type="radio" name="payment-method" value="bank-transfer" required>
+                    <img src="./check out bilder/bank.png" alt="Banköverföring"> Banköverföring
+                </label>
+                <label class="method">
+                    <input type="radio" name="payment-method" value="paypal" required>
+                    <img src="./check out bilder/paypal.png" alt="PayPal"> PayPal
+                </label>
+            </fieldset>
+        </div>
+        <label for="name">Namn:</label>
+        <input type="text" id="name" name="name" placeholder="Ange ditt namn" required>
+        <label for="address">Adress:</label>
+        <input type="text" id="address" name="address" placeholder="Ange din adress" required>
+        <label for="phone">Telefonnummer:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Ange ditt telefonnummer" required>
+        <label for="email">E-postadress:</label>
+        <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
+        <button type="submit">Slutför köp</button>
+    </form>
 </body>
 </html>
