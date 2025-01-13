@@ -124,10 +124,75 @@ exempelvid main > .profile-menu eller main > .checkout*/
             margin: 2rem auto;
             padding: 2rem;
             border-radius: 8px;
-            gap: 2rem;
+            gap: 1rem;
             box-sizing: border-box;
             font-family: OpenSans;
             border: 1px solid var(--lines-color);
+        }
+        .block{
+            background: linear-gradient(25deg,
+                    rgb(0, 0, 0) 0%,
+                    #40A011,
+                    rgb(0, 0, 0) 100%
+                   
+                    );
+                    /* border: 1px solid var(--texty-color); */
+                    box-shadow: -5px 8px 10px rgba(0, 0, 0, 0.8);
+                    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.8);
+
+                    /* border-top: 1px solid grey; */
+                    border-bottom: 1px solid  rgb(17, 17, 18);
+                    border-left: 1px solid var(--lines-color);
+                    /* border-right: 1px solid  rgb(58, 58, 58); */
+            border-radius: 8px;
+            opacity: 100%;
+            /* z-index: -1; */
+            
+        }
+        .block > h4{
+            
+            
+            
+            padding: 1rem;
+            width: 900px;
+            text-align: center;
+            text-transform: uppercase;
+            opacity: 100;
+            color: var(--texty-color);
+            font-size: 1.5rem;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 1); ;
+            
+
+            
+        }
+        .glow::before, .glow::after{
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: -2px; 
+            border-radius: 8px;
+            background: linear-gradient(45deg, #40A011, #1489FF, #4fbb19, #45a2ff, #4fbb19, #1489FF, #00ff00, #1489FF);
+            background-size: 400%;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            z-index: -1;
+            animation: animate 20s linear infinite;
+            opacity: .5;
+        }
+        @keyframes animate{
+            0%{
+                background-position: 0 0;
+            }
+            50%{
+                background-position: 400% 0;
+            }
+            100%{
+                background-position: 0 0;
+            }
+        }
+        .glow::after{
+            filter: blur(40px);
+            opacity: 0.99;
         }
 
 
@@ -141,7 +206,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             height: 400px;
             flex-direction: row;
             justify-content: center;
-            align-items: ;
+            
             flex-wrap: wrap;
             gap: 2rem;
             margin: 2rem;
@@ -227,10 +292,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
             }
 
-            0% {
-                background-position: 0% 0%;
 
-            }
         }
 
         .sales>.hoverback>.hover-text,
@@ -327,7 +389,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
         .sales>.hoverback:hover>section>button {
             opacity: 1;
             
-            
+            cursor: pointer;
            
         }
         .sales>.hoverback>section>button:hover {
@@ -345,7 +407,20 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
 
 
+        .sales > .text {
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid var(--lines-color);
+            background-color: var(--primary-color);
+            box-shadow:inset -2px 8px 10px rgba(0, 0, 0, 0.8);
 
+        }
+        .sales > .text > p {
+            
+            font-size: 1rem;
+            color: var(--texty-color);
+           
+        }
 
 
         .sale-product>article {
@@ -507,9 +582,9 @@ exempelvid main > .profile-menu eller main > .checkout*/
         <ul>
 
             <li><a href="products.html">Skruvdragare</a></li>
-            <li><a href="products.html">Tillbehör</a></li>
-            <li><a href="products.html">Utförsäljning</a></li>
-
+            <li><a href="accessories.html">Tillbehör</a></li>
+            <li><a href="sales.html">Utförsäljning</a></li>
+            <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
 
         </ul>
 
@@ -522,6 +597,9 @@ exempelvid main > .profile-menu eller main > .checkout*/
         </article>
     </nav>
     <main class="sales">
+        <div class="block glow">
+            <h4>Utförsäljning</h4>
+        </div>
         <section class="sale-product">
             <article>
                 <button>REA</button>
@@ -537,10 +615,13 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 <button onclick="addToCart(this)">köp</button>
                 <p class="nu">Nu: 4995kr</p>
             </section>
-
-            <!-- <p class="hover-in-p1">Ord. pris: 5 995 kr</p>
-            <p class="hover-in-p2">Nu: 4 995 kr</p> -->
+                    
             </div>
+        
+        </article>
+        <article class="text">
+
+            <p>Sladdlöst 18V combokit. Innehåller DDF485Z borrskruvdragare och DTD153Z slagskruvdragare. Levereras med 2 st 3,0 Ah batterier, snabbladdare samt väska</p>        
         </article>
     </main>
 
