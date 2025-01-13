@@ -135,35 +135,30 @@ exempelvid main > .profile-menu eller main > .checkout*/
                     rgb(0, 0, 0) 0%,
                     #40A011,
                     rgb(0, 0, 0) 100%);
-            /* border: 1px solid var(--texty-color); */
+
             box-shadow: -5px 8px 10px rgba(0, 0, 0, 0.8);
             box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.8);
-
-            /* border-top: 1px solid grey; */
             border-bottom: 1px solid rgb(17, 17, 18);
             border-left: 1px solid var(--lines-color);
-            /* border-right: 1px solid  rgb(58, 58, 58); */
             border-radius: 8px;
             opacity: 100%;
-            /* z-index: -1; */
+            width: 100%;
+            max-width: 90%;
+
 
         }
 
         .block>h4 {
-
-
-
             padding: 1rem;
-            width: 900px;
+            width: 100%;
+            max-width: 900px;
             text-align: center;
             text-transform: uppercase;
             opacity: 100;
             color: var(--texty-color);
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
             text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-            ;
-
-
+            margin: 0 auto;
 
         }
 
@@ -202,7 +197,8 @@ exempelvid main > .profile-menu eller main > .checkout*/
             opacity: 0.99;
         }
 
-        /* @media screen and (max-width: 850px) {
+        /* 
+        @media screen and (max-width: 850px) {
             .block > h4{
                 width:200px;
             }
@@ -424,18 +420,27 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
 
         .sales>.text {
+            flex: 1;
             text-align: center;
             padding: 1rem;
             border: 1px solid var(--lines-color);
             background-color: var(--primary-color);
             box-shadow: inset -2px 8px 10px rgba(0, 0, 0, 0.8);
+            width: 100%; /* Tar hela bredden av föräldern */
+    max-width: 90%; /* Förhindrar att det överstiger förälderns gränser */
+    margin: 0 auto; /* Centrerar inom föräldern */
+    box-sizing: border-box; /* Säkerställer att padding inkluderas i bredden */
+            
+            
 
         }
 
         .sales>.text>p {
 
-            font-size: 1rem;
-            color: var(--texty-color);
+            font-size: clamp(0.9rem, 2vw, 1.2rem); /* Gör textstorleken responsiv */
+        color: var(--texty-color);
+        line-height: 1.5; /* Förbättrar läsbarheten */
+        margin: 0; /* Tar bort oönskade marginaler */
 
         }
 
@@ -457,11 +462,17 @@ exempelvid main > .profile-menu eller main > .checkout*/
             font-size: 1rem;
         }
 
-   
+           
         @media (min-width: 1024px) {
+    
             .sales {
                 width: 60%;
                 padding: 2rem;
+            }
+            .sales>.block,
+            .sales>.block>h4 {
+                width: 100%;
+                font-size: 1.2rem;
             }
 
             .sales>.hoverback {
@@ -480,23 +491,64 @@ exempelvid main > .profile-menu eller main > .checkout*/
             }
         }
 
-     
+
         @media (max-width: 780px) {
             .sales {
-                width: 90%;
+                width: 60%;
                 padding: 1.5rem;
+                min-width: 400px;
+            }
+
+            .sales>.block,
+            .sales>.block>h4 {
+                width: 90%;
+                font-size: 1.2rem;
             }
 
             .sales>.hoverback {
                 width: 70%;
                 height: 4rem;
                 background-size: 180% 100%;
+                top: 50%;
+            }
+            .sales>.hoverback>.hover-text {
+                font-size: clamp(0.8 rem, 2vw, 1.5rem);
+                text-align: center;
+            }
+
+            .sales>.hoverback>.hover-in {
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .sales>.hoverback>section>.tidigare,
+            .sales>.hoverback>section>.nu {
+                font-size: clamp(1rem, 1vw, 4rem);
+                flex-direction: column;
+            }
+
+            .sales>.hoverback>section>.nu {
+                left: unsent;
+            }
+
+            .sales>.hoverback>section>button {
+                font-size: clamp(0.8rem, 2vw, 1.5rem);
+                align-items: center;
+                bottom: 0;
+                left: 25%;
+                margin: 1rem auto;
+                width: clamp(6rem, 50%, 12rem);
+                height: clamp(2rem, 5vw, 4rem);
+                padding: clamp(0.5rem, 1vw, 1rem);
+                border-radius: clamp(4px, 1vw, 8px);
+                transition: all 0.3s ease;
             }
 
             .sales>.hoverback:hover {
                 width: 90%;
                 height: 12rem;
-                top: 40%;
+                top: 30%;
             }
 
             .sales>.sale-product {
@@ -519,34 +571,32 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 font-size: 1.2rem;
             }
 
-            .sales>.block,
-            .sales>.block>h4 {
-                width: 90%;
-                font-size: 1.2rem;
-            }
+
 
             .sales .text {
                 display: flex;
                 flex-shrink: 1;
-           
-                position: absolute;
                 top: 80%;
-                left: 0;
-                right: 0;
-                margin: 0rem 2rem;
                 text-align: center;
                 padding: 1rem;
 
             }
         }
 
-       
-        @media (max-width: 480px) {
+
+        @media  (max-width: 480px) {
             .sales {
-                width: 95%;
+                width: 85%;
                 padding: 1rem;
                 gap: 0.5rem;
                 flex-direction: column;
+                margin: .5rem;
+            }
+
+            .sales>.block,
+            .sales>.block>h4 {
+                width: 90%;
+                font-size: 1.2rem;
             }
 
             .sales>.hoverback {
@@ -589,7 +639,6 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 align-items: center;
                 bottom: 0;
                 left: 25%;
-
                 margin: 1rem auto;
                 width: clamp(6rem, 50%, 12rem);
                 height: clamp(2rem, 5vw, 4rem);
@@ -604,7 +653,6 @@ exempelvid main > .profile-menu eller main > .checkout*/
             }
 
             .sales>.sale-product>article>button {
-
                 font-size: clamp(1.5rem, 3vw, 3rem);
                 width: 100%;
                 height: 30%;
@@ -613,12 +661,9 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
             .sales .text {
                 display: flex;
-                flex-shrink: 1;
                 width: 96%;
-                top: 75%;
-                left: 0;
-                right: 0;
-                margin: 0rem .5rem;
+                top: 60%;
+           
                 text-align: center;
                 padding: 1rem;
 
