@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drillzone</title>
+    <title>Drillzone - Skapa Konto</title>
     <link rel="stylesheet" href="OriginalStyling.css">
-    <link rel="icon" type="image/png" href="./assets/favicon.png" >
+    <link rel="icon" type="image/png" href="./assets/logo5.png" >
     <style>
 .social-media {
         display: flex;
@@ -25,69 +25,182 @@
         margin-left: 2rem;
     }
 
-
-    /*Register styling*/
-
     .register-main{
-        display: flex;
-        color: var(--texty-color);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 8rem 1fr 1fr 6rem;
         background-color: var(--secondary-color);
-        height: 100%;
+        margin: 2rem;
+        border-radius: 5%;
+        flex-grow: 1;
     }
-    .register-main section{
-        padding: 2rem;
-        border-left: var(--primary-color) ;
-        width: 100%;
+    .register-main>h2{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 10;
+        padding-top: 1rem;
+        font-size: 2rem;
     }
-    .register-main>section>article>input{
-        height: 2.5rem;
-        width: 75%;
+
+    /*Right side*/
+    .right-side{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 7;
+        grid-column-end: 13;
+
+        flex-shrink: 1;
+    }
+    .right-side>p{
+        font-size: 1.2rem;
+    }
+    .right-side>h3{
+        padding-bottom: 2rem;
+    }
+    .right-side>input{
+        height: 3.5rem;
+        width: 45%;
+        margin-bottom: 1rem;
         border: none;
         background-color: var(--primary-color);
-        color: var(--texty-color);
-        margin-bottom: 1rem;
-        padding-left: 0.5rem;
-    }
-    .register-main>section>article>input::placeholder{
-        color: var(--texty-color);
-        opacity: 0.60;
-
-    }
-
-    .username-input{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        border-right: 3px solid var(--primary-color);
-    }
-    .leveransaddress{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .register-main>section>article>p{
-        margin-bottom: 0.5rem;
-    }
-    .create-acc{
-        align-self: center;
-        margin-left: 30%;
-        height: 2rem;
-        background-color: var(--button-color);
         padding: 0.5rem;
         color: var(--texty-color);
+        font-size: 1.2rem;
+    }
+    .right-side>input::placeholder{
+        color: var(--texty-color);
+        font-size: 1rem;
+    }
+    .register-main>button{
+        font-family: OpenSans;
+        font-size: 1rem;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        grid-column-start: 12;
+        grid-column-end: 13;
+        height: 3rem;
+        width: 7rem;
+        background-color: var(--button-color);
         border: none;
-        border-radius: 5%;
+        border-radius: 8%;
+        color: var(--texty-color);
+        margin-right: 2rem;
+        margin-top: 1rem;
+    }
+    .register-main>button:hover{
+        background-color: var(--button-hover-color);
+        cursor: pointer;
     }
 
+    /*Left side */
+    .left-side{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 7;
+    }
+    .left-side>p{
+        font-size: 1.2rem;
+    }
+    .left-side>h3{
+        padding-bottom: 2rem;
+    }
+    .left-side>input{
+        height: 3.5rem;
+        width: 75%;
+        margin-bottom: 1rem;
+        border: none;
+        background-color: var(--primary-color);
+        padding: 0.5rem;
+        color: var(--texty-color);
+        font-size: 1.2rem;
+    }
+    .left-side>input::placeholder{
+        color: var(--texty-color);
+        font-size: 1rem;
+    }
+    .checkboxes{
+        display: grid;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 7;
+        grid-column-end: 12;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .checkbox1{
+        display: flex;
+        align-items: center;
+        gap:0.5rem;
+    }
+    .checkbox1>p>a{
+        text-decoration: underline;
+        color: var(--texty-color);
+    }
+    .checkbox1>p>a:hover{
+        color: var(--hover-color);
+    }
+    .checkbox2{
+        display: flex;
+        align-items: center;
+        gap:0.5rem;
+    }
+    .logo-register{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 11;
+        grid-column-end: 13;
 
-    
+        width: 75%;
+    }
 
+    @media (max-width: 875px){
+        .checkboxes{
+            display: grid;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 4;
+            grid-column-end: 12;
+        }
+    }
+    @media (max-width: 725px){
+        .checkboxes{
+            display: grid;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 12;
+        }
+        .register-main{
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 3%;
+        }
+        .register-main>img{
+            position: relative;
+            width: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .register-main>h2{
+            margin-bottom: 2rem;
+        }
+        
+    }
     </style>
 </head>
 <body>
     <header>
         <button class="icon-button">
-          <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
+            <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
           <a href="index.html"></a>
         </button>
         
@@ -120,53 +233,53 @@
               <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px" height="20px"></a>
             </article>
     </nav>
-    
+
     <main class="register-main">
-        <section class="username-input"> 
-            <h2>Skapa nytt konto</h2>
-            <article class="username">
-                <p>Användarnamn:</p>
-                <input type="text" placeholder="Användarnamn">
-            </article>
-
-            <article class="namn-input">
-                <p>Fullständigt namn:</p>
-                <input type="text" placeholder="Förnamn">
-                <input type="text" placeholder="Efternamn">
-            </article>
-
-            <article class="password-input">
-                    <p>Lösenord:</p>
-                    <input type="text" placeholder="Lösenord">
-                    <input type="text" placeholder="Bekräfta lösenord">
-            </article>
-        </section>    
         
-        <section class="leveransaddress">
-            <article class="personnummer">
+        
+        <img class="logo-register" src="./assets/logo5.png" alt="Company Logo">
+        <h2>Skapa konto</h2>
+        <aside class="left-side">
+                <h3>Användarupgifter</h3>
                 <p>Personnummer:</p>
                 <input type="text" placeholder="Personnummer">
-            </article>
-            <article class="gatuaddress">
-                <p>Leveransaddress:</p>
-                <input type="text" placeholder="Gatunamn">
-                <input type="text" placeholder="Postnummer">
-            </article>
+                <p>Användarnamn:</p>
+                <input type="text" placeholder="Användarnamn">
+                <p>Lösenord:</p>
+                <input type="password" placeholder="Lösenord">
+                <input type="password" placeholder="Bekräfta Lösenord">
+        </aside>
+        <aside class="right-side">
+            <h3>Leveransuppgifter</h3>
+            <p>Fullständigt namn:</p>
+            <input class="firstname" type="text" placeholder="Förnamn">
+            <input class="lastname" type="text" placeholder="Efternamn">
+            
+            <p>Leveransaddress:</p>
+            <input type="text" placeholder="Address">
+            <input type="text" placeholder="Postnummer">
+            <input type="text" placeholder="Stad">
+            
+            <p>Kontaktuppgifter: </p>
+            <input type="text" placeholder="E-post">
+            <input type="text" placeholder="Telefonnummer">
+        </aside>
+        <section class="checkboxes">
+            <section  class="checkbox1" >
+                <input type="checkbox">
+                <p>Jag har läst och accepterar <a href="#">villkoren.</a></p>
+            </section>
 
-            <article class="kontaktuppgiter">
-                <p>Kontaktuppgiter:</p>
-                <input type="text" placeholder="E-mail">
-                <input type="text" placeholder="Telefonnummer">
-            </article>
-            <button class="create-acc">
-                Skapa Konto
-            </button>
+            <section  class="checkbox2" >
+                <input class="checkbox2" type="checkbox">
+                <p>Jag vill få erbjudanden och nyhetsbrev till mailen</p>
+            </section>
         </section>
-
+        <button>Skapa Konto</button>
 
     </main>
-
-      <footer class="footer">
+   
+    <footer class="footer">
         <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
         <ul>
             <li><a href="index.html">Hem</a></li>
