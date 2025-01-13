@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundvagn</title>
+    <link rel="stylesheet" href="OriginalStyling.css">
+    <style>
+        :root{
+    --primary-color: #292929;
+    --secondary-color: #303233;
+    --texty-color: #fff;
+    --lines-color: #000;
+    --hover-color: #1489FF;
+    --button-color: #40A011;
+    --button-hover-color: #4fbb19;
+    --search-bar-color: #191A1B;
+
+
+
+    --button-font-size: 12px;
+    --p-font-size: 12px;
+    --font-family:
+    }
+                .social-media {
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            width: 5rem;
+
+
+        }
+
+
+
+        nav>p {
+            position: absolute;
+            top: 0.8rem;
+            right: 5rem;
+            display: block;
+            margin-top: auto;
+            color: var(--texty-color);
+            text-decoration: underline;
+            font-size: 10px;
+            margin-left: 2rem;
+
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            color: var(--texty-color);
+            width: 100%;
+
+        }
+        main .cart-section {
+            padding: 1rem;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+        }
+        .cart-section h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+        .cart-section > th {
+            justify-content: s;
+            align-items: flex-start;
+            text-align: left;
+            padding: 1rem;
+            border: 1px solid var(--lines-color);
+        }
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table th, table td {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+table th {
+    background-color: #3a3a3a;
+    font-weight: bold;
+    text-transform: none;
+    color: #fff;
+}
+
+table td img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+
+table input[type="number"] {
+    width: 60px;
+    padding: 0.3rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+table button.btn {
+    background-color: #6b0b00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    /* transition: background-color 0.3s ease-in-out; */
+}
+
+table button.btn:hover {
+    background-color: #c0392b;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+}
+
+.cart-summary h2 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.cart-summary p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.cart-summary .btn.checkout {
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    /* transition: background-color 0.3s ease-in-out; */
+}
+
+.cart-summary .btn.checkout:hover {
+    background-color: var(--button-hover-color);
+}
+    
+
+          </style>
+</head>
+<body>
+
+    <header>
+        <button class="icon-button">
+          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+          <a href="index.html">Drillzone.se</a>
+        </button>
+    
+    
+        <section class="search">
+          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+          <input type="text" placeholder="Search...">
+        </section>
+    
+        <section class="login-cart">
+          <button class="login">
+            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="login.html">Logga in</a>
+          </button>
+    
+          <button class="cart">
+            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="cartcopy.html">Kundvagn</a>
+          </button>
+        </section>
+      </header>
+
+    <nav>
+        <ul>
+            
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="products.html">Tillbehör</a></li>
+            <li><a href="products.html">Utförsäljning</a></li>
+
+        
+        </ul>
+                <!-- <form class="search-bar" action="search" method="GET">
+                    <input type="text" name="search" placeholder="Sök efter produkter..">
+                    <button type="submit">&#x1F50E;&#xFE0E;</button>
+                </form> -->
+                    <p>Besök oss på:</p>
+                    <article class="social-media">
+                        <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px" height="20px"></a>
+                        <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px" height="20px"></a>
+                    </article>
+    </nav>
+
+<main>
+    <section class="cart-section">
+        <h1>Kundvagn</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Produktnamn</th>
+                    <th>Antal</th>
+                    <th>Pris per styck (SEK)</th>
+                    <th>Totalpris (SEK)</th>
+                    <th>Åtgärder</th>
+                </tr>
+            </thead>
+            <tbody id="cart"></tbody>
+        </table>
+        <div class="cart-summary">
+            <h2>Sammanfattning</h2>
+            <p id="total-price"><strong>Totalt:</strong> 0 SEK</p>
+            <button class="btn checkout">Till kassan</button>
+        </div>
+    </section>
+</main>
+
+
+
+<footer class="footer">
+    <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+    <ul>
+        <li><a href="#">Hem</a></li>
+        <li><a href="products.html">Produkter</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Om oss</a></li>
+    </ul>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>

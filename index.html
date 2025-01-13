@@ -6,8 +6,7 @@
     <title>Drillzone.se</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
-        /*        skapar vi olika sidor, gör classes för varje sida. 
-exempelvid main > .profile-menu eller main > .checkout*/
+
     :root{
         /* --primary-color: #242526; */
         --secondary-color: #303233;
@@ -46,106 +45,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
         font-family: OpenSans;
         background-color: var(--primary-color);
     }
-    /* header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  
-    box-sizing: border-box;
-    background-color: var(--primary-color); 
-}
-
-Logo
-    .header-logo {
-        display: flex;
-        align-items: center; 
-
-    }
-
-    .header-logo-img {
-        width: 4rem;
-        margin-left: 0; 
-    }
-
-
-    header > .name {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: rgb(111, 111, 111);
-        
-        font-size: 1.5rem;
     
-
-    }
-        .header-logo>h1{
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: white;
-            font-size: 2.5rem;
-
-    
-        }
-    .search-img{
-      width: 2rem;
-    }
-    .login-img{
-
-      width: 2rem;
-    }
-    .cart-img{
-        width: 2rem;
-    } */
-
-    /*Search input*/
-    /* .search{
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-        max-width: 50rem;
-        height: 2.6rem;
-        background-color: #191a1c;
-        margin: 0 2rem;
-    }
-    .search>input{
-        width: 100%;
-        background-color: #191a1c;
-        border: none;
-        margin-left: 1rem;
-        color: white;
-        font-size: 1rem;
-    }
-    .search>input:focus{
-    outline: none;
-    
-    }
-    .search>input::placeholder{
-    color: white;
-    }
-
-    /*login/cart*/
-    /* .login-cart{
-        
-    display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-    .login, .cart {
-
-        display: flex;
-        align-items: center;
-        color: white;
-        font-size: 1.1rem; */
-    /* }
-    .login > a, .cart > a {
-        font-size: 10px;
-        text-decoration: none;
-        color: white;
-    }
-    .cart {
-        background-color: green; 
-        padding: 0.5rem 1rem; 
-        border-radius: 0.3rem; /
-    } */ 
 
 
     .social-media {
@@ -236,33 +136,32 @@ Logo
     text-align: center; 
     box-sizing: border-box;
     border-radius: 8px;
-    /* border: 1px solid var(--lines-color);  */
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  */
+  
     display: block; 
     }
-    main > article > h6 {
+    main > section > h6 {
         color: var(--texty-color);
         font-size: 10px;
         text-align: center;
     }
-    main > article > h6 > a {
+    main > section > h6 > a {
         text-decoration: underline;
         color: var(--texty-color);
     } */
-     main > article > h6 > a:hover {
+     main > section > h6 > a:hover {
         color: var(--hover-color); 
     } 
 
 
 
-     main > article   {
+     main > section   {
         
         color: var(--texty-color); 
         display: flex; 
         flex-direction: column;
        justify-content: space-between;
         align-items: center; 
-        /* border: 1px solid var(--lines-color); */
+
         border-radius: 8px;
         padding: 1rem;
         width: calc(25% - 1rem);
@@ -274,21 +173,21 @@ Logo
         flex-grow: 0;  
 
     }
-     main > article > .price {
+     main > section > .price {
         color: var(--hover-color); 
         font-size: 16px; 
-        /* font-weight: bold;  */
+  
          margin: 0.5rem 0; 
     }
 
-    main > article > .description {
+    main > section > .description {
         font-size: 10px; 
         color: var(--texty-color); 
         text-align: center; 
         margin: 0.5rem 0; 
     }  
 
-     main > article > button {
+     main > section > button {
     background-color: var(--button-color);
     color: var(--texty-color);
     font-size: 12px;
@@ -297,23 +196,27 @@ Logo
     padding: 0.5rem;
     margin: 0.1rem;
     cursor: pointer;
-    align-self: stretch; 
+
+    width: 100%;
+    max-width: 200px;
+    min-width: 150px;
     text-align: center; 
 } 
-     main > article >  button:hover {
+     main > section >  button:hover {
         background-color: var(--button-hover-color);
         
     }
-    main > article >  img {
-        width: 100%;
+    main > section >  img {
+        width: 50%;
         height: auto;
+      
         
         border-radius: 2px; 
         display: block;   
     }
     /* MAIN SCALABILITY */
       @media(max-width: 600px) {
-    main > article {
+    main > section {
         width: 100%; 
     }
 
@@ -353,75 +256,72 @@ Logo
     
           <button class="cart">
             <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="#">Kundvagn</a>
+            <a class="cart-text" href="cart.html">Kundvagn</a>
           </button>
         </section>
       </header>
 
-    <nav>
+     <nav>
         <ul>
             
             <li><a href="products.html">Skruvdragare</a></li>
-            <li><a href="products.html">Tillbehör</a></li>
-            <li><a href="products.html">Utförsäljning</a></li>
+            <li><a href="accessories.html">Tillbehör</a></li>
+            <li><a href="sales.html">Utförsäljning</a></li>
+            <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
 
         
         </ul>
-                <!-- <form class="search-bar" action="search" method="GET">
-                    <input type="text" name="search" placeholder="Sök efter produkter..">
-                    <button type="submit">&#x1F50E;&#xFE0E;</button>
-                </form> -->
                     <p>Besök oss på:</p>
                     <article class="social-media">
                         <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px" height="20px"></a>
                         <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px" height="20px"></a>
                     </article>
     </nav>
-    <article class="index-info">
+    <section class="index-info">
         <p>Vi på Drillzone.se hjälper dig att hitta rätt skruvdragare för alla jobb oavsett om du är en hobbysnickare eller företagare.</p>
         <p>Med vårt gedigna sortiment av skruvdragare och tillbehör garanterar vi att alla projekt i framtiden kommer bli en fröjd. <br> Har du några frågor tveka inte på att <a href="#">kontakta oss</a>.</p> 
-     </article> 
+    </section> 
     <main>
         <h4>Våra mest sålda och populära produkter</h4>
-        <article>
+        <section data-product-id="4" data-product-name="Black & Decker BCD001C1" data-product-price="890">
             <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Black and decker">
             <h6><a href="product_info.html">Black & Decker BCD001C1</a></h6>
             <p class ="description">En högpresterande 18V lithium-ion borr-/ skruvdragare.</p>
             <p class="price">890;-</p>
-            
-            <button>Add to cart</button>
-        </article>
-        <article>
+            <button onclick="addToCart(this)">Köp</button>
+        </section>
+        <section data-product-id="3" data-product-name="Makita DDF484RTJ" data-product-price="4790">
             <img src="./product-images/Makita DDF484RTJ - 4790kr.jpg" alt="Makita DDF484RTJ">
             <h6><a href="./product_info.html"> DDF484RTJ</a></h6>
             <p class ="description">Kolborstfri 18V borrskruvdragare med snabbchuck. Utrustad med dubbel LED-belysning och XP</p>
             <p class="price">4790;-</p>
-            <button>Add to cart</button>
-        </article>
-        <article>
+            <button onclick="addToCart(this)">Köp</button>
+        </section>
+        <section data-product-id="2" data-product-name="Milwaukee M18 BLDDRC-502C" data-product-price="3590">
             <img src="./product-images/Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="Milwaukee M18 BLDDRC-502C">
             <h6><a href="product_info.html">Milwaukee M18 BLDDRC-502C</a></h6>
             <p class ="description">Extremt kompakt kolborstfri borrskruvdragare på endast 145 mm</p>
             <p class="price">3590;-</p>
-            <button>Add to cart</button>
-        </article>
-        <article>
-            <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch GSR 12V-15">
-            <h6><a href="product_info.html">Bosch GSR 12V-15</a></h6>
-            <p class ="description">Borrskruvdragaren med välbalanserad prestanda inom 12 V-klassen</p>
-            <p class="price">1590;-</p>
-            <button>Add to cart</button>
-        </article>
+            <button onclick="addToCart(this)">Köp</button>
+        </section>
+        <section data-product-id="1" data-product-name="Bosch GSR 18V-EC" data-product-price="3679">
+            <img src="./product-images/Bosch GSR 18V-EC - 3679kr .jpg" alt="Bosch GSR 18V-ECr">
+            <h6><a href="product_info.html">Bosch GSR 18V-E</a></h6>
+            <p class="description">En högpresterande 18V lithium-ion borr-/ skruvdragare.</p>
+            <p class="price">3679;-</p>
+            <button onclick="addToCart(this)">Köp</button>
+        </section>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="products.html">Produkter</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="about.html">Om oss</a></li>
-        </ul>
-    </footer>
+       
+        <footer class="footer">
+            <p>Copyright &copy; 2025 Dillzone AB</p>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </footer>
+    <script src="cart.js"></script>
 </body>
 </html>
