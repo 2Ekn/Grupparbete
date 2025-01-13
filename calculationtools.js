@@ -16,7 +16,6 @@ document.getElementById("calculate").onclick = function(){
     document.getElementById("trallmeter").textContent = resultat2 + " meter trall";
 }
 
-
 //Vilken dragare?
 const currentImage = document.getElementById('dragarbild');
 const currentText = document.getElementById('dragartext');
@@ -36,6 +35,6 @@ knapp1.addEventListener('click', () => changeImage('assets/black&decker ai.jpeg'
 knapp2.addEventListener('click', () => changeImage('assets/stanley ai.jpeg'));
 knapp3.addEventListener('click', () => changeImage('assets/makita ai.jpeg'));
 
-knapp1.addEventListener('click', () => changeText('En prisvärd skruvdragare som erbjuder grundläggande funktioner för enklare hemmaprojekt.'));
-knapp2.addEventListener('click', () => changeText('En pålitlig och prisvärd skruvdragare som kombinerar kvalitet och prestanda för både vardagliga och mer avancerade projekt.'));
-knapp3.addEventListener('click', () => changeText('En skruvdragare i toppklass som levererar högsta prestanda, precision och hållbarhet för professionella användare och krävande projekt.'));
+knapp1.addEventListener('click', () => changeText('Black & Decker är en skruvdragare som erbjuder grundläggande funktioner för enklare hemmaprojekt.'));
+knapp2.addEventListener('click', () => changeText('Stanley är en pålitlig och prisvärd skruvdragare som kombinerar kvalitet och prestanda för både vardagliga och mer avancerade projekt.'));
+knapp3.addEventListener('click', () => changeText('Makita skruvdragarna är i toppklass som levererar högsta prestanda, precision och hållbarhet för professionella användare och krävande projekt.'));
