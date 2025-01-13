@@ -240,22 +240,22 @@ Logo
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  */
     display: block; 
     }
-    main > article > h6 {
+    main > section > h6 {
         color: var(--texty-color);
         font-size: 10px;
         text-align: center;
     }
-    main > article > h6 > a {
+    main > section > h6 > a {
         text-decoration: underline;
         color: var(--texty-color);
     } */
-     main > article > h6 > a:hover {
+     main > section > h6 > a:hover {
         color: var(--hover-color); 
     } 
 
 
 
-     main > article   {
+     main > section   {
         
         color: var(--texty-color); 
         display: flex; 
@@ -274,21 +274,21 @@ Logo
         flex-grow: 0;  
 
     }
-     main > article > .price {
+     main > section > .price {
         color: var(--hover-color); 
         font-size: 16px; 
         /* font-weight: bold;  */
          margin: 0.5rem 0; 
     }
 
-    main > article > .description {
+    main > section > .description {
         font-size: 10px; 
         color: var(--texty-color); 
         text-align: center; 
         margin: 0.5rem 0; 
     }  
 
-     main > article > button {
+     main > section > button {
     background-color: var(--button-color);
     color: var(--texty-color);
     font-size: 12px;
@@ -300,11 +300,11 @@ Logo
     align-self: stretch; 
     text-align: center; 
 } 
-     main > article >  button:hover {
+     main > section >  button:hover {
         background-color: var(--button-hover-color);
         
     }
-    main > article >  img {
+    main > section >  img {
         width: 100%;
         height: auto;
         
@@ -313,7 +313,7 @@ Logo
     }
     /* MAIN SCALABILITY */
       @media(max-width: 600px) {
-    main > article {
+    main > section {
         width: 100%; 
     }
 
@@ -353,17 +353,18 @@ Logo
     
           <button class="cart">
             <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="#">Kundvagn</a>
+            <a class="cart-text" href="cartcopy.html">Kundvagn</a>
           </button>
         </section>
       </header>
 
-    <nav>
+     <nav>
         <ul>
             
             <li><a href="products.html">Skruvdragare</a></li>
-            <li><a href="products.html">Tillbehör</a></li>
-            <li><a href="products.html">Utförsäljning</a></li>
+            <li><a href="accessories.html">Tillbehör</a></li>
+            <li><a href="sales.html">Utförsäljning</a></li>
+            <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
 
         
         </ul>
@@ -377,51 +378,51 @@ Logo
                         <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px" height="20px"></a>
                     </article>
     </nav>
-    <article class="index-info">
+    <section class="index-info">
         <p>Vi på Drillzone.se hjälper dig att hitta rätt skruvdragare för alla jobb oavsett om du är en hobbysnickare eller företagare.</p>
         <p>Med vårt gedigna sortiment av skruvdragare och tillbehör garanterar vi att alla projekt i framtiden kommer bli en fröjd. <br> Har du några frågor tveka inte på att <a href="#">kontakta oss</a>.</p> 
-     </article> 
+    </section> 
     <main>
         <h4>Våra mest sålda och populära produkter</h4>
-        <article>
+        <section data-product-id="4" data-product-name="Black & Decker BCD001C1" data-product-price="890">
             <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Black and decker">
             <h6><a href="product_info.html">Black & Decker BCD001C1</a></h6>
             <p class ="description">En högpresterande 18V lithium-ion borr-/ skruvdragare.</p>
             <p class="price">890;-</p>
-            
-            <button>Add to cart</button>
-        </article>
-        <article>
+            <button onclick="addToCart(this)">Add to cart</button>
+        </section>
+        <section data-product-id="3" data-product-name="Makita DDF484RTJ" data-product-price="4790">
             <img src="./product-images/Makita DDF484RTJ - 4790kr.jpg" alt="Makita DDF484RTJ">
             <h6><a href="./product_info.html"> DDF484RTJ</a></h6>
             <p class ="description">Kolborstfri 18V borrskruvdragare med snabbchuck. Utrustad med dubbel LED-belysning och XP</p>
             <p class="price">4790;-</p>
-            <button>Add to cart</button>
-        </article>
-        <article>
+            <button onclick="addToCart(this)">Add to cart</button>
+        </section>
+        <section data-product-id="2" data-product-name="Milwaukee M18 BLDDRC-502C" data-product-price="3590">
             <img src="./product-images/Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="Milwaukee M18 BLDDRC-502C">
             <h6><a href="product_info.html">Milwaukee M18 BLDDRC-502C</a></h6>
             <p class ="description">Extremt kompakt kolborstfri borrskruvdragare på endast 145 mm</p>
             <p class="price">3590;-</p>
-            <button>Add to cart</button>
-        </article>
-        <article>
-            <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch GSR 12V-15">
-            <h6><a href="product_info.html">Bosch GSR 12V-15</a></h6>
-            <p class ="description">Borrskruvdragaren med välbalanserad prestanda inom 12 V-klassen</p>
-            <p class="price">1590;-</p>
-            <button>Add to cart</button>
-        </article>
+            <button onclick="addToCart(this)">Add to cart</button>
+        </section>
+        <section data-product-id="1" data-product-name="Bosch GSR 18V-EC" data-product-price="3679">
+            <img src="./product-images/Bosch GSR 18V-EC - 3679kr .jpg" alt="Bosch GSR 18V-ECr">
+            <h6><a href="product_info.html">Bosch GSR 18V-E</a></h6>
+            <p class="description">En högpresterande 18V lithium-ion borr-/ skruvdragare.</p>
+            <p class="price">3679;-</p>
+            <button onclick="addToCart(this)">Add to cart</button>
+        </section>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="products.html">Produkter</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="about.html">Om oss</a></li>
-        </ul>
-    </footer>
+       
+        <footer class="footer">
+            <p>&copy; 2025 Din Butik. Alla rättigheter förbehållna.</p>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </footer>
+    <script src="cart.js"></script>
 </body>
 </html>
