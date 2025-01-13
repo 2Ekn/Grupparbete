@@ -129,30 +129,30 @@ exempelvid main > .profile-menu eller main > .checkout*/
             font-family: OpenSans;
             border: 1px solid var(--lines-color);
         }
-        .block{
+
+        .block {
             background: linear-gradient(25deg,
                     rgb(0, 0, 0) 0%,
                     #40A011,
-                    rgb(0, 0, 0) 100%
-                   
-                    );
-                    /* border: 1px solid var(--texty-color); */
-                    box-shadow: -5px 8px 10px rgba(0, 0, 0, 0.8);
-                    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.8);
+                    rgb(0, 0, 0) 100%);
+            /* border: 1px solid var(--texty-color); */
+            box-shadow: -5px 8px 10px rgba(0, 0, 0, 0.8);
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.8);
 
-                    /* border-top: 1px solid grey; */
-                    border-bottom: 1px solid  rgb(17, 17, 18);
-                    border-left: 1px solid var(--lines-color);
-                    /* border-right: 1px solid  rgb(58, 58, 58); */
+            /* border-top: 1px solid grey; */
+            border-bottom: 1px solid rgb(17, 17, 18);
+            border-left: 1px solid var(--lines-color);
+            /* border-right: 1px solid  rgb(58, 58, 58); */
             border-radius: 8px;
             opacity: 100%;
             /* z-index: -1; */
-            
+
         }
-        .block > h4{
-            
-            
-            
+
+        .block>h4 {
+
+
+
             padding: 1rem;
             width: 900px;
             text-align: center;
@@ -160,16 +160,19 @@ exempelvid main > .profile-menu eller main > .checkout*/
             opacity: 100;
             color: var(--texty-color);
             font-size: 1.5rem;
-            text-shadow: 3px 3px 3px rgba(0, 0, 0, 1); ;
-            
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+            ;
 
-            
+
+
         }
-        .glow::before, .glow::after{
+
+        .glow::before,
+        .glow::after {
             content: '';
             position: absolute;
             left: -2px;
-            top: -2px; 
+            top: -2px;
             border-radius: 8px;
             background: linear-gradient(45deg, #40A011, #1489FF, #4fbb19, #45a2ff, #4fbb19, #1489FF, #00ff00, #1489FF);
             background-size: 400%;
@@ -179,22 +182,26 @@ exempelvid main > .profile-menu eller main > .checkout*/
             animation: animate 20s linear infinite;
             opacity: .5;
         }
-        @keyframes animate{
-            0%{
+
+        @keyframes animate {
+            0% {
                 background-position: 0 0;
             }
-            50%{
+
+            50% {
                 background-position: 400% 0;
             }
-            100%{
+
+            100% {
                 background-position: 0 0;
             }
         }
-        .glow::after{
+
+        .glow::after {
             filter: blur(40px);
             opacity: 0.99;
         }
-       
+
         /* @media screen and (max-width: 850px) {
             .block > h4{
                 width:200px;
@@ -214,7 +221,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             height: 400px;
             flex-direction: row;
             justify-content: center;
-            
+
             flex-wrap: wrap;
             gap: 2rem;
             margin: 2rem;
@@ -229,7 +236,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             overflow: hidden;
         }
 
-       
+
 
         .sales>.sale-product>article>button {
             display: flex;
@@ -340,7 +347,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             justify-content: space-around;
             align-items: center;
             gap: 1rem;
-            margin:0 2rem;
+            margin: 0 2rem;
             width: 100%;
         }
 
@@ -353,17 +360,17 @@ exempelvid main > .profile-menu eller main > .checkout*/
             font-size: 1.5rem;
             font-weight: 700;
             transition: opacity 0.3s ease;
-           
+
         }
 
-        
+
         .sales>.hoverback>section>.tidigare {
             position: absolute;
             left: 1%;
             color: red;
         }
 
-        
+
         .sales>.hoverback>section>.nu {
             position: absolute;
             left: 80%;
@@ -371,7 +378,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             color: var(--button-hover-color);
         }
 
-        
+
         .sales>.hoverback>section>button {
             color: #fff;
             position: absolute;
@@ -391,15 +398,16 @@ exempelvid main > .profile-menu eller main > .checkout*/
             background-color: var(--button-hover-color);
         }
 
-        
+
         .sales>.hoverback:hover>section>.tidigare,
         .sales>.hoverback:hover>section>.nu,
         .sales>.hoverback:hover>section>button {
             opacity: 1;
-            
+
             cursor: pointer;
-           
+
         }
+
         .sales>.hoverback>section>button:hover {
             background-color: var(--button-hover-color);
         }
@@ -415,19 +423,20 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
 
 
-        .sales > .text {
+        .sales>.text {
             text-align: center;
             padding: 1rem;
             border: 1px solid var(--lines-color);
             background-color: var(--primary-color);
-            box-shadow:inset -2px 8px 10px rgba(0, 0, 0, 0.8);
+            box-shadow: inset -2px 8px 10px rgba(0, 0, 0, 0.8);
 
         }
-        .sales > .text > p {
-            
+
+        .sales>.text>p {
+
             font-size: 1rem;
             color: var(--texty-color);
-           
+
         }
 
 
@@ -447,155 +456,174 @@ exempelvid main > .profile-menu eller main > .checkout*/
         .sale-product>article>p {
             font-size: 1rem;
         }
-        /* För stora skärmar */
-@media (min-width: 1024px) {
-    .sales {
-        width: 60%;
-        padding: 2rem;
-    }
-    .sales>.hoverback {
-        width: 50%;
-        height: 5rem;
-    }
-}
 
-/* Mellanstora skärmar */
-@media (max-width: 780px) {
-    .sales {
-        width: 90%;
-        padding: 1.5rem;
-    }
-    .sales>.hoverback {
-        width: 70%;
-        height: 4rem;
-        background-size: 180% 100%;
-    }
-    .sales>.hoverback:hover {
-        width: 80%;
-        height: 5.5rem;
-    }
-}
+   
+        @media (min-width: 1024px) {
+            .sales {
+                width: 60%;
+                padding: 2rem;
+            }
 
-/* Små skärmar */
-@media (max-width: 480px) {
-    .sales {
-        width: 95%;
-        padding: 1rem;
-        gap: 0.5rem;
-        flex-direction: column;
-    }
-    .sales>.hoverback {
-        width: 80%;
-        height: auto; /* Anpassar höjden efter innehållet */
-        background-size: 150% 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-    .sales>.hoverback > section{
-        width: 80%;
-        height: 3rem;
-        background-size: 150% 100%;
-        flex-direction: column;
-    }
-    .sales>.hoverback:hover {
-        display:flex; 
-        top: 40%;
-        width: 90%;
-        height: 15rem;
-        flex-direction: column;
-        align-items: center;
-    }
-    .sales>.hoverback>.hover-text {
-        font-size: 1rem;
-    }
-    .sales>.hoverback>.hover-in {
-        font-size: 1.2rem;
-        flex-direction: column;
-    }
-    .sales>.hoverback>section>.tidigare,
-    .sales>.hoverback>section>.nu {
-        font-size: 1rem;
-        flex-direction: column;
-    }
-    .sales>.sale-product {
-        width: 200px;
-        height: 200px;
-    }
-    .sales>.sale-product>article>button {
-        font-size: 1.2rem;
-        width: 80%;
-        left: 10%;
-    }
-}
+            .sales>.hoverback {
+                width: 50%;
+                height: 5rem;
+            }
 
+            .sales>.hoverback:hover {
+                width: 85%;
+                height: 8rem;
+            }
+
+            .sales>.sale-product {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+     
         @media (max-width: 780px) {
             .sales {
-                flex: 1 1 100%;
-                width: 100%;
+                width: 90%;
+                padding: 1.5rem;
+            }
 
-                padding: 1rem;
-                flex-direction: column;
+            .sales>.hoverback {
+                width: 70%;
+                height: 4rem;
+                background-size: 180% 100%;
             }
-            .sales > .block {
-                width: 400px;
+
+            .sales>.hoverback:hover {
+                width: 90%;
+                height: 12rem;
+                top: 40%;
             }
-            .sales > .block > h4 {
-                width: 400px;
-                font-size: 1.3rem;
-            }
+
             .sales>.sale-product {
                 width: 300px;
                 height: 300px;
             }
-            .sales>.sale-product > article > button {
-                flex: 1 1 100%;
+
+            .sales>.sale-product>article>button {
+                font-size: 3rem;
                 width: 100%;
-                height: 4rem;
+                left: 10%;
                 align-items: center;
-               
-                
             }
-            
+
+            .sales>.hoverback>.hover-text {
+                font-size: 1.2rem;
+            }
+
+            .sales>.hoverback>.hover-in {
+                font-size: 1.2rem;
+            }
+
+            .sales>.block,
+            .sales>.block>h4 {
+                width: 90%;
+                font-size: 1.2rem;
+            }
+
+            .sales .text {
+                display: flex;
+                flex-shrink: 1;
+           
+                position: absolute;
+                top: 80%;
+                left: 0;
+                right: 0;
+                margin: 0rem 2rem;
+                text-align: center;
+                padding: 1rem;
+
+            }
         }
 
-
-
-
+       
         @media (max-width: 480px) {
             .sales {
-                margin-left: 3rem;
-                justify-content: center;
-                align-items: center;
-                flex: 1 1 100%;
-                width: 80%;
-
+                width: 95%;
                 padding: 1rem;
+                gap: 0.5rem;
                 flex-direction: column;
             }
-            .sales > .block {
-                width: 200px;
+
+            .sales>.hoverback {
+                width: 70%;
+                height: 3rem;
+                background-size: 150% 100%;
+                top: 50%;
             }
-            .sales > .block > h4 {
-                width: 200px;
+
+            .sales>.hoverback:hover {
+                width: 70%;
+                height: 10rem;
+                flex-direction: column;
+                top: 30%;
             }
-            .sales > .sale-product {
+
+            .sales>.hoverback>.hover-text {
+                font-size: clamp(0.8 rem, 2vw, 1.5rem);
+                text-align: center;
+            }
+
+            .sales>.hoverback>.hover-in {
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .sales>.hoverback>section>.tidigare,
+            .sales>.hoverback>section>.nu {
+                font-size: clamp(0.8rem, 2vw, 1.5rem);
+                flex-direction: column;
+            }
+
+            .sales>.hoverback>section>.nu {
+                left: unsent;
+            }
+
+            .sales>.hoverback>section>button {
+                font-size: clamp(0.8rem, 2vw, 1.5rem);
+                align-items: center;
+                bottom: 0;
+                left: 25%;
+
+                margin: 1rem auto;
+                width: clamp(6rem, 50%, 12rem);
+                height: clamp(2rem, 5vw, 4rem);
+                padding: clamp(0.5rem, 1vw, 1rem);
+                border-radius: clamp(4px, 1vw, 8px);
+                transition: all 0.3s ease;
+            }
+
+            .sales>.sale-product {
                 width: 250px;
                 height: 250px;
             }
-            .sales>.sale-product > article > button {
-                flex: 1 1 100%;
+
+            .sales>.sale-product>article>button {
+
+                font-size: clamp(1.5rem, 3vw, 3rem);
                 width: 100%;
-                height: 3rem;
-                align-items: center;
-                font-size:2rem;
-                left: 15%;
+                height: 30%;
+                left: 10%;
+            }
 
+            .sales .text {
+                display: flex;
+                flex-shrink: 1;
+                width: 96%;
+                top: 75%;
+                left: 0;
+                right: 0;
+                margin: 0rem .5rem;
+                text-align: center;
+                padding: 1rem;
+
+            }
         }
-
-
     </style>
 
 </head>
@@ -663,13 +691,14 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 <button onclick="addToCart(this)">köp</button>
                 <p class="nu">Nu: 4995kr</p>
             </section>
-                    
+
             </div>
-        
+
         </article>
         <article class="text">
 
-            <p>Sladdlöst 18V combokit. Innehåller DDF485Z borrskruvdragare och DTD153Z slagskruvdragare. Levereras med 2 st 3,0 Ah batterier, snabbladdare samt väska</p>        
+            <p>Sladdlöst 18V combokit. Innehåller DDF485Z borrskruvdragare och DTD153Z slagskruvdragare. Levereras med 2
+                st 3,0 Ah batterier, snabbladdare samt väska</p>
         </article>
     </main>
 
