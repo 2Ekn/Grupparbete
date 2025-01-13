@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drillzone</title>
+  <title>Drillzone - Logga in</title>
   <link rel="stylesheet" href="OriginalStyling.css">
-  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="icon" type="image/png" href="./assets/logo5.png">
 </head>
 
 <style>
@@ -63,13 +63,34 @@
     .logga-in-button:hover{
       background-color: var(--button-hover-color);
     }
+    
+
+    @media (max-width: 1025px) {
+        .login-screen{
+          width: 85%;
+          height: 100%;
+          font-size: 2rem;
+        }
+        .login-screen img {
+          margin-top: auto;
+        }
+        .login-screen p{
+          font-size: 1.5rem;
+        }
+        .login-screen input{
+          width: 80%;
+          height: 7%;
+        }
+        .logga-in-button{
+          margin-bottom: auto;
+        }
+      }
     </style>
 
 <body>
   <header>
     <button class="icon-button">
-      <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
-      <a href="index.html">Drillzone.se</a>
+      <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
     </button>
     
 
