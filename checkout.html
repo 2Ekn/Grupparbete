@@ -17,8 +17,9 @@
             text-align: center;
             color: var(--texty-color);
         }
-        table th {
-            background-color: var(--hover-color);
+
+        .cart-summary {
+            margin-bottom: 20px;
         }
 
         table {
@@ -228,28 +229,7 @@
         </div>
     </section>
 
-        <!-- Checkout form -->
-        <form action="thankyou.html" method="POST">
-            <label for="name">Namn:</label>
-            <input type="text" id="name" name="name" placeholder="Ange ditt namn" required>
-            
-            <label for="address">Adress:</label>
-            <input type="text" id="address" name="address" placeholder="Ange din adress" required>
-            
-            <label for="phone">Telefonnummer:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Ange ditt telefonnummer" required>
-            
-            <label for="email">E-postadress:</label>
-            <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
-            
-            <label for="account">Bankkonto:</label>
-            <input type="text" id="account" name="account" placeholder="Ange ditt bankkonto" required>
-            
-            <button type="submit">Slutför köp</button>
-        </form>
-    </section>
-</main>
-
+<<<<<<<<< Temporary merge branch 1
 <footer class="footer">
     <p>&copy; 2025 Din Butik. Alla rättigheter förbehållنا.</p>
     <ul>
@@ -259,6 +239,60 @@
         <li><a href="#">Om oss</a></li>
     </ul>
 </footer>
+=========
+    <form action="thankyou.html" method="POST">
+        <h1>Checkout</h1>
+        <div class="flex-container">
+            <fieldset>
+                <legend>Fraktmetod:</legend>
+                <label class="method">
+                    <input type="radio" name="delivery-method" value="hämta-i-butik" required>
+                    <img src="./check out bilder/store-3d-icon-png.png" alt="Hämta i butik"> Hämta i butik
+                </label>
+                <label class="method">
+                    <input type="radio" name="delivery-method" value="dhl-ombud" required>
+                    <img src="./check out bilder/DHL-Emblema.png" alt="DHL Ombud"> DHL Ombud
+                </label>
+                <label class="method">
+                    <input type="radio" name="delivery-method" value="postnord-ombud" required>
+                    <img src="./check out bilder/th.jpg" alt="Postnord Ombud"> Postnord Ombud
+                </label>
+                <label class="method">
+                    <input type="radio" name="delivery-method" value="instabox-paketskåp" required>
+                    <img src="./check out bilder/instabox-logo.webp" alt="Instabox Paketskåp"> Instabox Paketskåp
+                </label>
+            </fieldset>
+>>>>>>>>> Temporary merge branch 2
 
+            <fieldset>
+                <legend>Betalningsmetod:</legend>
+                <label class="method">
+                    <input type="radio" name="payment-method" value="swish" required>
+                    <img src="./check out bilder/swish_vertical_main_rgb-png.webp" alt="Swish"> Swish
+                </label>
+                <label class="method">
+                    <input type="radio" name="payment-method" value="faktura" required>
+                    <img src="./check out bilder/invoice-1024.webp" alt="Faktura"> Faktura 14 dagar
+                </label>
+                <label class="method">
+                    <input type="radio" name="payment-method" value="bank-transfer" required>
+                    <img src="./check out bilder/bank.png" alt="Banköverföring"> Banköverföring
+                </label>
+                <label class="method">
+                    <input type="radio" name="payment-method" value="paypal" required>
+                    <img src="./check out bilder/paypal.png" alt="PayPal"> PayPal
+                </label>
+            </fieldset>
+        </div>
+        <label for="name">Namn:</label>
+        <input type="text" id="name" name="name" placeholder="Ange ditt namn" required>
+        <label for="address">Adress:</label>
+        <input type="text" id="address" name="address" placeholder="Ange din adress" required>
+        <label for="phone">Telefonnummer:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Ange ditt telefonnummer" required>
+        <label for="email">E-postadress:</label>
+        <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
+        <button type="submit">Slutför köp</button>
+    </form>
 </body>
 </html>
