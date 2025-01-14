@@ -26,11 +26,10 @@
         }
 
         table th {
-
+            background-color: var(--secondary-color);
             background-color: var(--primary-color);
             color: white;
             font-size: 16px;
-
         }
 
         table th:hover, table td:hover {
@@ -97,6 +96,45 @@
             font-size: 10px;
             margin-left: 2rem;
         }
+         /* Media query för små skärmar (mobiler) */
+         @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column; /* Ändrar till vertikal layout för små skärmar */
+            }
+
+            .method img {
+                width: 30px; /* Minskar storleken på ikonerna */
+                height: 30px;
+            }
+
+            .cart-summary table {
+                font-size: 12px; /* Minskar textstorleken i tabellen */
+            }
+
+            form {
+                padding: 15px; /* Minskar padding för små skärmar */
+            }
+
+            button {
+                padding: 12px; /* Justerar knappstorlek för mindre skärmar */
+            }
+        }
+
+        /* Media query för tablet-skärmar */
+        @media screen and (max-width: 1024px) {
+            .flex-container {
+                flex-direction: column; /* Justering av layouten för tablet-storlekar */
+            }
+
+            .method img {
+                width: 35px;
+                height: 35px;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -143,8 +181,7 @@
                     height="20px"></a>
         </article>
     </nav>
-
-
+</main>
     <main>
         <section class="cart-section">
             <h1>Kundvagn</h1>
@@ -181,10 +218,10 @@
                 <button class="btn checkout">
                     <a href="checkout.html" style="text-decoration: none; color: inherit;">Gå Till kassan</a>
                 </button>
+                
             </div>
         </section>
     </main>
-
     <footer class="footer">
         <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
         <ul>
@@ -194,7 +231,5 @@
             <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </footer>
-
-
 </body>
 </html>
