@@ -96,6 +96,45 @@
             font-size: 10px;
             margin-left: 2rem;
         }
+         /* Media query för små skärmar (mobiler) */
+         @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column; /* Ändrar till vertikal layout för små skärmar */
+            }
+
+            .method img {
+                width: 30px; /* Minskar storleken på ikonerna */
+                height: 30px;
+            }
+
+            .cart-summary table {
+                font-size: 12px; /* Minskar textstorleken i tabellen */
+            }
+
+            form {
+                padding: 15px; /* Minskar padding för små skärmar */
+            }
+
+            button {
+                padding: 12px; /* Justerar knappstorlek för mindre skärmar */
+            }
+        }
+
+        /* Media query för tablet-skärmar */
+        @media screen and (max-width: 1024px) {
+            .flex-container {
+                flex-direction: column; /* Justering av layouten för tablet-storlekar */
+            }
+
+            .method img {
+                width: 35px;
+                height: 35px;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
