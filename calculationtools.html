@@ -8,17 +8,18 @@
 
     <style>
         /* Calculationtools(Jonas) */
+        /* git pull origin main */
         .maincontainer h2{
             font-size: 2vw;
-            margin: 2%;
-            padding: 2%;
+            margin: 1%;
+            padding: 1%;
             text-align: center;
             color: white;
             background-color: var(--secondary-color);
             border-radius: 8px;
         }
         .page-wrapper{
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -36,7 +37,7 @@
             color: var(--texty-color);
             margin-bottom: 1rem;
         }
-        .trall-counter #dragartext{
+        #dragartext{
             font-size: clamp(1px, 2vw, 24px);
             color: var(--texty-color);
             text-shadow: black 0px 0px 10px;
@@ -47,7 +48,6 @@
         }
         .trall-counter .buttons{
             display: flex;
-            align-items: end;
         }
         .trall-counter .buttons button{
             display: flex;
@@ -105,8 +105,8 @@
             text-shadow: black 0px 0px 10px;
         }
 
-        #input{
-            height: 5vh;
+        .sökfält #input{
+            height: 4vh;
             width: 15vw;
             max-width: 200px;
             font-size: clamp(1px, 3vw, 40px);
@@ -149,14 +149,18 @@
         font-size: 10px;
         margin-left: 2rem;
         }
+         @media(max-width: 768px) {
+            .sökfält #input{
+            height: 2vh;
+        }
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <button class="icon-button">
-          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
-          <a href="index.html">Drillzone.se</a>
+          <a href="./index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
         </button>
         
     
@@ -167,13 +171,13 @@
             
         <section class="login-cart">
           <button class="login">
-            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
-            <a class="login-text" href="login.html">Logga in</a>
+            <a href="./login.html"><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="./login.html">Logga in</a>
           </button>
     
           <button class="cart">
-            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="#">Kundvagn</a>
+            <a href="./cart.html"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="./cart.html">Kundvagn</a>
           </button>
         </section>
       </header>
@@ -182,10 +186,10 @@
       <nav>
         <ul>
 
-            <li><a href="products.html">Skruvdragare</a></li>
-            <li><a href="accessories.html">Tillbehör</a></li>
-            <li><a href="sales.html">Utförsäljning</a></li>
-            <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
+            <li><a href="./products.html">Skruvdragare</a></li>
+            <li><a href="./accessories.html">Tillbehör</a></li>
+            <li><a href="./sales.html">Utförsäljning</a></li>
+            <li><a href="./calculationtools.html">Hjälpmedel</a></li>
 
         </ul>
 
@@ -205,7 +209,7 @@
         
             <section class="trall-counter">
                 <section class="vilkendragarebild">
-                    <img src="./assets\vilkenskruvdragare.jpeg" alt="bild på skruvdragare" id="dragarbild">
+                    <img src="./assets/vilkenskruvdragare.jpeg" alt="bild på skruvdragare" id="dragarbild">
                     <section class="flexbox1">
                         <h4 id="dragartext">Vilken dragare söker du?</h4>
                         <section class="buttons">
@@ -219,10 +223,10 @@
 
             <section class="trall-counter">
                 <section class="trallbild">
-                    <img src="./assets\trall.jpeg" alt="bild på trall">
+                    <img src="./assets/trall.jpeg" alt="bild på trall">
                     <section class="flexbox2">
                         <h4 class="trallheader">Beräkna åtgång av trall + skruv.</h4>
-                        <section>
+                        <section class="sökfält">
                             <label>Antal m²:</label>
                             <input type="text" id="input">
                         </section>
@@ -238,12 +242,12 @@
     <footer class="footer">
         <p>Copyright &copy; 2025 Dillzone AB</p>
         <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="about.html">Om oss</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="./index.html">Hem</a></li>
+            <li><a href="./contact.html">Kontakt</a></li>
+            <li><a href="./about.html">Om oss</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
         </ul>
     </footer>
-        <script src="calculationtools.js"></script>
+        <script src="./calculationtools.js"></script>
 </body>
 </html>
