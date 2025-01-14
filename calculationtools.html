@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjälpmedel</title>
+    <link rel="stylesheet" href="./OriginalStyling.css">
+
+    <style>
+        /* Calculationtools(Jonas) */
+        .maincontainer h2{
+            font-size: 2vw;
+            margin: 2%;
+            padding: 2%;
+            text-align: center;
+            color: white;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+        }
+        .page-wrapper{
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .trall-counter{
+            min-height: 200px;
+            max-height: 400px;
+            overflow: hidden;
+            position: relative;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            color: var(--texty-color);
+            margin-bottom: 1rem;
+        }
+        .trall-counter #dragartext{
+            font-size: clamp(1px, 2vw, 24px);
+            color: var(--texty-color);
+            text-shadow: black 0px 0px 10px;
+        }
+        .trall-counter .vilkendragarebild h4{
+            align-self: flex-start;
+            width: 40%;
+        }
+        .trall-counter .buttons{
+            display: flex;
+            align-items: end;
+        }
+        .trall-counter .buttons button{
+            display: flex;
+            background-color: var(--button-color);
+            color: var(--texty-color); 
+            border: none; 
+            padding: 5px 25px; 
+            font-size: clamp(1px, 2vw, 24px);
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin: 1px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .trall-counter .buttons button:hover{
+            background-color: var(--button-hover-color);
+        }
+        .trall-counter .buttons button:focus{
+            border: 4px solid hsl(0, 0%, 0%);
+
+        }
+        .trallbild, .vilkendragarebild{
+            position: relative; 
+            width: fit-content; 
+            overflow: hidden;
+        }
+
+        .trallbild img, .vilkendragarebild img{
+            display: block; 
+            width: 100%; 
+            height: auto;
+        }
+        .flexbox1, .flexbox2{
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-between; 
+            align-items: center; 
+            color: white; 
+            padding: 1rem;
+        }
+        
+        .flexbox2 .mellanrum{
+            height: 30px; 
+            margin-bottom: 2rem;
+        }
+        .trall-counter .trallheader{
+            font-size: clamp(1px, 2vw, 24px);
+            text-align: center; 
+            color: var(--texty-color);
+            text-shadow: black 0px 0px 10px;
+        }
+
+        #input{
+            height: 5vh;
+            width: 15vw;
+            max-width: 200px;
+            font-size: clamp(1px, 3vw, 40px);
+            text-align: center;
+        }
+        .trall-counter label, #trallresultat, #trallmeter{
+            font-size: clamp(1px, 4vw, 40px);
+            text-shadow: black 0px 0px 10px;
+        }
+        .trall-counter .button1{
+            background-color: var(--button-color);
+            color: var(--texty-color); 
+            border: none; 
+            width: 50%;
+            padding: 10px 20px; 
+            font-size: clamp(1px, 2vw, 24px);
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .trall-counter .button1:hover{
+            background-color: var(--button-hover-color);
+        }
+        /* extra */
+        .social-media {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        width: 5rem;
+        }
+
+        nav>p {
+        position: absolute;
+        top: 0.8rem;
+        right: 5rem;
+        display: block;
+        margin-top: auto;
+        color: var(--texty-color);
+        text-decoration: underline;
+        font-size: 10px;
+        margin-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <button class="icon-button">
+          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
+          <a href="index.html">Drillzone.se</a>
+        </button>
+        
+    
+        <section class="search">
+          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+          <input type="text" placeholder="Search...">
+        </section>
+            
+        <section class="login-cart">
+          <button class="login">
+            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="login.html">Logga in</a>
+          </button>
+    
+          <button class="cart">
+            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="#">Kundvagn</a>
+          </button>
+        </section>
+      </header>
+
+      <!-- Navigationbar -->
+      <nav>
+        <ul>
+
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="accessories.html">Tillbehör</a></li>
+            <li><a href="sales.html">Utförsäljning</a></li>
+            <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
+
+        </ul>
+
+        <p>Besök oss på:</p>
+        <article class="social-media">
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
+                    height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
+                    height="20px"></a>
+        </article>
+    </nav>
+        
+    <!-- Main -->
+    <main class="maincontainer">
+        <h2>Hjälpmedel</h2>
+        <section class="page-wrapper">
+        
+            <section class="trall-counter">
+                <section class="vilkendragarebild">
+                    <img src="./assets\vilkenskruvdragare.jpeg" alt="bild på skruvdragare" id="dragarbild">
+                    <section class="flexbox1">
+                        <h4 id="dragartext">Vilken dragare söker du?</h4>
+                        <section class="buttons">
+                            <button id="knapp1">Budget</button>
+                            <button id="knapp2">Prisvärd</button>
+                            <button id="knapp3">Toppklass</button>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <section class="trall-counter">
+                <section class="trallbild">
+                    <img src="./assets\trall.jpeg" alt="bild på trall">
+                    <section class="flexbox2">
+                        <h4 class="trallheader">Beräkna åtgång av trall + skruv.</h4>
+                        <section>
+                            <label>Antal m²:</label>
+                            <input type="text" id="input">
+                        </section>
+                        <p class="mellanrum" id="trallresultat"></p>
+                        <p class="mellanrum" id="trallmeter"></p>
+                        <button class="button1" id="calculate">Beräkna</button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright &copy; 2025 Dillzone AB</p>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="about.html">Om oss</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </footer>
+        <script src="calculationtools.js"></script>
+</body>
+</html>
