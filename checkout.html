@@ -6,12 +6,6 @@
     <title>Kundvagn och Checkout</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: var(--secondary-color);
-        }
 
         h1 {
             text-align: center;
@@ -90,7 +84,7 @@
         }
 
         /* Aktivt tillstånd för ikoner */
-        input[type="radio"]:checked + img {
+        .flex-container input [type="radio"]:checked + img {
             border: 2px solid #28a745; /* Grön kantlinje */
             transform: scale(1.1); /* Förstorar ikonen */
         }
@@ -101,7 +95,7 @@
             font-weight: bold;
         }
 
-        input[type="text"], input[type="tel"], input[type="email"] {
+        .flex-container input[type="text"], input[type="tel"], input[type="email"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -110,7 +104,7 @@
             box-sizing: border-box;
         }
 
-        input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+        .flex-container input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
             border-color: #28a745;
             outline: none;
         }
@@ -229,7 +223,7 @@
                     height="20px"></a>
         </article>
     </nav>
-    <section>
+    <section class="Checkout">
         <h1>Sammanfattning av din kundvagn</h1>
         <div class="cart-summary">
             <table>
