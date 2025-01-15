@@ -26,7 +26,7 @@
         }
         .trall-counter{
             min-height: 200px;
-            max-height: 400px;
+            max-height: 500px;
             overflow: hidden;
             position: relative;
             padding: 1rem;
@@ -37,8 +37,8 @@
             color: var(--texty-color);
             margin-bottom: 1rem;
         }
-        #dragartext{
-            font-size: clamp(1px, 2vw, 24px);
+        .flexbox1 #dragartext{
+            font-size: clamp(1px, 3vw, 30px);
             color: var(--texty-color);
             text-shadow: black 0px 0px 10px;
         }
@@ -66,8 +66,7 @@
             background-color: var(--button-hover-color);
         }
         .trall-counter .buttons button:focus{
-            border: 4px solid hsl(0, 0%, 0%);
-
+            background-color: var(--button-hover-color);
         }
         .trallbild, .vilkendragarebild{
             position: relative; 
@@ -76,7 +75,7 @@
         }
 
         .trallbild img, .vilkendragarebild img{
-            display: block; 
+            display: flex; 
             width: 100%; 
             height: auto;
         }
@@ -99,7 +98,7 @@
             margin-bottom: 2rem;
         }
         .trall-counter .trallheader{
-            font-size: clamp(1px, 2vw, 24px);
+            font-size: clamp(5px, 2vw, 30px);
             text-align: center; 
             color: var(--texty-color);
             text-shadow: black 0px 0px 10px;
@@ -149,7 +148,7 @@
         font-size: 10px;
         margin-left: 2rem;
         }
-         @media(max-width: 768px) {
+         @media(max-width: 600px) {
             .sökfält #input{
             height: 2vh;
         }
@@ -225,7 +224,7 @@
                 <section class="trallbild">
                     <img src="./assets/trall.jpeg" alt="bild på trall">
                     <section class="flexbox2">
-                        <h4 class="trallheader">Beräkna åtgång av trall + skruv.</h4>
+                        <h4 class="trallheader">Beräkna åtgång av trall & skruv.</h4>
                         <section class="sökfält">
                             <label>Antal m²:</label>
                             <input type="text" id="input">
