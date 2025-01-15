@@ -168,6 +168,8 @@ color: white;
     border-radius: 0.3rem;
     font-family: OpenSans;
 }
+
+/*Responsivitet Header*/
 @media (max-width: 906px) {
     .cart > .cart-text  {
         display: none;
@@ -189,19 +191,24 @@ color: white;
         margin-bottom: 0.5rem;
     }
     .icon-button{
-        margin-left: 0;
+        margin-left: 0.5rem;
     }
     .login-cart{
         position:absolute;
         top: 0.5rem;
-        margin-left: 70%;
+        margin-left: 80%;
     }
     .search{
         margin-left: auto;
         width: 95%;
     }
-  
+    @media (max-width:600px){
+        .login-cart{
+            margin-left:75%;
+        }
+    }
 }
+
 /*NAVIGATION  */
 
     nav {

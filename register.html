@@ -135,20 +135,16 @@
         margin-bottom: 1rem;
     }
     .checkbox1{
-        display: flex;
-        align-items: center;
         gap:0.5rem;
     }
-    .checkbox1>p>a{
+    .checkbox1>a{
         text-decoration: underline;
         color: var(--texty-color);
     }
-    .checkbox1>p>a:hover{
+    .checkbox1>a:hover{
         color: var(--hover-color);
     }
     .checkbox2{
-        display: flex;
-        align-items: center;
         gap:0.5rem;
     }
     .logo-register{
@@ -160,6 +156,8 @@
         width: 75%;
     }
 
+
+    
     @media (max-width: 875px){
         .checkboxes{
             display: grid;
@@ -193,8 +191,8 @@
         .register-main>h2{
             margin-bottom: 2rem;
         }
-        
     }
+
     </style>
 </head>
 <body>
@@ -253,7 +251,8 @@
                 <input type="text" placeholder="Användarnamn">
                 <p>Lösenord:</p>
                 <input type="password" placeholder="Lösenord">
-                <input type="password" placeholder="Bekräfta Lösenord">
+               
+                
         </aside>
         <aside class="right-side">
             <h3>Leveransuppgifter</h3>
@@ -271,18 +270,17 @@
             <input type="text" placeholder="Telefonnummer">
         </aside>
         <section class="checkboxes">
-            <section  class="checkbox1" >
+            <label  class="checkbox1" >
                 <input type="checkbox">
-                <p>Jag har läst och accepterar <a href="#">villkoren.</a></p>
-            </section>
+                Jag har läst och accepterar <a href="#">villkoren.</a>
+            </label>
 
-            <section  class="checkbox2" >
+            <label  class="checkbox2" >
                 <input class="checkbox2" type="checkbox">
-                <p>Jag vill få erbjudanden och nyhetsbrev till mailen</p>
-            </section>
+                Jag vill få erbjudanden och nyhetsbrev till mailen
+            </label>
         </section>
         <button>Skapa Konto</button>
-
     </main>
    
     <footer class="footer">
