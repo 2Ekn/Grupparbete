@@ -6,6 +6,7 @@
     <title>Drillzone - Skapa Konto</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <link rel="icon" type="image/png" href="./assets/logo5.png" >
+    
     <style>
 .social-media {
         display: flex;
@@ -31,7 +32,7 @@
         grid-template-rows: 8rem 1fr 1fr 6rem;
         background-color: var(--secondary-color);
         margin: 2rem;
-        border-radius: 5%;
+        border-radius: 2rem;
         flex-grow: 1;
     }
     .register-main>h2{
@@ -121,6 +122,20 @@
         color: var(--texty-color);
         font-size: 1rem;
     }
+    div>input{
+        height: 3.5rem;
+        width: 75%;
+        margin-bottom: 1rem;
+        border: none;
+        background-color: var(--primary-color);
+        padding: 0.5rem;
+        color: var(--texty-color);
+        font-size: 1.2rem;
+    }
+    div>input::placeholder{
+        color: var(--texty-color);
+        font-size: 1rem;
+    }
     .checkboxes{
         display: grid;
         grid-row-start: 4;
@@ -180,7 +195,7 @@
             flex-direction: column;
             padding: 1rem;
             margin: 0.5rem;
-            border-radius: 3%;
+            border-radius: 2rem;
         }
         .register-main>img{
             position: relative;
@@ -190,7 +205,29 @@
         }
         .register-main>h2{
             margin-bottom: 2rem;
+            margin-top: 1rem;
         }
+    }
+
+    .checkbox-password input{
+        display: none;
+    }
+    .checkbox-password label {
+        font-weight: bold;
+        color: var(--texty-color);
+        opacity: 0.75;
+    }
+    .checkbox-password label::before {
+        content: "● ";
+    }
+    
+    .checkbox-password input:checked + label {
+        color: var(--button-color);
+        font-weight: bold;
+    }
+    .checkbox-password input:checked + label::before {
+        content: "✔ ";
+        color: var(--button-color)
     }
 
     </style>
@@ -249,10 +286,16 @@
                 <input type="text" placeholder="Personnummer">
                 <p>Användarnamn:</p>
                 <input type="text" placeholder="Användarnamn">
-                <p>Lösenord:</p>
-                <input type="password" placeholder="Lösenord">
-               
                 
+                <div class="password-checklist-container">
+                    <p>Lösenord:</p>
+                    <input type="password" id="password" placeholder="Lösenord">
+                    <section class="checkbox-password">
+
+                        <input type="checkbox" id="password-length" disabled>
+                        <label for="password-length">Minst 8 tecken</label>
+                    </section>
+                </div>
         </aside>
         <aside class="right-side">
             <h3>Leveransuppgifter</h3>
@@ -292,5 +335,18 @@
             <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </footer>
+    <script>
+        password = document.getElementById('password');
+        correctLength = document.getElementById('password-length');
+        
+        function ChangeCheckbox(){
+            if (password.value.length >= 8) {
+                correctLength.checked = true;
+            } else {
+                correctLength.checked = false; 
+            }
+        }
+        password.addEventListener('input', ChangeCheckbox)
+    </script>
 </body>
 </html>

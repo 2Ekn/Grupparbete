@@ -20,7 +20,8 @@
 
 
         .cart-summary {
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
+            padding: 1rem;
       }
 
         table th {
@@ -96,7 +97,7 @@
         }
 
         /* Aktivt tillstånd för ikoner */
-        input[type="radio"]:checked + img {
+        fomr input[type="radio"]:checked + img {
             border: 2px solid #28a745; /* Grön kantlinje */
             transform: scale(1.1); /* Förstorar ikonen */
         }
@@ -107,7 +108,7 @@
             font-weight: bold;
         }
 
-        input[type="text"], input[type="tel"], input[type="email"] {
+        form input[type="text"], input[type="tel"], input[type="email"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -116,12 +117,12 @@
             box-sizing: border-box;
         }
 
-        input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+        form input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
             border-color: #28a745;
             outline: none;
         }
 
-        button {
+        .buy-button {
             width: 100%;
             padding: 10px;
             background-color: #28a745;
@@ -133,7 +134,7 @@
             transition: background-color 0.3s ease;
         }
 
-        button:hover {
+        .buy-button:hover {
             background-color: #218838;
         }
 
@@ -233,6 +234,7 @@
         </article>
     </nav>
 
+<main>
     <section>
         <h1>Sammanfattning av din kundvagn</h1>
         <div class="cart-summary">
@@ -274,8 +276,7 @@
             </table>
         </div>
     </section>
-</main>
-
+    
     <form action="thankyou.html" method="POST">
         <h1>Checkout</h1>
         <div class="flex-container">
@@ -327,8 +328,9 @@
         <input type="tel" id="phone" name="phone" placeholder="Ange ditt telefonnummer" required>
         <label for="email">E-postadress:</label>
         <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
-        <button type="submit">Slutför köp</button>
+        <button class="buy-button" type="submit">Slutför köp</button>
     </form>
+</main>
     
     <footer class="footer">
         <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>

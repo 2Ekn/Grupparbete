@@ -202,10 +202,10 @@ color: white;
         margin-left: auto;
         width: 95%;
     }
-    @media (max-width:600px){
-        .login-cart{
-            margin-left:75%;
-        }
+}
+@media (max-width:600px){
+    .login-cart{
+        margin-left:70%;
     }
 }
 
@@ -594,7 +594,7 @@ display: flex;
 flex-direction: column;
 align-items: center;  
 gap: 5px;
-flex-grow: 1;
+
 }
 .login-screen{
 display: flex;
@@ -608,8 +608,9 @@ border-radius: 5%;
 background-color: var(--secondary-color);
 width: 25rem;
 }
-.login-screen>input{
-height: 2rem;
+
+.login-input{
+height: 2.5rem;
 width: 80%;
 background-color: var(--primary-color);
 color: white;
@@ -619,8 +620,9 @@ font-size: 1rem;
 margin-bottom: 1rem;
 }
 .login-screen>h2{
-color: var(--texty-color);
-margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--texty-color);
+    margin-bottom: 1rem;
 }
 .login-screen>.register{
 margin-top: 3rem;
@@ -628,6 +630,8 @@ margin-top: 3rem;
 .login-screen>img{
 width: 10rem;
 }
+
+
 /*Contact*/   
 
 .contact {
