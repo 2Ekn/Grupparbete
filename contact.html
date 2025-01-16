@@ -237,9 +237,11 @@ exempelvid main > .profile-menu eller main > .checkout*/
         <section class="contact-options">
             <article>
                 <h5>Telefon</h5>
+                
                 <p>Stockholm: <a href="tel:070-7221006">070-7221006</a></p>
                 <p>Göteborg: <a href="tel:070-7221005">070-7221005</a></p>
                 <p>Malmö: <a href="tel:070-7221004">070-7221004</a></p>
+            
             </article>
 
             <article>
@@ -262,25 +264,58 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 <ul>
                     <li>
                         Stockholm:
-                        <a href="https://www.google.com/maps/place/Västra+Trädgårdsgatan+15,+111+53+Stockholm"
-                            target="_blank">
-                            Västra Trädgårdsgatan 15, 111 53
-                        </a>
+                        <p><a href="#" onclick="openMap('stockholm-map', 'stockholm-button')">Västra Trädgårdsgatan 15, 111 53 Stockholm</a></p>
+                        <iframe 
+                            id="stockholm-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21317.67144785373!2d18.068622705241487!3d59.32948268625314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5bcb4d1397%3A0x3ad002fa02ff1ff9!2sV%C3%A4stra%20Tr%C3%A4dg%C3%A5rdsgatan%2015%2C%20111%2053%20Stockholm!5e0!3m2!1sen!2sse!4v1716209230814!5m2!1sen!2sse" 
+                            width="400" 
+                            height="400" 
+                            style="border:0; display: none;" 
+
+                            allowfullscreen="" 
+                            loading="fast" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <button id="stockholm-button" onclick="closeMap('stockholm-map', 'stockholm-button')" style="display: none;">Stäng</button>
+                        
                     </li>
                     <li>
+                        <br>
                         Göteborg:
-                        <a href="https://www.google.com/maps/place/Avenyn+31,+411+36+Göteborg" target="_blank">
-                            Avenyn 31, 411 36
-                        </a>
-
+                        <p> <a href="#" onclick="openMap('gbg-map', 'gbg-button')">Avenyn 31, 411 36 Göteborg</a></p>
+                        <iframe 
+                            id="gbg-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21296.24522069968!2d11.96960322929223!3d57.7042216808988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff3682c1e3435%3A0x861b9b7868a8f3fa!2sAvenyn+31%2C+411+36+G%C3%B6teborg!5e0!3m2!1sen!2sse!4v1716209230814!5m2!1sen!2sse" 
+                            width="400" 
+                            height="400" 
+                            style="border:0; display: none;" 
+                            allowfullscreen="" 
+                            loading="fast" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <button id="gbg-button" onclick="closeMap('gbg-map', 'gbg-button')" style="display: none;">Stäng</button>
+                        
+                    </li>
+                    <li>
+                        <br>
                         Malmö:
-                        <a href="https://www.google.com/maps/place/Stortorget+12,+211+34+Malmö" target="_blank">
-                            Stortorget 12, 211 34
-                        </a>
+                        <p><a href="#" onclick="openMap('malmö-map', 'malmö-button')">Stortorget 12, 211 34 Malmö</a></p>
+                        <iframe 
+                            id="malmö-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21260.519517546324!2d13.003822229579668!3d55.60529318057307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a3199679331d%3A0xdf7e8e2076b27f59!2sStortorget%2012%2C%20211%2034%20Malm%C3%B6!5e0!3m2!1sen!2sse!4v1716209230814!5m2!1sen!2sse" 
+                            width="400" 
+                            height="400" 
+                            style="border:0; display: none;" 
+                            allowfullscreen="" 
+                            loading="fast" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <button id="malmö-button" onclick="closeMap('malmö-map', 'malmö-button')" style="display: none;">Stäng</button>
+                        
                     </li>
                 </ul>
             </article>
-
+            
     </main>
 
     <footer class="footer">
@@ -292,6 +327,23 @@ exempelvid main > .profile-menu eller main > .checkout*/
             <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </footer>
+    <script>
+        function openMap(mapId, buttonId) {
+          const map = document.getElementById(mapId);
+          const closeButton = document.getElementById(buttonId);
+          
+          map.style.display = 'block'; 
+          closeButton.style.display = 'inline-block'; 
+        }
+      
+        function closeMap(mapId, buttonId) {
+          const map = document.getElementById(mapId);
+          const closeButton = document.getElementById(buttonId);
+          
+          map.style.display = 'none'; 
+          closeButton.style.display = 'none'; 
+        }
+      </script>
 </body>
 
 </html>
