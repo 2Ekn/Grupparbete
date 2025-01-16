@@ -78,7 +78,31 @@ exempelvid main > .profile-menu eller main > .checkout*/
             margin-left: 2rem;
 
         }
+        @media screen and (max-width: 1337px) {
+            .contact>.contact-options {
+                flex-direction: column;
+                border: none;
+                gap: 2rem;
+                max-width: 230px;
+                
+            }
+            .contact>.contact-options>article:first-child {
+                border: none;
+                border-bottom: 1px solid var(--lines-color);
+            }
 
+            .contact>.contact-options>article:nth-child(2) {
+                border: none;
+                border-bottom: 1px solid var(--lines-color);
+
+            }
+            
+            .contact>.contact-options>article:last-child {
+                border: none;
+                border-bottom: 1px solid var(--lines-color);
+
+            }
+        }
 
         @media(max-width: 800px) {
             .contact>.contact-options>article {
@@ -119,7 +143,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
             main {
                 justify-content: center;
-                min-width: 255px;
+                min-width: 300px;
             }
 
             .contact > .contact-info > p {
@@ -154,6 +178,10 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 /* justify-content: center;
                 align-content: center; */
             }
+            .contact-options>article >ul> li >iframe {
+            
+            width: 300px;
+        }
         }
 
         .contact>.contact-info>p>a {
@@ -172,6 +200,8 @@ exempelvid main > .profile-menu eller main > .checkout*/
             opacity: 0.8;
 
         }
+    
+    
     </style>
 
 </head>
@@ -315,7 +345,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
                     </li>
                 </ul>
             </article>
-            
+
     </main>
 
     <footer class="footer">
