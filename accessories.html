@@ -70,12 +70,12 @@
         }
         
         @media(max-width: 600px) {
-            .products .allproducts {
-                width: 100%; 
-                display: flex;
-                flex-direction: column;
-            }
-
+            .productdisplay .productinfo {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media(max-width: 400px) {
+            .productdisplay .productinfo {
+            grid-template-columns: 1fr;
         }
         /* extra */
         .social-media {

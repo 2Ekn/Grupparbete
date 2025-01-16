@@ -73,11 +73,11 @@
 
         @media(max-width: 600px) {
             .productdisplay .productinfo {
-            max-width: 800px;
-            margin: 0 auto;
-            display: grid;
             grid-template-columns: 1fr 1fr;
-            
+        }
+        @media(max-width: 400px) {
+            .productdisplay .productinfo {
+            grid-template-columns: 1fr;
         }
         }
         /* extra */
