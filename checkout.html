@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: var(--secondary-color);
+            background-color: var(--primary-color);
         }
         nav>p {
             position: absolute;
@@ -62,11 +62,46 @@
             max-width: 900px;
             margin: auto;
             padding: 20px;
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             border: 1px solid var(--lines-color);
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .divider {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    display: inline-block;
+    width: 30%;
+    height: 2px;
+    background-color: #4CAF50; 
+    position: relative;
+    vertical-align: middle;
+}
+
+.divider::before {
+    margin-right: 15px;
+}
+
+.divider::after {
+    margin-left: 15px;
+}
+
+.divider-text {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4CAF50;
+    background-color: var(--secondary-color); 
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
         fieldset {
             border: none;
@@ -280,15 +315,10 @@
             </table>
         </div>
     </section>
-<footer class="footer">
-    <p>&copy; 2025 Din Butik. Alla rättigheter förbehåll.</p>
-    <ul>
-        <li><a href="#">Hem</a></li>
-        <li><a href="products.html">Produkter</a></li>
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Om oss</a></li>
-    </ul>
-</footer>
+    <div class="divider">
+        <span class="divider-text">Välj din frakt och betalningsmetod</span>
+    </div>
+    
     <form action="thankyou.html" method="POST">
         <h1>Checkout</h1>
         <div class="flex-container">
