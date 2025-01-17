@@ -53,9 +53,10 @@
             font-size: 10px;
             margin-left: 2rem;
         }
+
         table tr:hover {
-            background-color:#4fbb19;
-        } 
+            background-color: #4fbb19;
+        }
 
         body {
             font-family: Arial, sans-serif;
@@ -77,43 +78,68 @@
             border: 1px solid var(--lines-color);
             padding: 10px;
             text-align: center;
-            background-color: var(--secondary-color); ;
+            background-color: var(--secondary-color);
         }
 
         table td img {
-            display: block; 
-            max-width: 100px; 
-            max-height: 100px; 
+            display: block;
+            max-width: 100px;
+            max-height: 100px;
             object-fit: contain;
-            margin: 0 auto; 
+            margin: 0 auto;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
         }
 
-        .totalt {
-            text-align: right;
-            font-size: 18px;
-            margin-top: 10px;
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-top: 1px solid #4fbb19;
+            margin: 0 10px;
+        }
+
+        .divider-text {
+            font-size: 25px;
             font-weight: bold;
+            color: var(--texty-color)
         }
+       .summary {
+    text-align: center; /* وسط‌چین کردن محتوا */
+    margin-top: 20px;
+}
 
-        .summary {
-            margin-top: 20px;
-            text-align: right;
-        }
+.summary h2 {
+    margin-bottom: 10px; /* فاصله زیر عنوان */
+    font-size: 20px; /* تنظیم اندازه فونت عنوان */
+}
 
-        .button-container {
-            text-align: right;
-            margin-top: 20px;
-        }
+.summary .totalt {
+    font-size: 18px; /* تنظیم اندازه فونت متن Totalt */
+    font-weight: bold;
+    margin-bottom: 15px; /* فاصله زیر متن Totalt */
+}
 
-        .checkout-button {
-            background-color: #40A011;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+.button-container {
+    margin-top: 10px; /* فاصله بالای دکمه */
+}
+
+.checkout-button {
+    background-color: #40A011;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
 
         .remove-button {
             background-color: #FF4C4C;
@@ -124,7 +150,6 @@
             cursor: pointer;
             font-size: 14px;
         }
-
     </style>
 </head>
 <body>
@@ -132,12 +157,12 @@
         <button class="icon-button">
             <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
         </button>
-        
+
         <section class="search">
             <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
             <input type="text" placeholder="Search...">
         </section>
-            
+
         <section class="login-cart">
             <button class="login">
                 <a href="login.html"><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
@@ -150,7 +175,7 @@
             </button>
         </section>
     </header>
-    
+
     <nav>
         <ul>
             <li><a href="products.html">Skruvdragare</a></li>
@@ -216,16 +241,13 @@
 
         <!-- بخش Sammanfattning -->
         <div class="summary">
-            <h2>Sammanfattning</h2>
+            <div class="divider">
+                <span class="divider-text">Sammanfattning</span>
+            </div>
             <p class="totalt">Totalt: 8150 SEK</p>
-        </div>
-
-        <!-- دکمه Gå till kassan -->
-        <div class="button-container">
             <div class="button-container">
                 <a href="checkout.html" class="checkout-button">Gå till kassan</a>
             </div>
-            
         </div>
     </div>
 
