@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drillzone.se/about</title>
+    <title>Drillzone.se/sales</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
         /*        skapar vi olika sidor, gör classes för varje sida. 
@@ -24,14 +24,14 @@ exempelvid main > .profile-menu eller main > .checkout*/
             --button-font-size: 12px;
             --p-font-size: 12px;
             --font-family:
-        }
+        } 
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
+        
         @font-face {
             font-family: OpenSans;
             src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
@@ -87,12 +87,6 @@ exempelvid main > .profile-menu eller main > .checkout*/
         }
 
 
-
-
-
-
-
-
         @media(max-width: 600px) {
             main>article {
                 width: 100%;
@@ -124,7 +118,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             margin: 2rem auto;
             padding: 2rem;
             border-radius: 8px;
-            gap: 1rem;
+            gap: 4rem;
             box-sizing: border-box;
             font-family: OpenSans;
             border: 1px solid var(--lines-color);
@@ -144,9 +138,18 @@ exempelvid main > .profile-menu eller main > .checkout*/
             opacity: 100%;
             width: 100%;
             max-width: 90%;
-
+           
 
         }
+        /* @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(180deg);
+            }
+        } */
 
         .block>h4 {
             padding: 1rem;
@@ -159,8 +162,43 @@ exempelvid main > .profile-menu eller main > .checkout*/
             font-size: clamp(1rem, 2.5vw, 1.5rem);
             text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
             margin: 0 auto;
-
+           
+            animation: rotate 9s ease infinite; 
+            animation-timing-function: ease;
+  
+   
         }
+        @keyframes rotate {
+            0% {
+                transform: scale(1.0);
+                color: transparent; 
+                ;
+                text-shadow: none;
+            }
+            25% {
+                
+                color: #40A011;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); 
+            }
+
+            50% {
+                transform:scale(1.8);
+                color: #ffffff;
+                text-shadow: 3px 3px 3px rgba(0, 0, 0, 1); 
+            }
+            75% {
+                
+                color: #40A011;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); 
+            }
+            100% {
+                transform:scale(1.0);
+                color: transparent;
+                text-shadow: none;
+            }
+        }
+
+
 
         .glow::before,
         .glow::after {
@@ -418,10 +456,11 @@ exempelvid main > .profile-menu eller main > .checkout*/
             border: 1px solid var(--lines-color);
             background-color: var(--primary-color);
             box-shadow: inset -2px 8px 10px rgba(0, 0, 0, 0.8);
-            width: 100%; /* Tar hela bredden av föräldern */
-    max-width: 90%; /* Förhindrar att det överstiger förälderns gränser */
-    margin: 0 auto; /* Centrerar inom föräldern */
-    box-sizing: border-box; /* Säkerställer att padding inkluderas i bredden */
+            width: 100%; 
+            max-width: 90%; 
+            max-height: 20%;
+            margin: 0 auto; 
+            box-sizing: border-box; 
             
             
 
@@ -429,10 +468,10 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
         .sales>.text>p {
 
-            font-size: clamp(0.9rem, 2vw, 1.2rem); /* Gör textstorleken responsiv */
+            font-size: clamp(0.9rem, 2vw, 1.2rem); 
         color: var(--texty-color);
-        line-height: 1.5; /* Förbättrar läsbarheten */
-        margin: 0; /* Tar bort oönskade marginaler */
+        line-height: 1.5; 
+        margin: 0; 
 
         }
 
@@ -580,7 +619,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             .sales {
                 width: 85%;
                 padding: 1rem;
-                gap: 0.5rem;
+                gap: 4rem;
                 flex-direction: column;
                 margin: .5rem;
             }
