@@ -37,6 +37,60 @@
             color: var(--texty-color);
             margin-bottom: 1rem;
         }
+        
+        .jämförelse-grid{
+            padding-top: 10%;
+            text-align: center;
+            background-color: var(--primary-bg);
+            border-radius: 8px;
+            color: var(--texty-color);
+            
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(11, 1fr);
+ 
+            padding-right: 1rem;
+            color: var(--texty-color);
+            font-size: clamp(4px, 1vw, 12px);
+            border: var(--secondary-color) solid 1rem;
+            position: relative;
+        }
+        .jämförelse-grid *{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .jämförelse-grid .kolumn2 ,.kolumn3 ,.kolumn4 ,.kolumn5 ,.kolumn6 ,.kolumn7 ,
+        .kolumn8 ,.kolumn9 ,.kolumn10 ,.kolumn11{
+            border-radius: 0.5rem;
+        }
+        .jämförelse-grid .kolumn2:hover ,.kolumn3:hover ,.kolumn4:hover ,.kolumn5:hover ,.kolumn6:hover ,.kolumn7:hover ,
+        .kolumn8:hover ,.kolumn9:hover ,.kolumn10:hover ,.kolumn11:hover{
+            transform: scale(1.05);
+            border: var(--button-hover-color) solid 1px;
+            background-color: #6e6e6e;
+            cursor: default;
+        }
+        .jämförelse-grid .kolumn1{
+            font-weight: bold;
+        }
+        .jämförelse-grid .kolumn1 img{
+            opacity: 0;
+        }
+        .jämförelse-grid img{
+            width:99%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .jämförelse-grid h5{
+            padding-bottom: 5%;
+            position: absolute;
+            display: flex;
+            justify-self: center;
+            font-size: clamp(2px, 5vw, 50px);
+        }
+        
         .flexbox1 #dragartext{
             font-size: clamp(1px, 3vw, 30px);
             color: var(--texty-color);
@@ -148,11 +202,13 @@
         font-size: 10px;
         margin-left: 2rem;
         }
-         @media(max-width: 600px) {
+
+        @media(max-width: 575) {
             .sökfält #input{
             height: 2vh;
         }
         }
+        
     </style>
 </head>
 <body>
@@ -235,6 +291,101 @@
                     </section>
                 </section>
             </section>
+
+            
+            <section class="jämförelse-grid">
+                <h5>Jämför skruvdragare</h5>
+                <section class="kolumn1">
+                    <img src="./product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="">
+                    <p>Märke:</p>
+                    <p>Modell:</p>
+                    <p>Varvtal:</p>
+                    <p>Volt:</p>
+                    <p>Pris:</p>
+                </section>
+                <section class="kolumn2" >
+                    <img src="./product-images/Bosch GSR 18V-EC - 3679kr .jpg" alt="">
+                    <p>Bosch</p>
+                    <p>GSR 18V-EC</p>
+                    <p>2000/min</p>
+                    <p>18v</p>
+                    <p>3679:-</p>
+                </section>
+                <section class="kolumn3" >
+                    <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="">
+                    <p>Black & Decker</p>
+                    <p>BCD001C1</p>
+                    <p>600/min</p>
+                    <p>18v</p>
+                    <p>890:-</p>
+                </section>
+                <section class="kolumn4" >
+                    <img src="product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="">
+                    <p>Milwaukee</p>
+                    <p>M18 BLDDRC</p>
+                    <p>1800/min</p>
+                    <p>18v</p>
+                    <p>3590:-</p>
+                </section>
+                <section class="kolumn5" >
+                    <img src="./product-images/HiKOKI DS18DD - 2590kr.jpg" alt="">
+                    <p>HiKOKI</p>
+                    <p>DS18DD</p>
+                    <p>1600/min</p>
+                    <p>18v</p>
+                    <p>2590:-</p>
+                </section>
+                <section class="kolumn6" >
+                    <img src="./product-images/STANLEY FatMax -  2690kr.jpg" alt="">
+                    <p>STANLEY</p>
+                    <p>FatMax</p>
+                    <p>1600/min</p>
+                    <p>18v</p>
+                    <p>2690:-</p>
+                </section>
+                <section class="kolumn7" >
+                    <img src="./product-images/Metabo BS 18 - 3190kr.jpg" alt="">
+                    <p>Metabo</p>
+                    <p>BS 18</p>
+                    <p>1500/min</p>
+                    <p>18v</p>
+                    <p>3190:-</p>
+                </section>
+                <section class="kolumn8" >
+                    <img src="./product-images/Milwaukee M12 BDD-202C - 2390kr.jpg" alt="">
+                    <p>Milwaukee</p>
+                    <p>M12 BDD</p>
+                    <p>1500/min</p>
+                    <p>12v</p>
+                    <p>2390:-</p>
+                </section>
+                <section class="kolumn9" >
+                    <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="">
+                    <p>Black & Decker</p>
+                    <p>BCD001C1</p>
+                    <p>600/min</p>
+                    <p>18v</p>
+                    <p>890:-</p>
+                </section>
+                <section class="kolumn10" >
+                    <img src="./product-images/Flex DD 2G - 2890kr.jpg" alt="">
+                    <p>Flex</p>
+                    <p>DD 2G</p>
+                    <p>1300/min</p>
+                    <p>12v</p>
+                    <p>2890:-</p>
+                </section>
+                <section class="kolumn11" >
+                    <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="">
+                    <p>Bosch</p>
+                    <p>GSR 12V-15</p>
+                    <p>1300/min</p>
+                    <p>12v</p>
+                    <p>1590:-</p>
+                </section>
+
+            </section>
+            
         </section>
     </main>
     <!-- Footer -->
