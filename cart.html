@@ -1,81 +1,38 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kundvagn</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
-        /* Tabellens stil med dubbla kanter */
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: separate;
-            border-spacing: 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        table th, table td {
-            padding: 10px 15px;
-            text-align: center;
-            border: 2px solid #f0f0f0;
-            border-radius: 8px;
-            background-color: var(--secondary-color);
-            transition: all 0.3s ease;
-        }
-
-        table th {
-            background-color: var(--secondary-color);
-            background-color: var(--primary-color);
-            color: white;
-            font-size: 16px;
-        }
-
-        table th:hover, table td:hover {
-            background-color: var(--button-color);
-            transform: scale(1.02);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            border-color: #ddd;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tbody tr:nth-child(odd) {
-            background-color: #ffffff;
-        }
-
-        .cart-section table td img {
-            display: block;
-            margin: 0 auto;
-            max-width: 60px;
-        }
-
-        .cart-section .btn {
-            margin: 10px auto;
-            display: block;
-        }
-
-        .login-cart {
+        header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
         }
 
-        .login-cart section {
-            margin-right: 15px;
+        header>button {
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
         }
 
-        .logout a {
+        header>a {
             text-decoration: none;
-            font-size: 14px;
-            color: #f44336;
-            font-weight: bold;
+            color: inherit;
+            color: var(--texty-color);
+            font-size: 1.1rem;
         }
 
-        .logout a:hover {
-            color: #d32f2f;
+        .icon-button>a {
+            font-size: 2.5rem;
+        }
+
+        .icon-button>a:hover {
+            font-size: 2rem;
+            text-decoration: none;
         }
 
         .social-media {
@@ -85,7 +42,7 @@
             width: 5rem;
         }
 
-        nav > p {
+        nav>p {
             position: absolute;
             top: 0.8rem;
             right: 5rem;
@@ -96,132 +53,182 @@
             font-size: 10px;
             margin-left: 2rem;
         }
-         /* Media query för små skärmar (mobiler) */
-         @media screen and (max-width: 768px) {
-            .flex-container {
-                flex-direction: column; /* Ändrar till vertikal layout för små skärmar */
-            }
+        table tr:hover {
+            background-color:#4fbb19;
+        } 
 
-            .method img {
-                width: 30px; /* Minskar storleken på ikonerna */
-                height: 30px;
-            }
-
-            .cart-summary table {
-                font-size: 12px; /* Minskar textstorleken i tabellen */
-            }
-
-            form {
-                padding: 15px; /* Minskar padding för små skärmar */
-            }
-
-            button {
-                padding: 12px; /* Justerar knappstorlek för mindre skärmar */
-            }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Media query för tablet-skärmar */
-        @media screen and (max-width: 1024px) {
-            .flex-container {
-                flex-direction: column; /* Justering av layouten för tablet-storlekar */
-            }
-
-            .method img {
-                width: 35px;
-                height: 35px;
-            }
-
-            form {
-                padding: 20px;
-            }
+        h1, h2 {
+            text-align: center;
         }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            border: 1px solid var(--lines-color);
+            padding: 10px;
+            text-align: center;
+            background-color: var(--secondary-color); ;
+        }
+
+        table td img {
+            display: block; 
+            max-width: 100px; 
+            max-height: 100px; 
+            object-fit: contain;
+            margin: 0 auto; 
+        }
+
+        .totalt {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .summary {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .button-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .checkout-button {
+            background-color: #40A011;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .remove-button {
+            background-color: #FF4C4C;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
     </style>
 </head>
 <body>
-
     <header>
         <button class="icon-button">
-          <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
+            <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
         </button>
         
-    
         <section class="search">
-          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
-          <input type="text" placeholder="Search...">
+            <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
+            <input type="text" placeholder="Search...">
         </section>
             
         <section class="login-cart">
-          <button class="login">
-            <a href="login.html"><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
-            <a class="login-text" href="login.html">Logga in</a>
-          </button>
-    
-          <button class="cart">
-            <a href="cart.html"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="cart.html">Kundvagn</a>
-          </button>
+            <button class="login">
+                <a href="login.html"><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+                <a class="login-text" href="logga ut.html">Logga ut</a>
+            </button>
+
+            <button class="cart">
+                <a href="cart.html"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+                <a class="cart-text" href="cart.html">Kundvagn</a>
+            </button>
         </section>
-      </header>
-
-      <nav>
+    </header>
+    
+    <nav>
         <ul>
-
             <li><a href="products.html">Skruvdragare</a></li>
             <li><a href="accessories.html">Tillbehör</a></li>
             <li><a href="sales.html">Utförsäljning</a></li>
             <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
-
         </ul>
 
         <p>Besök oss på:</p>
         <article class="social-media">
-            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
-                    height="20px"></a>
-            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
-                    height="20px"></a>
+            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px" height="20px"></a>
+            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px" height="20px"></a>
         </article>
     </nav>
-</main>
-    <main>
-        <section class="cart-section">
-            <h1>Kundvagn</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col">Produkt</th>
-                        <th scope="col">Produktnamn</th>
-                        <th scope="col">Antal</th>
-                        <th scope="col">Pris per styck (SEK)</th>
-                        <th scope="col">Totalpris (SEK)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produktbild för Black & Decker BCD001C1"></td>
-                        <td>Black & Decker BCD001C1</td>
-                        <td><input type="number" value="1" min="1" aria-label="Antal"></td>
-                        <td>890</td>
-                        <td>890</td>
-                    </tr>
-                    <tr>
-                        <td><img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Produktbild för Bosch GSR 12V-15"></td>
-                        <td>Bosch GSR 12V-15</td>
-                        <td><input type="number" value="2" min="1" aria-label="Antal"></td>
-                        <td>1590</td>
-                        <td>3180</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="cart-summary">
-                <h2>Sammanfattning</h2>
-                <p><strong>Totalt:</strong> 4070 SEK</p>
-                <button class="btn checkout">
-                    <a href="checkout.html" style="text-decoration: none; color: inherit;">Gå Till kassan</a>
-                </button>
-                
+
+    <div class="container">
+        <h1>Kundvagn</h1>
+
+        <!-- جدول محصولات -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Antal</th>
+                    <th>Pris</th>
+                    <th>Total</th>
+                    <th>Åtgärder</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Produkt 1">
+                        Black & Decker BCD001C1
+                    </td>
+                    <td>2</td>
+                    <td>890 SEK</td>
+                    <td>1780 SEK</td>
+                    <td><button class="remove-button">Ta bort</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Produkt 2">
+                        Bosch GSR 12V-15
+                    </td>
+                    <td>1</td>
+                    <td>1590 SEK</td>
+                    <td>3180 SEK</td>
+                    <td><button class="remove-button">Ta bort</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="./product-images/Metabo BS 18 - 3190kr.jpg" alt="Produkt 3">
+                        Produkt 3
+                    </td>
+                    <td>1</td>
+                    <td>3190 SEK</td>
+                    <td>3190 SEK</td>
+                    <td><button class="remove-button">Ta bort</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- بخش Sammanfattning -->
+        <div class="summary">
+            <h2>Sammanfattning</h2>
+            <p class="totalt">Totalt: 8150 SEK</p>
+        </div>
+
+        <!-- دکمه Gå till kassan -->
+        <div class="button-container">
+            <div class="button-container">
+                <a href="checkout.html" class="checkout-button">Gå till kassan</a>
             </div>
-        </section>
-    </main>
+            
+        </div>
+    </div>
+
     <footer class="footer">
         <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
         <ul>
