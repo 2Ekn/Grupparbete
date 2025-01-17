@@ -5,70 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logga ut</title>
     <link rel="stylesheet" href="OriginalStyling.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--secondary-color);
+        }
+        .content-container {
+            text-align: center;
+            background: var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .content-container h1 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: var(--texty-color);
+        }
+        .content-container p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: var(--texty-color);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .logout-btn {
+            background: #f44336;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .logout-btn:hover {
+            background: #d32f2f;
+        }
+        .cancel-btn {
+            background: #ddd;
+            color: #333;
+        }
+        .cancel-btn:hover {
+            background: #bbb;
+        }
+
+        /* طراحی واکنش‌گرا */
+        @media (max-width: 768px) {
+            .content-container {
+                width: 90%;
+                padding: 15px;
+            }
+            .content-container h1 {
+                font-size: 20px;
+            }
+            .content-container p {
+                font-size: 14px;
+            }
+            .btn {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-container {
+                width: 100%;
+                padding: 10px;
+            }
+            .content-container h1 {
+                font-size: 18px;
+            }
+            .content-container p {
+                font-size: 12px;
+            }
+            .btn {
+                font-size: 10px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <button class="icon-button">
-          <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
-        </button>
-        
-    
-        <section class="search">
-          <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
-          <input type="text" placeholder="Search...">
-        </section>
-            
-        <section class="login-cart">
-          <button class="login">
-            <a href="login.html"><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
-            <a class="login-text" href="login.html">Logga in</a>
-          </button>
-    
-          <button class="cart">
-            <a href="cart.html"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="cart.html">Kundvagn</a>
-          </button>
-        </section>
-      </header>
-      <nav>
-        <ul>
-
-            <li><a href="products.html">Skruvdragare</a></li>
-            <li><a href="accessories.html">Tillbehör</a></li>
-            <li><a href="sales.html">Utförsäljning</a></li>
-            <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
-
-        </ul>
-
-        <p>Besök oss på:</p>
-        <article class="social-media">
-            <a href="http://instagram.com"><img src="./assets/instagram.png" alt="instagram" width="20px"
-                    height="20px"></a>
-            <a href="http://facebook.com"><img src="./assets/facebook.png" alt="facebook" width="20px"
-                    height="20px"></a>
-        </article>
-    </nav>
-
-    <section class="logout-section">
+    <div class="content-container">
         <h1>Logga ut</h1>
         <p>Är du säker på att du vill logga ut?</p>
-        <!-- Här skulle man normalt sätta en funktion för att logga ut via backend (t.ex. genom att ta bort sessionen) -->
-        <form action="index.html" method="get">
+        <form action="#" method="get">
             <button type="submit" class="btn logout-btn">Ja, logga ut</button>
         </form>
         <a href="profile.html" class="btn cancel-btn">Avbryt</a>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="about.html">Om oss</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-        </ul>
-    </footer>
-
+    </div>
 </body>
 </html>
