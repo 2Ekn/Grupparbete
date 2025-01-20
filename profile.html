@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil och Orderhistorik</title>
     <link rel="stylesheet" href="OriginalStyling.css">
+    
     <style>
         .social-media {
         display: flex;
@@ -83,16 +84,14 @@
                 <label for="uploadImage" class="upload-label">Ladda upp bild</label>
                 <input type="file" id="uploadImage" accept="image/*" aria-label="Ladda upp en profilbild">
             </div>
-            <div class="details">
+            <div class="details" id="details">
                 <h2>Användarinformation</h2>
-                <p><strong>Namn:</strong> Farzad Jafarzadehtey</p>
-                <p><strong>E-post:</strong> farzadjafarzadehtey@gmail.com</p>
-                <p><strong>Adress:</strong> Frihetsgatan, Stockholm</p>
+                <p><strong>Namn:</strong> <span id="userFullName"></span></p>
+                <p><strong>E-post:</strong> <span id="userEmail"></span></p>
+                <p><strong>Adress:</strong> <span id="userAddress"></span></p>
             </div>
         </div>
     </section>
-    
-
     <section class="order-history">
         <h2>Orderhistorik</h2>
         <table>
@@ -102,6 +101,7 @@
                     <th>Produktnamn</th>
                     <th>Pris (SEK)</th>
                     <th>Orderdatum</th>
+                    <th>Ordernummer</th> <!-- ستون جدید برای شماره سفارش -->
                 </tr>
             </thead>
             <tbody>
@@ -110,24 +110,26 @@
                     <td>Black & Decker BCD001C1</td>
                     <td>890</td>
                     <td>2025-01-11</td>
+                    <td>#12345</td>
                 </tr>
                 <tr>
                     <td><img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Produktbild"></td>
                     <td>Bosch GSR 12V-15</td>
                     <td>1590</td>
                     <td>2025-01-01</td>
-                    
+                    <td>#12346</td> 
                 </tr>
                 <tr>
                     <td><img src="./product-images/Makita DDF484RTJ - 4790kr.jpg" alt="Produktbild"></td>
                     <td>Makita DDF484RTJ</td>
                     <td>4790</td>
                     <td>2024-12-12</td>
-                    
+                    <td>#12347</td> 
                 </tr>
             </tbody>
         </table>
     </section>
+    
 
     <footer class="footer">
         <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
@@ -139,5 +141,19 @@
         </ul>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const queryParams = new URLSearchParams(window.location.search);
+        const username = queryParams.get('username');
+      
+        const userInfo = JSON.parse(localStorage.getItem(username));
+        if (userInfo) {
+            document.getElementById('userFullName').textContent = userInfo.fullName;
+            document.getElementById('userEmail').textContent = userInfo.email;
+            document.getElementById('userAddress').textContent = userInfo.fullAddress;
+        }
+      });
+    </script>
+    
 </body>
 </html>

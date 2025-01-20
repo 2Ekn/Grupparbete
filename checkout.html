@@ -6,20 +6,31 @@
     <title>Kundvagn och Checkout</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: var(--secondary-color);
+            background-color: var(--primary-color);
         }
-
+        nav>p {
+            position: absolute;
+            top: 0.8rem;
+            right: 5rem;
+            display: block;
+            margin-top: auto;
+            color: var(--texty-color);
+            text-decoration: underline;
+            font-size: 10px;
+            margin-left: 2rem;
+        }
         h1 {
             text-align: center;
             color: var(--texty-color);
         }
 
         .cart-summary {
-            margin-bottom: 20px;
+            margin-bottom: 40px
+
         }
 
         table {
@@ -47,19 +58,51 @@
             margin: auto;
         }
 
-        table tr:hover {
-            background-color:#4fbb19; 
-        }
 
         form {
             max-width: 900px;
             margin: auto;
             padding: 20px;
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             border: 1px solid var(--lines-color);
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .divider {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    display: inline-block;
+    width: 30%;
+    height: 2px;
+    background-color: #4CAF50; 
+    position: relative;
+    vertical-align: middle;
+}
+
+.divider::before {
+    margin-right: 15px;
+}
+
+.divider::after {
+    margin-left: 15px;
+}
+
+.divider-text {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--texty-color);
+    background-color: var(--secondary-color); 
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
         fieldset {
             border: none;
@@ -88,6 +131,9 @@
             margin-right: 10px;
             transition: transform 0.3s, border 0.3s;
         }
+        .method img:hover {
+            transform: scale(2.1);
+        }
 
         /* Aktivt tillstånd för ikoner */
         .flex-container input [type="radio"]:checked + img {
@@ -115,7 +161,7 @@
             outline: none;
         }
 
-        button {
+        .buy-button {
             width: 100%;
             padding: 10px;
             background-color: #28a745;
@@ -127,7 +173,7 @@
             transition: background-color 0.3s ease;
         }
 
-        button:hover {
+        .buy-button:hover {
             background-color: #218838;
         }
 
@@ -187,6 +233,7 @@
         
     </style>
 </head>
+<body>
 <header>
     <button class="icon-button">
       <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
@@ -210,15 +257,12 @@
       </button>
     </section>
   </header>
-<body>
       <nav>
         <ul>
-
             <li><a href="products.html">Skruvdragare</a></li>
             <li><a href="accessories.html">Tillbehör</a></li>
             <li><a href="sales.html">Utförsäljning</a></li>
             <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
-
         </ul>
 
         <p>Besök oss på:</p>
@@ -247,7 +291,9 @@
                             <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="Black & Decker">
                             <p>Black & Decker BCD001C1</p>
                         </td>
-                        <td>1</td>
+                        <td>
+                        <input type="number" id="antal" min="0" max="100" value="1" step="1">
+                        </td>
                         <td>890</td>
                         <td>890</td>
                     </tr>
@@ -256,7 +302,9 @@
                             <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="Bosch">
                             <p>Bosch GSR 12V-15</p>
                         </td>
-                        <td>2</td>
+                        <td>
+                            <input type="number" id="antal" min="0" max="100" value="2" step="1">
+                        </td>
                         <td>1590</td>
                         <td>3180</td>
                     </tr>
@@ -270,15 +318,10 @@
             </table>
         </div>
     </section>
-<footer class="footer">
-    <p>&copy; 2025 Din Butik. Alla rättigheter förbehåll.</p>
-    <ul>
-        <li><a href="#">Hem</a></li>
-        <li><a href="products.html">Produkter</a></li>
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Om oss</a></li>
-    </ul>
-</footer>
+    <div class="divider">
+        <span class="divider-text">Välj din frakt och betalningsmetod</span>
+    </div>
+    
     <form action="thankyou.html" method="POST">
         <h1>Checkout</h1>
         <div class="flex-container">
@@ -330,8 +373,9 @@
         <input type="tel" id="phone" name="phone" placeholder="Ange ditt telefonnummer" required>
         <label for="email">E-postadress:</label>
         <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
-        <button type="submit">Slutför köp</button>
+        <button class="buy-button" type="submit">Slutför köp</button>
     </form>
+</main>
     
     <footer class="footer">
         <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>

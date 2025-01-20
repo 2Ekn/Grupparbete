@@ -6,6 +6,7 @@
   <title>Drillzone - Logga in</title>
   <link rel="stylesheet" href="OriginalStyling.css">
   <link rel="icon" type="image/png" href="./assets/logo5.png">
+  <script type="text/javascript" src="login-validation.js" defer></script>
 </head>
 
 <style>
@@ -52,22 +53,15 @@
       border: none;
       border-radius: 5%;
       margin-bottom: 1rem;
-    }
-    .logga-in-button a{
-      text-decoration: none;
-      color: var(--texty-color);
-    }
-    .logga-in-button a:hover{
       color: var(--texty-color);
     }
     .logga-in-button:hover{
       background-color: var(--button-hover-color);
+      cursor: pointer;
     }
     
-
-    @media (max-width: 1025px) {
+    @media (max-width: 991.98px) {
         .login-screen{
-          width: 85%;
           height: 100%;
           font-size: 2rem;
         }
@@ -77,14 +71,46 @@
         .login-screen p{
           font-size: 1.5rem;
         }
-        .login-screen input{
-          width: 80%;
-          height: 7%;
-        }
+        
         .logga-in-button{
           margin-bottom: auto;
         }
-      }
+    }
+
+    @media (max-width: 575.98px) {
+        .login-screen{
+          width: 90%;
+        }
+    }
+    .login-screen-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    .username-input{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+    .validateDenied{
+      color: #a90000;;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.5rem;
+    }
+    .login-input{
+      margin-bottom: 0.2rem;
+      margin-top: 0.5rem;
+    }
+
+
+
     </style>
 
 <body>
@@ -114,12 +140,10 @@
     
   <nav>
     <ul>
-
         <li><a href="products.html">Skruvdragare</a></li>
         <li><a href="accessories.html">Tillbehör</a></li>
         <li><a href="sales.html">Utförsäljning</a></li>
         <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
-
     </ul>
 
     <p>Besök oss på:</p>
@@ -134,11 +158,18 @@
       <section class="login-screen">
         <img src="./assets/user-login-icon-14.png" alt="Login Screen">
         <h2 class="login-header">Logga in</h2>
-        <p>Användarnamn: </p>
-        <input class="login-input" type="text">
-        <p>Lösernord:</p>
-        <input class="login-input" type="password">
-        <button class="logga-in-button"><a href="profile.html">Logga in</a></button>
+
+        <form class="login-screen-form" method="GET" id="login-screen-form">
+          <div class="username-input" id="username-input">
+            Användarnamn:
+            <input class="login-input" type="text" id="username-login" name="email" oninput="validateEmailInput()">
+          </div>
+          Lösenord:
+          <input class="login-input" type="password" id="password-login" required>
+          <span  class="validateDenied" id="validateDenied"></span>
+          <button id="login-button" class="logga-in-button">Logga in</button>
+        </form>
+
         <a href="#">Glömt lösenord?</a>
         <a class="register" href="register.html">Har du inget konto? Registrera dig här!</a>
       </section>
@@ -152,5 +183,6 @@
           <li><a href="FAQ.html">FAQ</a></li>
       </ul>
   </footer>
+  <script type="text/javascript" src="login-validation.js" defer></script>
 </body>
 </html>
