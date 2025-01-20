@@ -6,7 +6,7 @@
     <title>Kundvagn och Checkout</title>
     <link rel="stylesheet" href="OriginalStyling.css">
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -161,7 +161,7 @@
             outline: none;
         }
 
-        button {
+        .buy-button {
             width: 100%;
             padding: 10px;
             background-color: #28a745;
@@ -173,7 +173,7 @@
             transition: background-color 0.3s ease;
         }
 
-        button:hover {
+        .buy-button:hover {
             background-color: #218838;
         }
 
@@ -233,6 +233,7 @@
         
     </style>
 </head>
+<body>
 <header>
     <button class="icon-button">
       <a href="index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
@@ -256,15 +257,12 @@
       </button>
     </section>
   </header>
-<body>
       <nav>
         <ul>
-
             <li><a href="products.html">Skruvdragare</a></li>
             <li><a href="accessories.html">Tillbehör</a></li>
             <li><a href="sales.html">Utförsäljning</a></li>
             <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
-
         </ul>
 
         <p>Besök oss på:</p>
@@ -375,8 +373,9 @@
         <input type="tel" id="phone" name="phone" placeholder="Ange ditt telefonnummer" required>
         <label for="email">E-postadress:</label>
         <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
-        <button type="submit">Slutför köp</button>
+        <button class="buy-button" type="submit">Slutför köp</button>
     </form>
+</main>
     
     <footer class="footer">
         <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
