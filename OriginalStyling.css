@@ -170,7 +170,7 @@ color: white;
 }
 
 /*Responsivitet Header*/
-@media (max-width: 906px) {
+@media (max-width: 991.98px) {
     .cart > .cart-text  {
         display: none;
     }
@@ -178,12 +178,7 @@ color: white;
         display: none;
     }
 }
-@media(max-width: 784px){
-    .search{
-        width: 250px;
-    }
-}
-@media (max-width: 725px){
+@media (max-width: 767.98px) {
     header{
         display: flex;
         flex-direction: column;
@@ -203,9 +198,9 @@ color: white;
         width: 95%;
     }
 }
-@media (max-width:600px){
+@media (max-width: 575.98px) {
     .login-cart{
-        margin-left:70%;
+        margin-left: 70%;
     }
 }
 

@@ -60,7 +60,7 @@
       cursor: pointer;
     }
     
-    @media (max-width: 1025px) {
+    @media (max-width: 991.98px) {
         .login-screen{
           height: 100%;
           font-size: 2rem;
@@ -77,9 +77,9 @@
         }
     }
 
-    @media (max-width: 400px){
+    @media (max-width: 575.98px) {
         .login-screen{
-          width: 95%;
+          width: 90%;
         }
     }
     .login-screen-form{
@@ -92,21 +92,23 @@
       width: 100%;
     }
 
-    .email-input{
+    .username-input{
       display: flex;
       flex-direction: column;
       width: 100%;
       align-items: center;
     }
-    .email-feedback{
-      position: relative;
-      color:red;
-      font-size: 14px;
+    .validateDenied{
+      color: #a90000;;
+      font-size: 1rem;
+      font-weight: bold;
       padding: 0.5rem;
     }
-    .email-input input{
+    .login-input{
       margin-bottom: 0.2rem;
+      margin-top: 0.5rem;
     }
+
 
 
     </style>
@@ -157,15 +159,15 @@
         <img src="./assets/user-login-icon-14.png" alt="Login Screen">
         <h2 class="login-header">Logga in</h2>
 
-        <form class="login-screen-form" action="profile.html" method="GET">
-          <section class="email-input">
-            E-post:
-            <input class="login-input" type="text" id="email" oninput="validateEmailInput()">
-            <span  class="email-feedback" id="emailFeedback"></span>
-          </section>
+        <form class="login-screen-form" method="GET" id="login-screen-form">
+          <div class="username-input" id="username-input">
+            Användarnamn:
+            <input class="login-input" type="text" id="username-login" name="email" oninput="validateEmailInput()">
+          </div>
           Lösenord:
-          <input class="login-input" type="password" id="password" required>
-          <button id="login-button" class="logga-in-button" type="submit" disabled>Logga in</button>
+          <input class="login-input" type="password" id="password-login" required>
+          <span  class="validateDenied" id="validateDenied"></span>
+          <button id="login-button" class="logga-in-button">Logga in</button>
         </form>
 
         <a href="#">Glömt lösenord?</a>
@@ -181,6 +183,6 @@
           <li><a href="FAQ.html">FAQ</a></li>
       </ul>
   </footer>
-
+  <script type="text/javascript" src="login-validation.js" defer></script>
 </body>
 </html>

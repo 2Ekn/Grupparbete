@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil och Orderhistorik</title>
     <link rel="stylesheet" href="OriginalStyling.css">
+    
     <style>
         .social-media {
         display: flex;
@@ -83,11 +84,11 @@
                 <label for="uploadImage" class="upload-label">Ladda upp bild</label>
                 <input type="file" id="uploadImage" accept="image/*" aria-label="Ladda upp en profilbild">
             </div>
-            <div class="details">
+            <div class="details" id="details">
                 <h2>Användarinformation</h2>
-                <p><strong>Namn:</strong> Farzad Jafarzadehtey</p>
-                <p><strong>E-post:</strong> farzadjafarzadehtey@gmail.com</p>
-                <p><strong>Adress:</strong> Frihetsgatan, Stockholm</p>
+                <p><strong>Namn:</strong> <span id="userFullName"></span></p>
+                <p><strong>E-post:</strong> <span id="userEmail"></span></p>
+                <p><strong>Adress:</strong> <span id="userAddress"></span></p>
             </div>
         </div>
     </section>
@@ -150,5 +151,19 @@
         </ul>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const queryParams = new URLSearchParams(window.location.search);
+        const username = queryParams.get('username');
+      
+        const userInfo = JSON.parse(localStorage.getItem(username));
+        if (userInfo) {
+            document.getElementById('userFullName').textContent = userInfo.fullName;
+            document.getElementById('userEmail').textContent = userInfo.email;
+            document.getElementById('userAddress').textContent = userInfo.fullAddress;
+        }
+      });
+    </script>
+    
 </body>
 </html>

@@ -1,18 +1,22 @@
-var email = document.getElementById('email').value;
-var password = document.getElementById('password');
 
-function validateEmailInput() {
-    const emailInput = document.getElementById('email').value;
-    const feedbackElement = document.getElementById('emailFeedback');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const submit = document.getElementById('login-button');
+document.getElementById('login-screen-form').addEventListener('submit', function(event){
+  event.preventDefault();
+
+  const username = document.getElementById('username-login').value;
+  const password = document.getElementById('password-login').value;
   
-    if (emailRegex.test(emailInput)) {
-      feedbackElement.textContent = "";
-      submit.disabled = false;
+
+  const validateDenied = document.getElementById('validateDenied');
+
+  const userInfo = JSON.parse(localStorage.getItem(username));
+
+  if(userInfo){
+    if(userInfo.password === password && userInfo.username === username){
+      window.location.href = `profile.html?username=${username}`;
+    } else {
+      validateDenied.textContent = "Fel lösenord eller användarnamn";
     }
-    else {
-      feedbackElement.textContent = "Var vänlig ange en giltig e-postaddress";
-      submit.disabled = true;
-    }
-}
+  } else{
+    validateDenied.textContent = "Fel lösenord eller användarnamn";
+  }
+})
