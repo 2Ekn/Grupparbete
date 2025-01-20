@@ -93,7 +93,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
 
 
 
-        @media(max-width: 600px) {
+        @media(max-width: 576px) {
             main>article {
                 width: 100%;
             }
@@ -238,7 +238,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
         }
 
     
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
             .about {
                 width: 90%;
 
@@ -293,7 +293,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
       </header>
 
       <nav>
-        <ul>
+        <ul class="menu-list">
 
             <li><a href="products.html">Skruvdragare</a></li>
             <li><a href="accessories.html">Tillbehör</a></li>
@@ -301,6 +301,11 @@ exempelvid main > .profile-menu eller main > .checkout*/
             <li><a href="calculationtools.html">Hjälpmedel</a></li>
 
         </ul>
+        <button class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
         <p>Besök oss på:</p>
         <article class="social-media">
@@ -363,6 +368,15 @@ exempelvid main > .profile-menu eller main > .checkout*/
             <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </footer>
+    <script>
+        function toggleMenu() {
+          const menuList = document.querySelector('.menu-list');
+          const menuButton = document.querySelector('.menu-button');
+        
+          menuList.classList.toggle('active'); 
+          menuButton.classList.toggle('active'); 
+        }
+            </script>
 </body>
 
 </html>

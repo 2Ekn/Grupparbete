@@ -385,7 +385,7 @@ exempelvid main > .profile-menu eller main > .checkout*/
             text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
             font-size: 1.5rem;
             font-weight: 700;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.1s ease;
 
         }
 
@@ -494,40 +494,19 @@ exempelvid main > .profile-menu eller main > .checkout*/
         }
 
            /* MEDIA */
-        @media (min-width: 1024px) {
+           @media (max-width: 1200px){
+            .sales>.hoverback>.hover-text {
+                font-size: clamp(0.8 rem, 2vw, 1.5rem);
+                text-align: center;
+            }
+           }
+        @media (max-width: 992px) {
     
             .sales {
-                width: 60%;
-                padding: 2rem;
-            }
-            .sales>.block,
-            .sales>.block>h4 {
-                width: 100%;
-                font-size: 1.2rem;
-            }
-
-            .sales>.hoverback {
-                width: 50%;
-                height: 5rem;
-            }
-
-            .sales>.hoverback:hover {
-                width: 85%;
-                height: 8rem;
-            }
-
-            .sales>.sale-product {
-                width: 350px;
-                height: 350px;
-            }
-        }
-
-
-        @media (max-width: 780px) {
-            .sales {
+                /* display: flex; */
                 width: 60%;
                 padding: 1.5rem;
-                min-width: 400px;
+                min-width: 350px;
             }
 
             .sales>.block,
@@ -612,22 +591,122 @@ exempelvid main > .profile-menu eller main > .checkout*/
                 padding: 1rem;
 
             }
-        }
+
+        }     
 
 
-        @media  (max-width: 480px) {
+        @media (max-width: 768px) {
             .sales {
-                width: 85%;
-                padding: 1rem;
-                gap: 4rem;
-                flex-direction: column;
-                margin: .5rem;
+                /* display: flex; */
+                width: 60%;
+                padding: 1.5rem;
+                min-width: 350px;
             }
 
             .sales>.block,
             .sales>.block>h4 {
                 width: 90%;
                 font-size: 1.2rem;
+                animation: none;
+            }
+
+            .sales>.hoverback {
+                width: 70%;
+                height: 4rem;
+                background-size: 180% 100%;
+                top: 50%;
+            }
+            .sales>.hoverback>.hover-text {
+                font-size: clamp(0.8 rem, 2vw, 1.5rem);
+                text-align: center;
+            }
+
+            .sales>.hoverback>.hover-in {
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .sales>.hoverback>section>.tidigare,
+            .sales>.hoverback>section>.nu {
+                font-size: clamp(1rem, 1vw, 4rem);
+                flex-direction: column;
+            }
+
+            .sales>.hoverback>section>.nu {
+                left: unsent;
+            }
+
+            .sales>.hoverback>section>button {
+                font-size: clamp(0.8rem, 2vw, 1.5rem);
+                align-items: center;
+                bottom: 0;
+                left: 25%;
+                margin: 1rem auto;
+                width: clamp(6rem, 50%, 12rem);
+                height: clamp(2rem, 5vw, 4rem);
+                padding: clamp(0.5rem, 1vw, 1rem);
+                border-radius: clamp(4px, 1vw, 8px);
+                transition: all 0.3s ease;
+            }
+
+            .sales>.hoverback:hover {
+                width: 90%;
+                height: 12rem;
+                top: 30%;
+            }
+
+            .sales>.sale-product {
+                width: 300px;
+                height: 300px;
+            }
+
+            .sales>.sale-product>article>button {
+                font-size: 3rem;
+                width: 100%;
+                left: 10%;
+                align-items: center;
+            }
+
+            .sales>.hoverback>.hover-text {
+                font-size: 1.2rem;
+            }
+
+            .sales>.hoverback>.hover-in {
+                font-size: 1.2rem;
+            }
+
+
+
+            .sales .text {
+                display: flex;
+                flex-shrink: 1;
+                top: 80%;
+                text-align: center;
+                padding: 1rem;
+
+            }
+        }
+
+
+        @media  (max-width: 576px) {
+            .sales {
+                align-self: center;
+                display: flex;
+                /* border: 1px solid red; */
+                width: 200px;
+                padding: 2rem 0;
+                gap: 4rem;
+                flex-direction: column;
+                /* margin: 2rem 0rem; */
+            }
+
+            .sales>.block,
+            .sales>.block>h4 {
+                width: 65%;
+                font-size: 1rem;
+                animation: none;
+                
             }
 
             .sales>.hoverback {
@@ -691,14 +770,18 @@ exempelvid main > .profile-menu eller main > .checkout*/
             }
 
             .sales .text {
-                display: flex;
-                width: 96%;
-                top: 60%;
+                display: block;
+                width: auto;
+         
            
                 text-align: center;
                 padding: 1rem;
 
             }
+            article.text {
+                font-size: 1rem;
+            }
+     
         }
     </style>
 
@@ -730,14 +813,19 @@ exempelvid main > .profile-menu eller main > .checkout*/
       </header>
 
       <nav>
-        <ul>
+        <ul class="menu-list">
 
             <li><a href="products.html">Skruvdragare</a></li>
             <li><a href="accessories.html">Tillbehör</a></li>
             <li><a href="sales.html">Utförsäljning</a></li>
-            <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
+            <li><a href="calculationtools.html">Hjälpmedel</a></li>
 
         </ul>
+        <button class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
         <p>Besök oss på:</p>
         <article class="social-media">
@@ -787,6 +875,15 @@ exempelvid main > .profile-menu eller main > .checkout*/
         </ul>
     </footer>
     <script src="cart.js"></script>
+    <script>
+        function toggleMenu() {
+          const menuList = document.querySelector('.menu-list');
+          const menuButton = document.querySelector('.menu-button');
+        
+          menuList.classList.toggle('active');
+          menuButton.classList.toggle('active'); 
+        }
+            </script>
 </body>
 
 </html>
