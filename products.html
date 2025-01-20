@@ -128,14 +128,19 @@
 
       <!-- Navigationbar -->
       <nav>
-        <ul>
+        <ul class="menu-list">
 
-            <li><a href="./products.html">Skruvdragare</a></li>
-            <li><a href="./accessories.html">Tillbehör</a></li>
-            <li><a href="./sales.html">Utförsäljning</a></li>
-            <li><a href="./calculationtools.html">Hjälpmedel</a></li>
+            <li><a href="products.html">Skruvdragare</a></li>
+            <li><a href="accessories.html">Tillbehör</a></li>
+            <li><a href="sales.html">Utförsäljning</a></li>
+            <li><a href="calculationtools.html">Hjälpmedel</a></li>
 
         </ul>
+        <button class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
         <p>Besök oss på:</p>
         <article class="social-media">
@@ -314,6 +319,14 @@
     </footer>
         <script src="./cart.js"></script>
         <script src="./products.js"></script>
-
+        <script>
+            function toggleMenu() {
+              const menuList = document.querySelector('.menu-list');
+              const menuButton = document.querySelector('.menu-button');
+            
+              menuList.classList.toggle('active'); // Visa eller dölj menyn
+              menuButton.classList.toggle('active'); // Växla bakgrund för knappen
+            }
+                </script>
 </body>
 </html>
