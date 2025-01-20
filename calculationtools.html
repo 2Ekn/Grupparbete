@@ -10,22 +10,22 @@
         /* Calculationtools(Jonas) */
         .maincontainer h2{
             font-size: 2vw;
-            margin: 2%;
-            padding: 2%;
+            margin: 1%;
+            padding: 1%;
             text-align: center;
             color: white;
             background-color: var(--secondary-color);
             border-radius: 8px;
         }
         .page-wrapper{
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
         }
         .trall-counter{
             min-height: 200px;
-            max-height: 400px;
+            max-height: 500px;
             overflow: hidden;
             position: relative;
             padding: 1rem;
@@ -36,8 +36,72 @@
             color: var(--texty-color);
             margin-bottom: 1rem;
         }
-        .trall-counter #dragartext{
-            font-size: clamp(1px, 2vw, 24px);
+        
+        .jämförelse-grid{
+            padding-top: 10%;
+            padding-bottom: 1rem;
+            text-align: center;
+            background-image: linear-gradient(var(--secondary-color), var(--button-color));
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(11, 1fr);
+            padding-left: 1rem;
+            padding-right: 1rem;
+            color: var(--texty-color);
+            font-size: clamp(4px, 1vw, 12px);
+            border: var(--secondary-color) solid 1rem;
+            position: relative;
+        }
+        .jämförelse-grid *{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .jämförelse-grid .kolumn2 ,.kolumn3 ,.kolumn4 ,.kolumn5 ,.kolumn6 ,.kolumn7 ,
+        .kolumn8 ,.kolumn9 ,.kolumn10 ,.kolumn11{
+            border-radius: 0.5rem;
+            background-color: var(--secondary-color);
+            margin: 1px;
+        }
+        .jämförelse-grid .kolumn2:hover ,.kolumn3:hover ,.kolumn4:hover ,.kolumn5:hover ,.kolumn6:hover ,.kolumn7:hover ,
+        .kolumn8:hover ,.kolumn9:hover ,.kolumn10:hover ,.kolumn11:hover{
+            transform: scale(1.2);
+            border: var(--button-hover-color) solid 1px;
+            background-color: #6e6e6e;
+            cursor: default;
+        }
+        .jämförelse-grid .kolumn1{
+            font-weight: bold;
+            background-color: var(--secondary-color);
+            border-radius: 0.5rem;
+            margin: 1px;
+
+        }
+        .jämförelse-grid .kolumn1 img{
+            opacity: 0;
+        }
+        .jämförelse-grid img{
+            width:99%;
+            height: auto;
+            border-radius: 0.5rem;
+
+        }
+        .jämförelse-grid h5{
+            margin: 1rem;
+            width: 90%;
+            position: absolute;
+            display: flex;
+            justify-self: center;
+            font-size: clamp(2px, 5vw, 50px);
+            background-color: var(--secondary-color);
+            border-radius: 1rem;
+        }
+        
+        .flexbox1 #dragartext{
+            font-size: clamp(1px, 3vw, 30px);
             color: var(--texty-color);
             text-shadow: black 0px 0px 10px;
         }
@@ -47,7 +111,6 @@
         }
         .trall-counter .buttons{
             display: flex;
-            align-items: end;
         }
         .trall-counter .buttons button{
             display: flex;
@@ -66,8 +129,7 @@
             background-color: var(--button-hover-color);
         }
         .trall-counter .buttons button:focus{
-            border: 4px solid hsl(0, 0%, 0%);
-
+            background-color: var(--button-hover-color);
         }
         .trallbild, .vilkendragarebild{
             position: relative; 
@@ -76,7 +138,7 @@
         }
 
         .trallbild img, .vilkendragarebild img{
-            display: block; 
+            display: flex; 
             width: 100%; 
             height: auto;
         }
@@ -99,14 +161,14 @@
             margin-bottom: 2rem;
         }
         .trall-counter .trallheader{
-            font-size: clamp(1px, 2vw, 24px);
+            font-size: clamp(5px, 2vw, 30px);
             text-align: center; 
             color: var(--texty-color);
             text-shadow: black 0px 0px 10px;
         }
 
-        #input{
-            height: 5vh;
+        .sökfält #input{
+            height: 4vh;
             width: 15vw;
             max-width: 200px;
             font-size: clamp(1px, 3vw, 40px);
@@ -149,14 +211,20 @@
         font-size: 10px;
         margin-left: 2rem;
         }
+
+        @media(max-width: 575) {
+            .sökfält #input{
+            height: 2vh;
+        }
+        }
+        
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <button class="icon-button">
-          <a href="index.html"><img class="header-logo-img" src="./assets/logo.jpg" alt="Company Logo"></a>
-          <a href="index.html">Drillzone.se</a>
+          <a href="./index.html"><img class="header-logo-img" src="./assets/logo5.png" alt="Company Logo"></a>
         </button>
         
     
@@ -167,13 +235,13 @@
             
         <section class="login-cart">
           <button class="login">
-            <a href=""><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
-            <a class="login-text" href="login.html">Logga in</a>
+            <a href="./login.html"><img class="login-img" src="./assets/user-login-icon-14.png" alt="User login logo"></a>
+            <a class="login-text" href="./login.html">Logga in</a>
           </button>
     
           <button class="cart">
-            <a href="#"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
-            <a class="cart-text" href="#">Kundvagn</a>
+            <a href="./cart.html"><img class="cart-img" src="./assets/shoppingCart.png" alt="Shopping cart"></a>
+            <a class="cart-text" href="./cart.html">Kundvagn</a>
           </button>
         </section>
       </header>
@@ -182,10 +250,10 @@
       <nav>
         <ul>
 
-            <li><a href="products.html">Skruvdragare</a></li>
-            <li><a href="accessories.html">Tillbehör</a></li>
-            <li><a href="sales.html">Utförsäljning</a></li>
-            <li><a href="hjälpmedel.html">Hjälpmedel</a></li>
+            <li><a href="./products.html">Skruvdragare</a></li>
+            <li><a href="./accessories.html">Tillbehör</a></li>
+            <li><a href="./sales.html">Utförsäljning</a></li>
+            <li><a href="./calculationtools.html">Hjälpmedel</a></li>
 
         </ul>
 
@@ -205,7 +273,7 @@
         
             <section class="trall-counter">
                 <section class="vilkendragarebild">
-                    <img src="./assets\vilkenskruvdragare.jpeg" alt="bild på skruvdragare" id="dragarbild">
+                    <img src="./assets/vilkenskruvdragare.jpeg" alt="bild på skruvdragare" id="dragarbild">
                     <section class="flexbox1">
                         <h4 id="dragartext">Vilken dragare söker du?</h4>
                         <section class="buttons">
@@ -219,10 +287,10 @@
 
             <section class="trall-counter">
                 <section class="trallbild">
-                    <img src="./assets\trall.jpeg" alt="bild på trall">
+                    <img src="./assets/trall.jpeg" alt="bild på trall">
                     <section class="flexbox2">
-                        <h4 class="trallheader">Beräkna åtgång av trall + skruv.</h4>
-                        <section>
+                        <h4 class="trallheader">Beräkna åtgång av trall & skruv.</h4>
+                        <section class="sökfält">
                             <label>Antal m²:</label>
                             <input type="text" id="input">
                         </section>
@@ -232,18 +300,113 @@
                     </section>
                 </section>
             </section>
+
+            
+            <section class="jämförelse-grid">
+                <h5>Jämför skruvdragare</h5>
+                <section class="kolumn1">
+                    <img src="./product-images\Black & Decker BCD001C1 - 890kr.jpg" alt="">
+                    <p>Märke:</p>
+                    <p>Modell:</p>
+                    <p>Varvtal:</p>
+                    <p>Volt:</p>
+                    <p>Pris:</p>
+                </section>
+                <section class="kolumn2" >
+                    <img src="./product-images/Bosch GSR 18V-EC - 3679kr .jpg" alt="">
+                    <p>Bosch</p>
+                    <p>GSR 18V-EC</p>
+                    <p>2000/min</p>
+                    <p>18v</p>
+                    <p>3679:-</p>
+                </section>
+                <section class="kolumn3" >
+                    <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="">
+                    <p>Black &Decker</p>
+                    <p>BCD001C1</p>
+                    <p>600/min</p>
+                    <p>18v</p>
+                    <p>890:-</p>
+                </section>
+                <section class="kolumn4" >
+                    <img src="product-images\Milwaukee M18 BLDDRC-502C - 3590kr.jpg" alt="">
+                    <p>Milwaukee</p>
+                    <p>M18 BLDDRC</p>
+                    <p>1800/min</p>
+                    <p>18v</p>
+                    <p>3590:-</p>
+                </section>
+                <section class="kolumn5" >
+                    <img src="./product-images/HiKOKI DS18DD - 2590kr.jpg" alt="">
+                    <p>HiKOKI</p>
+                    <p>DS18DD</p>
+                    <p>1600/min</p>
+                    <p>18v</p>
+                    <p>2590:-</p>
+                </section>
+                <section class="kolumn6" >
+                    <img src="./product-images/STANLEY FatMax -  2690kr.jpg" alt="">
+                    <p>STANLEY</p>
+                    <p>FatMax</p>
+                    <p>1600/min</p>
+                    <p>18v</p>
+                    <p>2690:-</p>
+                </section>
+                <section class="kolumn7" >
+                    <img src="./product-images/Metabo BS 18 - 3190kr.jpg" alt="">
+                    <p>Metabo</p>
+                    <p>BS 18</p>
+                    <p>1500/min</p>
+                    <p>18v</p>
+                    <p>3190:-</p>
+                </section>
+                <section class="kolumn8" >
+                    <img src="./product-images/Milwaukee M12 BDD-202C - 2390kr.jpg" alt="">
+                    <p>Milwaukee</p>
+                    <p>M12 BDD</p>
+                    <p>1500/min</p>
+                    <p>12v</p>
+                    <p>2390:-</p>
+                </section>
+                <section class="kolumn9" >
+                    <img src="./product-images/Makita DDF484RTJ - 4790kr.jpg" alt="">
+                    <p>Makita</p>
+                    <p>DDF484RTJ</p>
+                    <p>2000/min</p>
+                    <p>18v</p>
+                    <p>4790:-</p>
+                </section>
+                <section class="kolumn10" >
+                    <img src="./product-images/Flex DD 2G - 2890kr.jpg" alt="">
+                    <p>Flex</p>
+                    <p>DD 2G</p>
+                    <p>1300/min</p>
+                    <p>12v</p>
+                    <p>2890:-</p>
+                </section>
+                <section class="kolumn11" >
+                    <img src="./product-images/Bosch GSR 12V-15 - 1590kr.jpg" alt="">
+                    <p>Bosch</p>
+                    <p>GSR 12V-15</p>
+                    <p>1300/min</p>
+                    <p>12v</p>
+                    <p>1590:-</p>
+                </section>
+
+            </section>
+            
         </section>
     </main>
     <!-- Footer -->
     <footer class="footer">
-        <p>Copyright &copy; 2025 Dillzone AB</p>
+        <p>Copyright &copy; 2025 Drillzone AB</p>
         <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="about.html">Om oss</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="./index.html">Hem</a></li>
+            <li><a href="./contact.html">Kontakt</a></li>
+            <li><a href="./about.html">Om oss</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
         </ul>
     </footer>
-        <script src="calculationtools.js"></script>
+        <script src="./calculationtools.js"></script>
 </body>
 </html>
