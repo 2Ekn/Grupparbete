@@ -317,7 +317,7 @@ nav > p > a:hover {
     color: var(--hover-color);
 }
 /* SCALABILITY SEARCH BAR */
-@media (max-width: 756px) {
+@media (max-width: 768px) {
 nav {
     flex-wrap: wrap; 
 }
