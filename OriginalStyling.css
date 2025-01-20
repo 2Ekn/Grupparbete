@@ -271,7 +271,7 @@ nav > ul > li > a:hover {
     font-weight: bold;
   }
   
-  /* Dölj menyknappen för större skärmar */
+  
   .menu-button {
     display: none;
   }
