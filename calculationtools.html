@@ -8,7 +8,6 @@
 
     <style>
         /* Calculationtools(Jonas) */
-        /* git pull origin main */
         .maincontainer h2{
             font-size: 2vw;
             margin: 1%;
@@ -40,15 +39,15 @@
         
         .jämförelse-grid{
             padding-top: 10%;
+            padding-bottom: 1rem;
             text-align: center;
-            background-color: var(--primary-bg);
+            background-image: linear-gradient(var(--secondary-color), var(--button-color));
             border-radius: 8px;
-            color: var(--texty-color);
-            
+            margin-bottom: 1rem;
             width: 100%;
             display: grid;
             grid-template-columns: repeat(11, 1fr);
- 
+            padding-left: 1rem;
             padding-right: 1rem;
             color: var(--texty-color);
             font-size: clamp(4px, 1vw, 12px);
@@ -64,16 +63,22 @@
         .jämförelse-grid .kolumn2 ,.kolumn3 ,.kolumn4 ,.kolumn5 ,.kolumn6 ,.kolumn7 ,
         .kolumn8 ,.kolumn9 ,.kolumn10 ,.kolumn11{
             border-radius: 0.5rem;
+            background-color: var(--secondary-color);
+            margin: 1px;
         }
         .jämförelse-grid .kolumn2:hover ,.kolumn3:hover ,.kolumn4:hover ,.kolumn5:hover ,.kolumn6:hover ,.kolumn7:hover ,
         .kolumn8:hover ,.kolumn9:hover ,.kolumn10:hover ,.kolumn11:hover{
-            transform: scale(1.05);
+            transform: scale(1.2);
             border: var(--button-hover-color) solid 1px;
             background-color: #6e6e6e;
             cursor: default;
         }
         .jämförelse-grid .kolumn1{
             font-weight: bold;
+            background-color: var(--secondary-color);
+            border-radius: 0.5rem;
+            margin: 1px;
+
         }
         .jämförelse-grid .kolumn1 img{
             opacity: 0;
@@ -82,13 +87,17 @@
             width:99%;
             height: auto;
             border-radius: 0.5rem;
+
         }
         .jämförelse-grid h5{
-            padding-bottom: 5%;
+            margin: 1rem;
+            width: 90%;
             position: absolute;
             display: flex;
             justify-self: center;
             font-size: clamp(2px, 5vw, 50px);
+            background-color: var(--secondary-color);
+            border-radius: 1rem;
         }
         
         .flexbox1 #dragartext{
@@ -313,7 +322,7 @@
                 </section>
                 <section class="kolumn3" >
                     <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="">
-                    <p>Black & Decker</p>
+                    <p>Black &Decker</p>
                     <p>BCD001C1</p>
                     <p>600/min</p>
                     <p>18v</p>
@@ -360,12 +369,12 @@
                     <p>2390:-</p>
                 </section>
                 <section class="kolumn9" >
-                    <img src="./product-images/Black & Decker BCD001C1 - 890kr.jpg" alt="">
-                    <p>Black & Decker</p>
-                    <p>BCD001C1</p>
-                    <p>600/min</p>
+                    <img src="./product-images/Makita DDF484RTJ - 4790kr.jpg" alt="">
+                    <p>Makita</p>
+                    <p>DDF484RTJ</p>
+                    <p>2000/min</p>
                     <p>18v</p>
-                    <p>890:-</p>
+                    <p>4790:-</p>
                 </section>
                 <section class="kolumn10" >
                     <img src="./product-images/Flex DD 2G - 2890kr.jpg" alt="">
