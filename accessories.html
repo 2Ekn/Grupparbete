@@ -38,10 +38,11 @@
             width: 100%;
             display: flex;
             border-radius: 2px;
-            transition: filter 0.3s ease;
+            transition: all 0.3s ease;
         }
         .products .product-image:hover{
-            filter: brightness(1.2);
+            filter: brightness(1.1);
+            transform: scale(1.05);
         }
         .products .buy-button{
             background-color: var(--button-color);
@@ -70,12 +71,12 @@
         }
         
         @media(max-width: 767px) {
-            .productdisplay .productinfo {
+            .products .allproducts {
             grid-template-columns: 1fr 1fr;
         }
         }
         @media(max-width: 575px) {
-            .productdisplay .productinfo {
+            .products .allproducts {
             grid-template-columns: 1fr;
         }
         }
