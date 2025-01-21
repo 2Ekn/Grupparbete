@@ -724,79 +724,15 @@ text-decoration: underline;
 color: var(--hover-color);
 }
 
-/* @media (max-width: 800px) {
-.contact {
-    width: 90%;
-    padding: 1rem;
-}
 
-.contact>.contact-options {
-    flex-direction: column;
-    border: none;
-    gap: 2rem;
-}
-
-.contact>.contact-options>section {
-    flex: 1;
-}
-} */
 
 
 
 /* ABOUT */
-@font-face {
-    font-family: OpenSans;
-    src: url(./assets/OpenSans-VariableFont_wdth\,wght.ttf);
-}
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: OpenSans;
-    background-color: var(--primary-color);
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-    gap: 2rem;
-}
 
 
 /* MAIN  */
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: .5rem;
-    width: 5rem;
-
-
-}
-
-
-
-nav>p {
-    position: absolute;
-    top: 0.8rem;
-    right: 5rem;
-    display: block;
-    margin-top: auto;
-    color: var(--texty-color);
-    text-decoration: underline;
-    font-size: 10px;
-    margin-left: 2rem;
-
-}
 
 
 
@@ -805,22 +741,8 @@ nav>p {
 
 
 
-@media(max-width: 576px) {
-    main>article {
-        width: 100%;
-    }
 
-    main {
-        justify-content: center;
-    }
 
-    main>h4 {
-        font-size: 14px;
-        padding: 1.5rem;
-        text-align: center;
-
-    }
-}
 
 
 /* MAIN ABOUT*/
@@ -977,7 +899,7 @@ nav>p {
 }
 
 /* Contact MAIN */
-html,
+/* html,
 body {
     height: 100%;
     margin: 0;
@@ -990,34 +912,12 @@ body {
     margin: 0;
     font-family: OpenSans;
     background-color: var(--primary-color);
-}
+} */
 
 
 
 /* MAIN  */
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: .5rem;
-    width: 5rem;
 
-
-}
-
-
-
-nav>p {
-    position: absolute;
-    top: 0.8rem;
-    right: 5rem;
-    display: block;
-    margin-top: auto;
-    color: var(--texty-color);
-    text-decoration: underline;
-    font-size: 10px;
-    margin-left: 2rem;
-
-}
 @media screen and (max-width: 1400px) {
     .contact>.contact-options {
         flex-direction: column;
@@ -1074,14 +974,14 @@ nav>p {
 
 
 @media(max-width: 576px) {
-    main>article {
+    .contact>article {
         width: 100%;
         height: auto;
         flex-direction: column;
 
     }
 
-    main {
+    .contact {
         justify-content: center;
         min-width: 300px;
     }
@@ -1183,7 +1083,7 @@ nav>p {
 
 
 /* MAIN */
-main {
+.index-main {
     
     display:flex;
     flex-wrap: wrap; 
@@ -1195,7 +1095,7 @@ main {
     
 }
 
-main > h4 {
+.index-main > h4 {
     text-decoration: none;
 font-size: 16px; 
 font-style: normal;
@@ -1210,16 +1110,16 @@ border-radius: 8px;
 
 display: block; 
 }
-main > section > h6 {
+.index-main > section > h6 {
     color: var(--texty-color);
     font-size: 12px;
     text-align: center;
 }
-main > section > h6 > a {
+.index-main > section > h6 > a {
     text-decoration: underline;
     color: var(--texty-color);
 } */
- main > section > h6 > a:hover {
+.index-main > section > h6 > a:hover {
     color: var(--hover-color); 
 } 
 .index-info > p  {
@@ -1227,7 +1127,7 @@ font-size: 12px;
 }
 
 
- main > section   {
+.index-main > section   {
     
     color: var(--texty-color); 
     display: flex; 
@@ -1246,21 +1146,21 @@ font-size: 12px;
     flex-grow: 0;  
 
 }
- main > section > .price {
+.index-main > section > .price {
     color: var(--hover-color); 
     font-size: 16px; 
 
      margin: 0.5rem 0; 
 }
 
-main > section > .description {
+.index-main > section > .description {
     font-size: 10px; 
     color: var(--texty-color); 
     text-align: center; 
     margin: 0.5rem 0; 
 }  
 
- main > section > button {
+.index-main > section > button {
 background-color: var(--button-color);
 color: var(--texty-color);
 font-size: 12px;
@@ -1275,11 +1175,11 @@ max-width: 200px;
 min-width: 150px;
 text-align: center; 
 } 
- main > section >  button:hover {
+.index-main > section >  button:hover {
     background-color: var(--button-hover-color);
     
 }
-main > section >  img {
+.index-main > section >  img {
     width: 50%;
     height: auto;
   
@@ -1289,14 +1189,14 @@ main > section >  img {
 }
 /* MAIN SCALABILITY */
   @media(max-width: 768px) {
-main > section {
+    .index-main > section {
     width: 100%; 
 }
 
-main {
+.index-main {
     justify-content: center; 
 }
-main > h4 {
+.index-main > h4 {
     font-size: 14px; 
     padding: 1.5rem;
     text-align: center; 
@@ -1305,7 +1205,7 @@ main > h4 {
 } 
 
 /* SALES MAIN */
-html,
+/* html,
 body {
     height: 100%;
     margin: 0;
@@ -1326,35 +1226,13 @@ main {
     flex-direction: column;
 
     gap: 2rem;
-}
+} */
 
 
 /* MAIN  */
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: .5rem;
-    width: 5rem;
 
 
-}
-
-
-
-nav>p {
-    position: absolute;
-    top: 0.8rem;
-    right: 5rem;
-    display: block;
-    margin-top: auto;
-    color: var(--texty-color);
-    text-decoration: underline;
-    font-size: 10px;
-    margin-left: 2rem;
-
-}
-
-
+/* 
 @media(max-width: 600px) {
     main>article {
         width: 100%;
@@ -1370,7 +1248,7 @@ nav>p {
         text-align: center;
 
     }
-}
+} */
 
 
 /* MAIN START */
@@ -2874,53 +2752,9 @@ margin: 0;
     
 
       /* FARZAD */
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  
 
-    header>button {
-        display: flex;
-        align-items: center;
-        background: none;
-        border: none;
-    }
 
-    header>a {
-        text-decoration: none;
-        color: inherit;
-        color: var(--texty-color);
-        font-size: 1.1rem;
-    }
-
-    .icon-button>a {
-        font-size: 2.5rem;
-    }
-
-    .icon-button>a:hover {
-        font-size: 2rem;
-        text-decoration: none;
-    }
-
-    .social-media {
-        display: flex;
-        justify-content: center;
-        gap: .5rem;
-        width: 5rem;
-    }
-
-    nav>p {
-        position: absolute;
-        top: 0.8rem;
-        right: 5rem;
-        display: block;
-        margin-top: auto;
-        color: var(--texty-color);
-        text-decoration: underline;
-        font-size: 10px;
-        margin-left: 2rem;
-    }
 
     table tr:hover {
         background-color: #4fbb19;
@@ -3026,27 +2860,18 @@ margin: 0;
     }
 
     /* Checkout */
-    body {
+    /* body {
         font-family: Arial, sans-serif;
         margin: 0;
 
         /* padding: 20px; */
 
-        padding: 20px;
+        /* padding: 20px;
 
         background-color: var(--primary-color);
-    }
-    nav>p {
-        position: absolute;
-        top: 0.8rem;
-        right: 5rem;
-        display: block;
-        margin-top: auto;
-        color: var(--texty-color);
-        text-decoration: underline;
-        font-size: 10px;
-        margin-left: 2rem;
-    }
+    }  */
+
+    
     h1 {
         text-align: center;
         color: var(--texty-color);
@@ -3256,7 +3081,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     /* LOGGA UT */
-    body {
+    /* body {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -3264,7 +3089,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         margin: 0;
         font-family: Arial, sans-serif;
         background-color: var(--secondary-color);
-    }
+    } */
     .content-container {
         text-align: center;
         background: var(--primary-color);
