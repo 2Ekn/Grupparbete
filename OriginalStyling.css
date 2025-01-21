@@ -2609,7 +2609,7 @@ margin: 0;
     }
     .checkboxes{
         display: grid;
-        grid-row-start: 4;
+        grid-row-start: 3;
         grid-row-end: 5;
         grid-column-start: 9;
         grid-column-end: 13;
@@ -2617,7 +2617,8 @@ margin: 0;
         flex-direction: column;
         justify-content: flex-start;
         gap: 1rem;
-        margin-bottom: 3rem;
+        margin-top: auto;
+        margin-bottom: 4rem;
     }
     .checkbox1{
         gap:0.5rem;
