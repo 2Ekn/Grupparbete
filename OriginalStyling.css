@@ -200,7 +200,7 @@ color: white;
 }
 @media (max-width: 575.98px) {
     .login-cart{
-        margin-left: 70%;
+        align-self: flex-end;
     }
 }
 
@@ -2597,7 +2597,7 @@ margin: 0;
     }
     .checkboxes{
         display: grid;
-        grid-row-start: 4;
+        grid-row-start: 3;
         grid-row-end: 5;
         grid-column-start: 9;
         grid-column-end: 13;
@@ -2605,7 +2605,8 @@ margin: 0;
         flex-direction: column;
         justify-content: flex-start;
         gap: 1rem;
-        margin-bottom: 3rem;
+        margin-top: auto;
+        margin-bottom: 4rem;
     }
     .checkbox1{
         gap:0.5rem;
@@ -2728,6 +2729,7 @@ margin: 0;
         margin-bottom: 0.2rem;
         margin-top: 0.5rem;
         padding: 0.5rem;
+        border-radius: 0.5rem;
       }
       .QA-FAQ a {
         color: var(--texty-color);
@@ -2748,15 +2750,15 @@ margin: 0;
         background-color: #4fbb19;
     }
 
-    body {
+    /* body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-    }
+    } */
 
-    h1, h2 {
+    /* h1, h2 {
         text-align: center;
-    }
+    } */
 
     table {
         width: 100%;
@@ -2896,7 +2898,7 @@ margin: 0;
     }
 
 
-    form {
+    .checkout-form {
         max-width: 900px;
         margin: auto;
         padding: 20px;
@@ -2978,13 +2980,13 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         transform: scale(1.1); /* Förstorar ikonen */
     }
 
-    label {
+    .method {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
     }
 
-    form input[type="text"], input[type="tel"], input[type="email"] {
+    .checkout-form input[type="text"], input[type="tel"], input[type="email"] {
         width: 100%;
         padding: 10px;
         margin-bottom: 20px;
@@ -3043,11 +3045,11 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             font-size: 12px; /* Minskar textstorleken i tabellen */
         }
 
-        form {
+        .checkout-form {
             padding: 15px; /* Minskar padding för små skärmar */
         }
 
-        button {
+        .buy-button {
             padding: 12px; /* Justerar knappstorlek för mindre skärmar */
         }
     }
@@ -3063,7 +3065,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             height: 35px;
         }
 
-        form {
+        .checkout-form {
             padding: 20px;
         }
     }
