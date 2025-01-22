@@ -242,13 +242,7 @@ nav > ul > li > a {
     list-style: none;
 
 }
-nav > ul > li > a:hover {
-    text-decoration: none;
-    color: var(--hover-color);
-    font-style: bold;
 
-
-}
 .social-media {
     display: flex;
     justify-content: center;
@@ -295,7 +289,7 @@ nav>p {
 
   .menu-list a:hover {
     color: var(--hover-color);
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 
 
