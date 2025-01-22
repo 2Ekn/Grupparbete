@@ -342,13 +342,14 @@ nav>p {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-self: flex-e;
+      align-self: center;
+      margin-left: 1rem;
       width: 30px;
       height: 25px;
       background-color: var(--secondary-color);
       border: none;
       cursor: pointer;
-     
+    
     }
     .menu-button.active span:first-child {
        background-color: grey;
@@ -378,7 +379,7 @@ nav>p {
       height: 2px;
       background-color: white;
       transition: 0.3s;
-
+    
 
     }
   }
@@ -1299,7 +1300,7 @@ main {
    
     animation: rotate 9s ease infinite; 
     animation-timing-function: ease;
-
+/* animation:name duration timing-function delay iteration-count direction fill-mode; */
 }
 @keyframes rotate {
     0% {
@@ -3079,7 +3080,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     /* LOGGA UT */
-    /* body {
+    .logout{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -3087,7 +3088,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         margin: 0;
         font-family: Arial, sans-serif;
         background-color: var(--secondary-color);
-    } */
+    } 
     .content-container {
         text-align: center;
         background: var(--primary-color);
