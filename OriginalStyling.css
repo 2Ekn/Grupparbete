@@ -44,6 +44,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 
+
 }
 
 header>button{
@@ -163,11 +164,12 @@ color: white;
 }
 .cart {
     background-color: var(--button-color); /*ändrad färg*/
-    padding: 0.2rem 1rem;
+     padding: 0.2rem 1rem;
     margin-right: 0.5rem ;
     border-radius: 0.3rem;
     font-family: OpenSans;
-}
+    height: 43.38px;
+} 
 
 /*Responsivitet Header*/
 @media (max-width: 991.98px) {
