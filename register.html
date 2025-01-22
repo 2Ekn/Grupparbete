@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drillzone - Skapa Konto</title>
+    <title>Drillzone.se/Registrering</title>
     <link rel="stylesheet" href="OriginalStyling.css">
-    <link rel="icon" type="image/png" href="./assets/logo5.png" >
-    
-    <style>
-
-
-
-    </style>
+    <link rel="icon" type="image/png" href="./assets/logo5.png">
 </head>
 <body>
     <header>
@@ -22,7 +16,7 @@
         
         <section class="search">
           <img class="search-img" src="./assets/searchicon.png" alt="Search Icon">
-          <input type="text" placeholder="Search...">
+          <input type="text" placeholder="Sök...">
         </section>
             
         <section class="login-cart">
@@ -73,7 +67,7 @@
                 
                 <div class="password-checklist-container">
                     <p>Lösenord:</p>
-                    <input type="password" id="passwordRegister" placeholder="Lösenord">
+                    <input type="password" id="passwordRegister" placeholder="Lösenord" required>
                     <section class="checkbox-password">
 
                         <input type="checkbox" id="password-length" disabled>
@@ -84,29 +78,29 @@
         <aside class="right-side">
             <h3>Leveransuppgifter</h3>
             
-            <form id="registrering" action="profile.html" method="GET">
+            <form id="registrering" action="login.html" method="GET">
                 <p>Fullständigt namn:</p>
-                <input class="firstname"  type="text" placeholder="Förnamn" id="firstName">
-                <input class="lastname" type="text" placeholder="Efternamn" id="lastName">
+                <input class="firstname"  type="text" placeholder="Förnamn" id="firstName" required>
+                <input class="lastname" type="text" placeholder="Efternamn" id="lastName" required>
             
                 <p>Leveransaddress:</p>
-                <input type="text" placeholder="Address" id="address">
-                <input type="text" placeholder="Postnummer" id="zipCode">
-                <input type="text" placeholder="Stad" id="city">
+                <input type="text" placeholder="Address" id="address" required>
+                <input type="text" placeholder="Postnummer" id="zipCode" required>
+                <input type="text" placeholder="Stad" id="city" required>
             
                 <p>Kontaktuppgifter: </p>
-                <input type="text" placeholder="E-post" id="email">
+                <input type="text" placeholder="E-post" id="email" required>
                 <input type="text" placeholder="Telefonnummer">
                 <button type="submit">Skapa Konto</button>
             </form>
         </aside>
         <section class="checkboxes">
-            <label  class="checkbox1" >
+            <label  class="checkbox1">
                 <input type="checkbox">
                 Jag har läst och accepterar <a href="#">villkoren.</a>
             </label>
 
-            <label  class="checkbox2" >
+            <label  class="checkbox2">
                 <input class="checkbox2" type="checkbox">
                 Jag vill få erbjudanden och nyhetsbrev till mailen
             </label>
@@ -114,12 +108,12 @@
     </main>
    
     <footer class="footer">
-        <p>&copy; 2025 Drillzone AB. Alla rättigheter förbehållna.</p>
+        <p>Copyright &copy; 2025 Drillzone AB</p>
         <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="about.html">Om oss</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="./index.html">Hem</a></li>
+            <li><a href="./contact.html">Kontakt</a></li>
+            <li><a href="./about.html">Om oss</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
         </ul>
     </footer>
 
