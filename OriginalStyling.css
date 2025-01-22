@@ -43,7 +43,6 @@ header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-
 }
 
 header>button{
@@ -86,14 +85,17 @@ header>a{
 }
 .header-logo-img {
     width: 5rem;
+    height: 5rem;
     margin-left: 0;
 }
 
 .login-img{
     width: 2rem;
+    height: 2rem;
 }
 .cart-img{
     width: 2rem;
+    height: 2rem;
 }
 /*Search input*/
 .search{
@@ -111,8 +113,9 @@ header>a{
     margin-right: auto;
 }
 .search-img{
-    width: 2rem;
+    width: 2.5rem;
     margin-left: 0.5rem;
+    height: 2rem;
 }
 
 .search>input{
@@ -163,10 +166,11 @@ color: white;
 }
 .cart {
     background-color: var(--button-color); /*ändrad färg*/
-    padding: 0.2rem 1rem;
+     padding: 0.2rem 1rem;
     margin-right: 0.5rem ;
     border-radius: 0.3rem;
     font-family: OpenSans;
+    height: 3rem;
 }
 
 /*Responsivitet Header*/
@@ -2661,6 +2665,7 @@ margin: 0;
         .register-main{
             display: flex;
             flex-direction: column;
+            gap:1rem;
             padding: 1rem;
             margin: 0.5rem;
             border-radius: 2rem;
@@ -2674,6 +2679,7 @@ margin: 0;
         .register-main>h2{
             margin-bottom: 2rem;
             margin-top: 1rem;
+            
         }
     }
 
@@ -3087,11 +3093,11 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         height: 100vh;
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: var(--secondary-color);
+        background-color: var(--primary-color);
     } 
     .content-container {
         text-align: center;
-        background: var(--primary-color);
+        background: var(--secondary-color);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
