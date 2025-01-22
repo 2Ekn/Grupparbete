@@ -2857,6 +2857,86 @@ margin: 0;
         cursor: pointer;
         font-size: 14px;
     }
+/*nytt Inställningar för mobiler (mindre än 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search {
+        display: flex;
+        width: 100%;
+    }
+
+    .search input {
+        flex: 1;
+    }
+
+    nav .menu-list {
+        display: none; /* Dölj huvudmenyn */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .menu-list.active {
+        display: flex; /* Visa mobilmenyn när den är aktiv */
+    }
+
+    nav .menu-button {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    table img {
+        width: 50px;
+        height: auto;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+}
+
+/* Inställningar för surfplattor (mellan 768px och 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav .menu-list {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    footer ul {
+        display: flex;
+        gap: 20px;
+    }
+}
 
     /* Checkout */
     /* body {
