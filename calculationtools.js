@@ -8,8 +8,8 @@ let resultat1;
 let resultat2;
 
 document.getElementById("calculate").onclick = function(){
-    antalm2 = document.getElementById("input").value;
-    antalm2 = Number(antalm2);
+    antalm2 = document.getElementById("input").value; 
+    antalm2 = Number(antalm2); 
     resultat1 = trallskruvm2 * antalm2;
     resultat2 = meterperm2 * antalm2;
     document.getElementById("trallresultat").textContent = resultat1 + " trallskruv";
