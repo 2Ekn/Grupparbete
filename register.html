@@ -63,7 +63,7 @@
                 <p>Personnummer:</p>
                 <input type="text" placeholder="Personnummer" id="personnummer-register">
                 <p>Användarnamn:</p>
-                <input type="text" placeholder="Användarnamn" id="usernameRegister">
+                <input type="text" placeholder="Användarnamn" id="usernameRegister" required>
                 
                 <div class="password-checklist-container">
                     <p>Lösenord:</p>
@@ -91,20 +91,22 @@
                 <p>Kontaktuppgifter: </p>
                 <input type="text" placeholder="E-post" id="email" required>
                 <input type="text" placeholder="Telefonnummer">
+                <section class="checkboxes">
                 <button type="submit">Skapa Konto</button>
+                    <div class="checkboxes">
+                    <label  class="checkbox1">
+                        <input type="checkbox" required>
+                        Jag har läst och accepterar <a href="#">villkoren.</a>
+                    </label>
+        
+                    <label  class="checkbox2">
+                        <input class="checkbox2" type="checkbox">
+                        Jag vill få erbjudanden och nyhetsbrev till mailen
+                    </label>
+                </div>
+                <section>
             </form>
         </aside>
-        <section class="checkboxes">
-            <label  class="checkbox1">
-                <input type="checkbox">
-                Jag har läst och accepterar <a href="#">villkoren.</a>
-            </label>
-
-            <label  class="checkbox2">
-                <input class="checkbox2" type="checkbox">
-                Jag vill få erbjudanden och nyhetsbrev till mailen
-            </label>
-        </section>
     </main>
    
     <footer class="footer">
@@ -120,16 +122,19 @@
     <script>
         password = document.getElementById('passwordRegister');
         correctLength = document.getElementById('password-length');
-        
+
         function ChangeCheckbox(){
             if (password.value.length >= 8) {
                 correctLength.checked = true;
+                btn.disabled = false;
             } else {
-                correctLength.checked = false; 
+                correctLength.checked = false;
             }
         }
+
         password.addEventListener('input', ChangeCheckbox)
-    </script>
+
+</script>
 
     <script>
         document.getElementById('registrering').addEventListener('submit', function(event) {
